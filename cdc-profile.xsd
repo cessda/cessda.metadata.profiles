@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+  targetNamespace="ddi:codebook:2_5" xmlns:ns1="ddi:codebook:2_5" 
+  xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1"  >
+  <xs:import namespace="http://www.openarchives.org/OAI/2.0/oai_dc/" schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc.xsd"/>
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:annotation>
+        <xs:appinfo>CESSDA Data Catalogue</xs:appinfo>
+        <xs:documentation xml:lang="en">
+            Purpose: CMM v1.0 mapping validation for DDI 2.5
+            Version: 0.2
+            Date: 2018-04-28
+            Comments: There are issues with the specification of the 'distStmt' element.
+           
+           Given:
+            <distStmt>
+            <distDate> xml:lang="en" date="2002-07-03"</distDate>
+            <distrbtr> abbr="FSD" URI="http://www.fsd.uta.fi/" xml:lang="en">Finnish Social Science Archive</distrbtr>
+            </distStmt>
+           
+           Error message is:
+            "Invalid content was found starting with element '{"ddi:codebook:2_5":distrbtr}'. 
+            One of '{"ddi:codebook:2_5":distDate}' is expected." 
+
+            Date: 2018-07-02
+            Comments: problem with distStmt solved
+            dev comment on mandatory/should/could added
+            everything that is not mandatory is given a 'minOccurs=0'
+
+            some difficulty with the elements of citation in docDscr vs in stdyDesc
+            they contain the same elements, but have different rules on what is mandatory. 
+            for now, nothing is made mandatory, as that would imply it is also mandatory on the 'other' citation. 
+            These mandatory fields could be checked in a different way, for instance with a schematron
+
+            Date: 2018-07-18
+            Comments: 
+            * Add required 'xml:lang' to codeBook element
+            * Move collDate above nation like in ddi:codebook:2_5
+            * Make 'affiliation' in AuthEnty optional
+            * Add optional element othId, with required @role 
+      
+        </xs:documentation>
+    </xs:annotation>
+  <xs:element name="codeBook"><!-- xml:lang mandatory -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:docDscr"/><!-- mandatory -->
+        <xs:element ref="ns1:stdyDscr"/><!-- mandatory -->
+        <xs:element ref="ns1:fileDscr" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:decimal"/>
+      <xs:attribute ref="xml:lang" use="required"/><!-- mandatory -->
+      <xs:attribute ref="xsi:schemaLocation" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="docDscr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:citation"/><!-- mandatory -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdyDscr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:citation"/><!-- mandatory -->
+          <xs:element ref="ns1:stdyInfo"/><!-- mandatory -->
+          <xs:element ref="ns1:method" minOccurs="0"/><!-- should -->
+          <xs:element ref="ns1:dataAccs" minOccurs="0"/><!-- should -->
+          <xs:element ref="ns1:othrStdyMat" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stdyInfo">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element ref="ns1:subject" minOccurs="0"/><!-- should -->
+          <xs:element maxOccurs="unbounded" ref="ns1:abstract"/><!-- mandatory -->
+          <xs:element ref="ns1:sumDscr" minOccurs="0"/><!-- should -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subject">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="ns1:keyword" minOccurs="0"/><!-- should -->
+          <xs:element ref="ns1:topcClas" minOccurs="0"/><!-- should -->
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="keyword">
+    <xs:complexType mixed="true">
+      <xs:attribute name="ID"/>
+      <xs:attribute name="vocab" type="xs:NCName"/>
+      <xs:attribute name="vocabURI" type="xs:anyURI"/>
+        <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="topcClas">
+    <xs:complexType mixed="true">
+      <xs:attribute name="ID"/>
+      <xs:attribute name="vocab"/>
+      <xs:attribute name="vocabURI" type="xs:anyURI"/>
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="abstract">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sumDscr">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="ns1:collDate" minOccurs="0"/><!-- should -->
+          <xs:element maxOccurs="unbounded" ref="ns1:nation" minOccurs="0"/><!-- should -->
+          <xs:element maxOccurs="unbounded" ref="ns1:anlyUnit" minOccurs="0"/><!-- should -->
+          <xs:element maxOccurs="unbounded" ref="ns1:universe" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nation">
+    <xs:complexType mixed="true">
+      <xs:attribute name="abbr" use="required" type="xs:NCName"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="anlyUnit">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:concept"/><!-- should -->
+      </xs:sequence>
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="universe">
+    <xs:complexType mixed="true">
+      <xs:attribute name="clusion" use="required" type="xs:NCName"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collDate">
+    <xs:complexType mixed="true">
+      <xs:attribute name="date" type="xs:NMTOKEN"/>
+      <xs:attribute name="event" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="method">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:dataColl"/><!-- should -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dataColl">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="ns1:timeMeth" minOccurs="0"/><!-- should -->
+          <xs:element ref="ns1:dataCollector" minOccurs="0"/>
+          <xs:element maxOccurs="unbounded" ref="ns1:sampProc" minOccurs="0"/><!-- could -->
+          <xs:element ref="ns1:deviat" minOccurs="0"/>
+          <xs:element maxOccurs="unbounded" ref="ns1:collMode" minOccurs="0"/><!-- could -->
+          <xs:element ref="ns1:sources" minOccurs="0"/>
+          <xs:element ref="ns1:weight" minOccurs="0"/>
+          <xs:element ref="ns1:cleanOps" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timeMeth">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:concept"/>
+      </xs:sequence>
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dataCollector" type="xs:string"/>
+  <xs:element name="sampProc">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:concept"/><!-- could -->
+      </xs:sequence>
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deviat" type="xs:string"/>
+  <xs:element name="collMode">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:concept"/><!-- could -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sources">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="weight" type="xs:string"/>
+  <xs:element name="cleanOps" type="xs:NCName"/>
+  <xs:element name="dataAccs">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element ref="ns1:useStmt" minOccurs="0"/><!-- should -->
+          <xs:element ref="ns1:setAvail" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="useStmt">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="ns1:restrctn" minOccurs="0"/><!-- should -->
+          <xs:element ref="ns1:conditions" minOccurs="0"/>
+          <xs:element maxOccurs="unbounded" ref="ns1:specPerm" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="restrctn">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="conditions">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specPerm">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setAvail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:avlStatus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="avlStatus">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="othrStdyMat">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="fileDscr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:fileTxt"/><!-- should -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fileTxt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:fileName" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fileName">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+    <xs:element name="citation">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- titlStmt is mandatory within a citation in a stdyDscr, but not in a docDscr -->
+                <xs:element ref="ns1:titlStmt"/>
+                <xs:element minOccurs="0" ref="ns1:rspStmt"/>
+                <!-- prodStmt is mandatory within a citation in a docDscr , but not in a stdyDscr -->
+                <xs:element minOccurs="0" ref="ns1:prodStmt"/>                
+                <!-- holdings is mandatory  within a citation in a docDscr , but not in a stdyDscr-->
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:holdings"/>
+                <xs:element minOccurs="0" ref="ns1:distStmt"/><!-- should -->
+                <xs:element minOccurs="0" ref="ns1:serStmt"/>
+                <xs:element minOccurs="0" ref="ns1:verStmt"/>
+            </xs:sequence>
+            <xs:attribute ref="xml:lang"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="holdings">
+    <xs:complexType>
+      <xs:attribute name="URI" use="required" type="xs:anyURI"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prodStmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ns1:producer"/><!-- mandatory -->
+          <xs:element maxOccurs="unbounded" ref="ns1:copyright" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="producer">
+    <xs:complexType mixed="true">
+      <xs:attribute name="abbr" type="xs:NCName"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="copyright">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rspStmt">
+    <xs:complexType>
+      <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:AuthEnty"/><!-- should -->
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ns1:othId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthEnty">
+    <xs:complexType mixed="true">
+      <xs:attribute name="affiliation"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="othId">
+      <xs:complexType mixed="true">
+          <xs:attribute name="affiliation"/>
+          <xs:attribute name="role" use="required"/>
+          <xs:attribute ref="xml:lang" use="required"/>
+      </xs:complexType>
+  </xs:element>
+  <xs:element name="titlStmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:titl"/><!-- mandatory -->
+        <xs:element ref="ns1:parTitl" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element maxOccurs="unbounded" ref="ns1:IDNo" minOccurs="0"/><!-- should -->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="titl">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parTitl">
+    <xs:complexType mixed="true">
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IDNo">
+    <xs:complexType mixed="true">
+      <xs:attribute name="agency" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distStmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:distDate" minOccurs="0" maxOccurs="unbounded"/><!-- should -->
+        <xs:element ref="ns1:distrbtr" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distDate">
+    <xs:complexType>
+      <xs:attribute name="date" use="required" type="xs:date"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="distrbtr">
+    <xs:complexType mixed="true">
+      <xs:attribute name="URI" use="required" type="xs:anyURI"/>
+      <xs:attribute name="affiliation" type="xs:string"/>
+      <xs:attribute name="abbr" use="required" type="xs:NCName"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="serStmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:serName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="serName">
+    <xs:complexType mixed="true">
+      <xs:attribute name="ID" use="required" type="xs:NCName"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verStmt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ns1:version"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="version">
+    <xs:complexType>
+      <xs:attribute name="date" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute ref="xml:lang" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="concept">
+    <xs:complexType mixed="true">
+      <xs:attribute name="ID" type="xs:NCName"/>
+      <xs:attribute name="vocab" use="required"/>
+      <xs:attribute name="vocabURI" type="xs:anyURI"/>
+      <xs:attribute ref="xml:lang" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
