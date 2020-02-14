@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+____________________________________________________________________________________
+Copyright: 2019 CESSDA Metadata Office
+Author: Darren Bell - UK Data Archive
+Created: 2019-10-02
+Version: work-in-progress draft for CESSDA SPF 10 Oct 2019
+Last modified 2019-10-15
+____________________________________________________________________________________
+-->
+<pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="ddi:ddiprofile:3_2 ddiprofile.xsd" versionDate="2019-10-14">
+    <r:Agency>CESSDA</r:Agency>
+    <r:ID>CDC_DDI25_PROFILE</r:ID>
+    <r:Version>0.1</r:Version>
+    <!--
+    If required, UserAttributePairs can hold top-level parameters for automatic processing 
+    <r:UserAttributePair>
+        <r:AttributeKey>AttributeKey0</r:AttributeKey>
+        <r:AttributeValue>AttributeValue0</r:AttributeValue>
+    </r:UserAttributePair>
+    -->
+    <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
+    <pr:DDIProfileName>
+        <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE </r:String>
+    </pr:DDIProfileName>
+    <pr:XPathVersion>1.0</pr:XPathVersion>
+    <pr:DDINamespace>2.5</pr:DDINamespace>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix/>
+        <pr:XMLNamespace>ddi:codebook:2_5</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>xsi</pr:XMLPrefix>
+        <pr:XMLNamespace>http://www.w3.org/2001/XMLSchema-instance</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <!--****************************************************************************************-->
+    <!--ROOT ELEMENT-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: 'codeBook' is always the root element for a CDC xml document</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/@xml-lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: ISO 3166 2-letter code for country should be used</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/@xsi:schemaLocation" defaultValue="ddi:codebook:2_5 codebook.xsd"
+        fixedValue="true" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: System-required information - always "ddi:codebook:2_5
+                codebook.xsd"</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--TITLE AND IDENTIFIERS-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/docDscr" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Title of the CDC XML document</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the study title. ISO 3166 2-letter code for country should
+                be used</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/holdings/" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes - to indicate study description pages in different
+                languages</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/holdings/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the study description page at the SP website (there can be
+                multiple 'holding' elements for study description pages in different languages. ISO
+                3166 2-letter code for country should be used</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/holdings/@URI" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: This is the document the metadata refers to, i.e. the URL of the study
+                description page at the SP website.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Title of the Study. If additional titles are required in other
+                languages, use the parTitl element</r:Content>
+            <r:Content>CDC UI Label: Study title</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the study title. ISO 3166 2-letter code for country should
+                be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Title of the Study in additional languages other than the 'titl'
+                element. It is preferable to include this element to hold an English version of the
+                title if the 'titl' element is not in English.</r:Content>
+            <r:Content>CDC UI Label: Study title</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'parTitl' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the translated study title. ISO 3166 2-letter code for
+                country should be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Persistent identifier of the study</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'IDNo' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the persistent identifier of the study</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Agency responsible for the identifier of the study</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--PRINCIPAL INVESTIGATOR-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Principal investigator (Person reference) or Principal investigator
+                (Institution reference)</r:Content>
+            <r:Content>CDC UI Label: Creator</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'AuthEnty' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of Person or Organisation Reference</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@affiliation" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: If AuthEnty is a person, the organisational affiliation of that
+                person</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--PRODUCER-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/producer" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The element should contain the name of the organisation who has
+                published the metadata for the harvested study description. This is usually the
+                SP.</r:Content>
+            <r:Content>CDC UI Label: Publisher</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/producer/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the organisation name</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/producer/@abbr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: abbr</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--YEAR OF PUBLICATION-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The year or freetext date of when the study description was
+                published</r:Content>
+            <r:Content>CDC UI Label: Year of publication</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate/@date" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'distDate' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept 'YYYY-MM-DD',
+                'YYYY-MM' or 'YYYY' as date format.</r:Content>
+            <r:Content>CDC UI Label: Year of publication</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--SUBJECTS AND KEYWORDS-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Subject classifcation term for the study</r:Content>
+            <r:Content>CDC UI Label: Topic</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'topcClas' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the subject classification term</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocab"
+        defaultValue="CESSDA Topic Classification" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: name of the vocabulary. CMM model says that it is mandatory to use
+                CESSDA topsclas CV but for now all topClas terms will be harvested, regardless of
+                vocabulary used. Put the string "CESSDA Topic Classification" into the @vocab
+                Attribute for the terms where this voc is used, regardless of language. </r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocabURI"
+        defaultValue="CESSDA Topic Classification" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: This should contain the URN of the specific term
+                change this year and CESSDA does not have URNS yet.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The unique machine-actionable identifier (e.g. "1") of the term that
+                remains the same across languages</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Subject classifcation term for the study</r:Content>
+            <r:Content>CDC UI Label: Keyword</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword@vocab" defaultValue="ELSST"
+        fixedValue="true" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Source of keywords - always ELSST</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@vocabURI" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Not implemented yet until ELSST has a more stable URI
+                scheme</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Not implemented yet until ELSST has a more stable URI
+                scheme</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the keyword</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--ABSTRACT-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The abstract for the study</r:Content>
+            <r:Content>CDC UI Label: Abstract</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the abstract</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--DATA COLLECTION DATE(S)-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: This is the free text expression of the collection period.</r:Content>
+            <r:Content>CDC UI Label: Data collection period</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if collDate element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the free text expression of the collection
+                period</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@event" defaultValue="start"
+        isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if @date Attribute is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Either 'start', 'end' or 'single' to indicate the type of @date
+                Attribute</r:Content>
+            <r:Content>CDC UI Label: Data collection period: start date OR Data collection period:
+                End date</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@date" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'collDate' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Ideally YYYY-MM-DDThh:mm:ssZ format , but can accept YYYY-MM-DD,
+                YYYY-MM or YYYY as date attribute. If there are multiple end dates, use the
+                last.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--COUNTRY COVERAGE-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Countries relevant to the study area</r:Content>
+            <r:Content>CDC UI Label: Country</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'nation' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the country label</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@abbr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: ISO 3166 2-letter code for country should be used</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--UNIT OF ANALYSIS-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'anlyUnit' is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the unit of analysis label (in the 'content'
+                element)</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Unit of analysis label</r:Content>
+            <r:Content>CDC UI Label: Analysis unit</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocab"
+        defaultValue="DDI Analysis Unit" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: If you use the CMM recommended DDI vocabulary, for @vocab use the
+                string "DDI Analysis Unit" regardless of language. 'concept' contains the value of
+                the code (=term ID) that is the same across languages, and 'anlyUnit' the term in
+                local language. Use the URN of the source language CV version for
+                vocabURI."</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocabURI"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Use the URN of the source language CV version </r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: the value of the code (=term ID) that is the same across
+                languages</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--TIME DIMENSION-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/method" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Free text description of time dimension</r:Content>
+            <r:Content>CDC UI Label: Time dimension</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'timeMeth' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the time dimension label</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Time dimension CV item. If you use the CMM recommended DDI vocabulary,
+                for @vocab use the string "DDI Time Method", regardless of language. 'concept'
+                contains the value of the code (ID attribute) that is the same across languages, and
+                'timeMeth' is the term in local language. Use the canonical URI for the vocabURI
+                "urn:ddi-cv:TimeMethod", if you enter URI, though this may change.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept@vocab"
+        defaultValue="DDI Time Method" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Name of the vocabulary used for Time Dimension</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept@vocabURI"
+        defaultValue="urn:ddi-cv:TimeMethod" fixedValue="false" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: URI for the 'Time Dimension' Vocabulary</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept@ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Term ID of the Time Dimension CV Item</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--9 - SAMPLING METHOD-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Free text description of sampling procedure</r:Content>
+            <r:Content>CDC UI Label: Sampling procedure</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'sampProc' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the sampling procedure description</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: 'Type of Sampling Procedure' CV item. If you use the CMM recommended
+                DDI vocabulary, for @vocab use the string "DDI Sampling Procedure", regardless of
+                language. 'concept' contains the value of the code (ID attribute) that is the same
+                across languages, and 'sampProc' is the freetext description.</r:Content>
+            <r:Content>CDC UI Label: Type of sampling procedure</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept@vocab"
+        defaultValue="DDI Sampling Procedure" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Name of the vocabulary used for Type Of Sampling Procedure</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept@vocabURI" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: URI 'for the Type Of Sampling Procedure' Vocabulary</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept@ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Term ID of the 'Type Of Sampling Procedure' CV Item</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--DATA COLLECTION METHOD-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Free text description of data collection method</r:Content>
+            <r:Content>CDC UI Label: Sampling procedure</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'collMode' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the Data collection method description</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: 'Mode Of Collection' CV item. If you use the CMM recommended DDI
+                vocabulary, for @vocab use the string "DDI Mode Of Collection", regardless of
+                language. 'concept' contains the value of the code (ID attribute) that is the same
+                across languages, and 'collMode' is the freetext description.</r:Content>
+            <r:Content>CDC UI Label: Data collection method</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept@vocab"
+        defaultValue="DDI Sampling Procedure" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Name of the vocabulary used for Data Collection Mode</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept@vocabURI" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: URI for the 'Data Collection Mode' Vocabulary</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept@ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Term ID of the 'Data Collection Mode' CV Item</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--11 - ACCESS STATEMENT-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Refers to any information relating to the access and use conditions of
+                data that the SP wants to send. SPs need to concatenate the information for
+                'restrctn' the way they want it to appear in the CDC, if they use data from
+                different elements e.g.specPerm, restrctn, avlStatus etc. </r:Content>
+            <r:Content>CDC UI Label: Terms of data access</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'restrctn' is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the Access statement</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--FILE DESCRIPTIONS-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/fileDscr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Structural element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Structural element only - contains no data</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'fileTxt' element is present</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Language-specific name of file </r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName/@xml:lang" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'fileName' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language(s) of data files. The only information necessary for CDC is
+                the language of the files, as this is needed for the filter. The values or content
+                of the 'fileTxt' or 'fileName' are not extracted. </r:Content>
+            <r:Content>CDC UI Label: Language of data file(s).</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[<instruction type="example">instruction_parameter</instruction>]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+</pr:DDIProfile>
