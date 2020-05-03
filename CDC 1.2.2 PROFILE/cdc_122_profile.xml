@@ -3,29 +3,29 @@
 ____________________________________________________________________________________
 Copyright: 2020 CESSDA Metadata Office
 Author: Darren Bell - UK Data Archive
-Created: 2019-10-02
-Version: v0.3
-Change summary: Swapped order of <keyword> and <topcClas> elements, in order to
-more correctly align with the sequence in codebook.xsd
-Last modified 2020-05-03 Darren Bell
+Created: 2020-05-01
+Version: v0.1
+Change summary: First draft for comments
+Last modified 2020-05-01 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2020-03-06">
+    versionDate="2020-05-01">
     <r:Agency>CESSDA</r:Agency>
-    <r:ID>CDC_DDI25_PROFILE</r:ID>
-    <r:Version>0.2</r:Version>
+    <r:ID>CDC_DDI122_PROFILE</r:ID>
+    <r:Version>0.1</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
-        <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE</r:String>
+        <r:String>CESSDA DATA CATALOGUE (CDC) DDI 1.2.2 PROFILE</r:String>
     </pr:DDIProfileName>
     <pr:XPathVersion>1.0</pr:XPathVersion>
-    <pr:DDINamespace>2.5</pr:DDINamespace>
+    <pr:DDINamespace>1.22</pr:DDINamespace>
+    <!--NOTE THAT DDIPROFILE.XSD DOES NOT PERMIT FORMAT OF "1.2.2" IN THIS ELEMENT-->
     <pr:XMLPrefixMap>
         <pr:XMLPrefix/>
-        <pr:XMLNamespace>ddi:codebook:2_5</pr:XMLNamespace>
+        <pr:XMLNamespace>http://www.icpsr.umich.edu/DDI</pr:XMLNamespace>
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>xsi</pr:XMLPrefix>
@@ -34,7 +34,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ROOT ELEMENT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -42,13 +42,13 @@ ________________________________________________________________________________
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/@xsi:schemaLocation"
-        defaultValue="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
+        defaultValue="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd"
         fixedValue="true" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: System-required information - always "ddi:codebook:2_5
-                codebook.xsd"</r:Content>
+            <r:Content>Usage: System-required information - always "http://www.icpsr.umich.edu/DDI
+                http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd"</r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -62,14 +62,14 @@ ________________________________________________________________________________
             <r:Content>Usage: Title of the CDC XML document</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the study title. ISO 639-1 codes must be used.</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/docDscr/citation/holdings/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/docDscr/citation/holdings/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -96,7 +96,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Study title</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -114,7 +114,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Study title</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'parTitl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -122,35 +122,29 @@ ________________________________________________________________________________
                 used.</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The content of this element serves two purposes. First it is used for
-                the study/archival number given by the SP and secondly it is used for the PID. These
-                two cases have different specifications. IDNo in the sense of study number is
-                mandatory. An additional IDNo element may be provided for the purposes of a PID but
-                it is not mandatory. </r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Persistent identifier of the study</r:Content>
+        </r:Description>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml-lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'IDNo' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the persistent identifier of the study. ISO 639-1 codes
-                must be used. @xml:lang is mandatory if the 'IDNo' element is being used to display
-                a PID but it is not mandatory when IDNo is used to display the Study
-                Number.</r:Content>
+                must be used.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'IDNo' is present</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Agency responsible for the identifier of the study.</r:Content>
+            <r:Content>Usage: Agency responsible for the identifier of the study</r:Content>
         </r:Description>
-    </pr:Used>
+    </pr:Used>      
     <!--****************************************************************************************-->
     <!--PRINCIPAL INVESTIGATOR / CREATOR-->
     <!--****************************************************************************************-->
@@ -163,7 +157,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Creator</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'AuthEnty' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -193,7 +187,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Publisher</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -244,7 +238,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Keyword</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -279,7 +273,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Topic</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'topcClas' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -304,7 +298,6 @@ ________________________________________________________________________________
                 "urn:ddi:int.cessda.cv:TopicClassification:4.0" </r:Content>
         </r:Description>
     </pr:Used>
-
     <!--****************************************************************************************-->
     <!--ABSTRACT-->
     <!--****************************************************************************************-->
@@ -317,7 +310,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Abstract</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -332,16 +325,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: This is the free text expression of the collection period.</r:Content>
+            <r:Content>Usage: This is the free text expression of the collection period.  This element may be empty providing that the @date attribute is populated.</r:Content>
             <r:Content>CDC UI Label: Data collection period</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@xml:lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if collDate element is present and populated</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the free text expression of the collection period. ISO
-                639-1 codes must be used.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@event" isRequired="false">
@@ -375,7 +360,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Country</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'nation' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -391,7 +376,7 @@ ________________________________________________________________________________
                 present</r:Content>
         </r:Description>
     </pr:Used>
-    <!--****************************************************************************************-->
+  <!--****************************************************************************************-->
     <!--ANALYSIS UNIT-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit" isRequired="false">
@@ -403,7 +388,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Analysis unit</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'anlyUnit' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -451,7 +436,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Time dimension</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'timeMeth' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -500,7 +485,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Sampling procedure</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'sampProc' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -550,7 +535,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Data collection method</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'collMode' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -602,7 +587,7 @@ ________________________________________________________________________________
             <r:Content>CDC UI Label: Terms of data access</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn/@xml:lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'restrctn' is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -621,7 +606,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Language-specific name of file </r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
