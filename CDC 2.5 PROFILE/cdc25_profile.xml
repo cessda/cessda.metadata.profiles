@@ -4,19 +4,21 @@ ________________________________________________________________________________
 Copyright: 2020 CESSDA Metadata Office
 Author: Darren Bell - UK Data Archive
 Created: 2019-10-02
-Version: v0.4
-Change summary from v0.31: Signifcant changes based on user feedback to v0.3
-also injected "eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint" constraint type.
-Last modified 2020-09-05 Darren Bell
+Version: v0.9
+Change summary from v0.4: PreRelease version.
+Issues 57,60 from https://bitbucket.org/cessda/cessda.cmv/issues
+Corrected syntax of MandatoryIfParentPresentNodeConstraint constraint.
+Changed @vocabURI example patterns from "urn.." to "http:.."
+Last modified 2020-09-09 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2020-09-05">
+    versionDate="2020-09-09">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI25_PROFILE</r:ID>
-    <r:Version>0.4</r:Version>
+    <r:Version>0.9</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE</r:String>
@@ -38,7 +40,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: ISO 639-1 codes must be used</r:Content>
+            <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -81,14 +83,15 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'titl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the study title. ISO 639-1 codes must be used.</r:Content>
+            <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-            <cmv:Constraints>
-                <cmv:Constraint type="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-            </cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -98,7 +101,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the study description page at the SP website (there can be
                 multiple 'holding' elements for study description pages in different languages. ISO
-                639-1 codes must be used.</r:Content>
+                639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -130,7 +133,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the study title. ISO 639-1 codes must be used.</r:Content>
+            <r:Content>Usage: Language of the study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl" isRequired="false">
@@ -155,15 +158,15 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'parTitl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the translated study title. ISO 639-1 codes must
-                used.</r:Content>
+            <r:Content>Usage: Language of the translated study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -184,7 +187,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the persistent identifier of the study. ISO 639-1 codes
-                must be used. @xml:lang is mandatory if the 'IDNo' element is being used to display
+                codes are strongly encouraged to be used . @xml:lang is mandatory if the 'IDNo' element is being used to display
                 a PID but it is not mandatory when IDNo is used to display the Study
                 Number.</r:Content>
         </r:Description>
@@ -196,21 +199,14 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="true">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
+            <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Agency responsible for the identifier of the study. Value should be
                 one of https://vocabularies.cessda.eu/#!detail/CessdaPersistentIdentifierTypes i.e.
                 ARK or DOI or Handle or URN </r:Content>
         </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			<Constraints>
-			]]></r:Content>
-        </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--PRINCIPAL INVESTIGATOR / CREATOR-->
@@ -235,15 +231,15 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'AuthEnty' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of Person or Organisation name. ISO 639-1 codes must be
-                used.</r:Content>
+            <r:Content>Usage: Language of Person or Organisation name. ISO 639-1 codes codes are strongly encouraged to be used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -280,8 +276,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the organisation name. ISO 639-1 codes must be
-                used.</r:Content>
+            <r:Content>Usage: Language of the organisation name. ISO codes are strongly encouraged to be used.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@abbr" isRequired="false">
@@ -330,9 +325,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -344,8 +340,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Keyword for the study in the local language. There should always be an
-                English version of the keyword.</r:Content>
+            <r:Content>Usage: Keyword for the study in the local language.</r:Content>
             <r:Content>CDC UI Label: Keyword</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -356,18 +351,19 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml-lang" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the keyword. ISO 639-1 codes must be used.</r:Content>
+            <r:Content>Usage: Language of the keyword. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -382,9 +378,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -409,9 +406,8 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Subject classifcation term for the study in the local language. Use
-                values from
-                https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification if
+            <r:Content>Usage: Subject classifcation term for the study in the local language. Use code
+                values from https://vocabularies.cessda.eu/#!detail/TopicClassification if
                 possible but other vocabularies are permitted.</r:Content>
             <r:Content>CDC UI Label: Topic</r:Content>
         </r:Description>
@@ -427,15 +423,16 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'topcClas' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the subject classification term. ISO 639-1 codes must be
+            <r:Content>Usage: Language of the subject classification term. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -459,8 +456,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URN of the CV version that is being used e.g.
-                "urn:ddi:int.cessda.cv:TopicClassification:4.0" </r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/v1/vocabulary-details/TopicClassification/en/4.0</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -486,7 +483,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the abstract. ISO 639-1 codes must be used.</r:Content>
+            <r:Content>Usage: Language of the abstract. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -521,9 +518,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -538,9 +536,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -567,15 +566,16 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'nation' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the country label. ISO 639-1 codes must be
+            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -583,8 +583,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: ISO 3166-1 2-letter code must be used if this attribute is
-                present</r:Content>
+            <r:Content>Usage: ISO 3166-1 2-letter code must be used if this attribute is present</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -617,15 +616,16 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'anlyUnit' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Analysis Unit CV item. ISO 639-1 codes must be
+            <r:Content>Usage: Language of the Analysis Unit CV item. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -636,8 +636,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Analysis Unit Controlled Vocabulary "Code value" that is the same across
                 languages. e.g if the "anlyUnit" element is 'Kotitalous' for Finnish, the "concept"
-                element is 'Household' See
-                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:AnalysisUnit.</r:Content>
+                element is 'Household' See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:AnalysisUnit.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -667,8 +666,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URN of the CV version that is being used e.g.
-                "urn:ddi:int.ddi.cv:AnalysisUnit:2.0" </r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/v1/vocabulary-details/AnalysisUnit/en/1.0</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -701,15 +700,16 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'timeMeth' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Time Method CV item. ISO 639-1 codes must be
+            <r:Content>Usage: Language of the Time Method CV item. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -720,7 +720,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Time Method Controlled Vocabulary "Code value" that is the same across
                 languages. e.g if the 'timeMeth' element is 'Pitkittäisaineisto' for Finnish, the
-                'concept' element is 'Longitudinal' See
+                'concept' element is 'Longitudinal' See example at
                 https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TimeMethod</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -746,13 +746,12 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept/@vocabURI"
-        defaultValue="urn:ddi-cv:TimeMethod" fixedValue="false" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept/@vocabURI" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URN of the CV version that is being used e.g.
-                "urn:ddi:int.ddi.cv:TimeMethod:1.2"</r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/v1/vocabulary-details/TimeMethod/en/1.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -787,14 +786,15 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory if 'sampProc' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Sampling Procedure CV item or freetext description.
-                ISO 639-1 codes must be used.</r:Content>
+                ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -805,8 +805,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Sampling Procedure Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'sampProc' element is 'Todennäköisyysotanta' for
-                Finnish, the 'concept' element is 'Probability' See
-                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:SamplingProcedure </r:Content>
+                Finnish, the 'concept' element is 'Probability'. See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:SamplingProcedure </r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -837,8 +836,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URN of the CV version that is being used e.g.
-                "urn:ddi:int.ddi.cv:SamplingProcedure:1.1"</r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g. 
+                https://vocabularies.cessda.eu/v1/vocabulary-details/SamplingProcedure/en/1.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -872,15 +871,16 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'collMode' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Mode of Collection CV item. ISO 639-1 codes must be
+            <r:Content>Usage: Language of the Mode of Collection CV item. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-<cmv:Constraints>
-<cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -891,7 +891,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Mode of Collection Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'collMode' element is 'Haastattelu' for Finnish, the
-                'concept' element is 'Interview' See
+                'concept' element is 'Interview' See example at 
                 https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:ModeOfCollection </r:Content>
         </r:Description>
         <pr:Instructions>
@@ -923,8 +923,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URN of the CV version that is being used e.g.
-                "urn:ddi:int.ddi.cv:ModeOfCollection:3.0"</r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/v1/vocabulary-details/ModeOfCollection/en/3.0</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -960,13 +960,16 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'restrctn' is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Access statement. ISO 639-1 codes must be
+            <r:Content>Usage: Language of the Access statement. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<cmv:Constraints><cmv:Constrainttype="eu.cessda.cmv.core.MandatoryIfParentPresentNodeConstraint"/>
-</cmv:Constraints>]]>
+                <![CDATA[
+        <Constraints>
+          <MandatoryNodeIfParentPresentConstraint/>
+        </Constraints>
+      ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -994,7 +997,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language(s) of data files. The only information necessary for CDC is
                 the language of the files, as this is needed for the filter. The values or content
-                of 'fileName' are not extracted. ISO 639-1 codes must be used. </r:Content>
+                of 'fileName' are not extracted. ISO 639-1 codes are strongly encouraged to be used. </r:Content>
             <r:Content>CDC UI Label: Language of data file(s).</r:Content>
         </r:Description>
         <pr:Instructions>
