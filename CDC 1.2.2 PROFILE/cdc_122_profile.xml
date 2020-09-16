@@ -44,7 +44,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -73,7 +73,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<OptionalNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -105,7 +105,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -988,7 +988,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -1005,7 +1005,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
