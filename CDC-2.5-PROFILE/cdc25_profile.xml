@@ -43,7 +43,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -72,7 +72,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<OptionalNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -85,10 +85,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -104,7 +104,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -160,10 +160,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -233,10 +233,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -322,10 +322,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -357,10 +357,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -375,10 +375,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -426,10 +426,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -515,10 +515,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -533,10 +533,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -569,10 +569,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -619,10 +619,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -703,10 +703,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -788,10 +788,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -874,10 +874,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -963,10 +963,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -984,7 +984,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -1001,7 +1001,7 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
-			<Constraints>
+			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
