@@ -4,18 +4,18 @@ ________________________________________________________________________________
 Copyright: 2020 CESSDA Metadata Office
 Author: Darren Bell - UK Data Archive
 Created: 2019-10-02
-Version: v1.0
-Change summary from v0.9: Appoved by CESSDA MO for first public release.
-Last modified 2020-09-16 Darren Bell
+Version: v1.01
+Change summary from v1.0: Amended usage notes for distDate,collDate,topcClas elements and IDNo/@agency attribute
+Last modified 2020-09-24 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2020-09-16">
+    versionDate="2020-09-24">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI25_PROFILE</r:ID>
-    <r:Version>1.0</r:Version>
+    <r:Version>1.01</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE</r:String>
@@ -176,7 +176,7 @@ ________________________________________________________________________________
                 the study/archival number given by the SP and secondly it is used for the PID. These
                 two cases have different specifications. IDNo in the sense of study number is
                 mandatory. An additional IDNo element may be provided for the purposes of a PID but
-                it is not mandatory. See </r:Content>
+                it is not mandatory.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml:lang" isRequired="false">
@@ -200,9 +200,10 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Agency responsible for the identifier of the study. Value should be
-                one of https://vocabularies.cessda.eu/#!detail/CessdaPersistentIdentifierTypes i.e.
-                ARK or DOI or Handle or URN </r:Content>
+            <r:Content>Usage: Agency responsible for the identifier of the study. If you are using IDNo for a 
+                Persistent Identifer, value should be one of https://vocabularies.cessda.eu/#!detail/CessdaPersistentIdentifierTypes i.e.
+                ARK or DOI or Handle or URN
+            </r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -299,8 +300,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The year or freetext date of when the study description was published.
-                If the @date attribute is populated, this element may be empty.</r:Content>
+            <r:Content>Usage: The year or freetext date of when the study description was published.  
+                This element may be empty.</r:Content>
             <r:Content>CDC UI Label: Year of publication</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -387,7 +388,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Optional but note that if @vocab=”ELSST” then validation with list of
-                ELSST keywords takes place. The keyword element be rejected by the CDC if the wrong
+                ELSST keywords takes place. The keyword element may be rejected by the CDC if the wrong
                 URI is found.</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -403,8 +404,8 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Subject classifcation term for the study in the local language. Use code
-                values from https://vocabularies.cessda.eu/#!detail/TopicClassification if
+            <r:Content>Usage: Subject classifcation term for the study in the local language. Use descriptive
+                terms from https://vocabularies.cessda.eu/#!detail/TopicClassification if
                 possible but other vocabularies are permitted.</r:Content>
             <r:Content>CDC UI Label: Topic</r:Content>
         </r:Description>
@@ -491,8 +492,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: This is the free text expression of the collection period. If the
-                @date attribute is populated, this element may be empty.</r:Content>
+            <r:Content>Usage: This is the free text expression of the collection period. 
+                This element may be empty.</r:Content>
             <r:Content>CDC UI Label: Data collection period</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -633,7 +634,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Analysis Unit Controlled Vocabulary "Code value" that is the same across
                 languages. e.g if the "anlyUnit" element is 'Kotitalous' for Finnish, the "concept"
-                element is 'Household' See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:AnalysisUnit.</r:Content>
+                element is 'Household'. See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:AnalysisUnit.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -717,8 +718,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Time Method Controlled Vocabulary "Code value" that is the same across
                 languages. e.g if the 'timeMeth' element is 'Pitkittäisaineisto' for Finnish, the
-                'concept' element is 'Longitudinal' See example at
-                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TimeMethod</r:Content>
+                'concept' element is 'Longitudinal'. See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TimeMethod</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -888,7 +888,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Mode of Collection Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'collMode' element is 'Haastattelu' for Finnish, the
-                'concept' element is 'Interview' See example at 
+                'concept' element is 'Interview'. See example at 
                 https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:ModeOfCollection </r:Content>
         </r:Description>
         <pr:Instructions>
