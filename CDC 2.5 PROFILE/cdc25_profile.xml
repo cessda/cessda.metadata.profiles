@@ -5,8 +5,8 @@ Copyright: 2020 CESSDA Metadata Office
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2019-10-02
-Version: v1.02
-Change summary from v1.01: Added CC BY licence statement
+Version: v1.0.2
+Change summary from v1.02: Adjusted version number to align with CESSDA Semantic Versioning practices
 Last modified 2020-10-20 Darren Bell
 ____________________________________________________________________________________
 -->
@@ -16,7 +16,7 @@ ________________________________________________________________________________
     versionDate="2020-10-20">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI25_PROFILE</r:ID>
-    <r:Version>1.02</r:Version>
+    <r:Version>1.0.2</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE</r:String>
