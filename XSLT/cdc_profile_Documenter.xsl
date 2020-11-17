@@ -5,11 +5,11 @@
     <xsl:template match="/">
         <html>
             <body>
-                <h2 style="font-family:Arial">CDC DDI 2.5 PROFILE Documentation</h2>
+                <h2 style="font-family:Arial">DDI PROFILE Documentation</h2>
                 <table border="1">
                     <tr>
                         <td style="font-family:Arial;background-color:white; color:black">
-                            <b>DDI2.5 XPath</b>
+                            <b>DDI_XPath</b>
                         </td>
                         <td style="font-family:Arial;background-color:white; color:black">
                             <b>Required</b>
