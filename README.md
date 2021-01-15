@@ -3,20 +3,13 @@
 This repository contains DDI Profiles that are used by the [CESSDA Metadata Validator Tool](https://bitbucket.org/cessda/cessda.cmv.server/src/master/README.md)
 
 ## Context
-Essentially, a "DDI Profile" is an XML document that defines rules that a DDI metadata document needs to follow in a particular context. 
-As best practice, any DDI XML document should conform to the relevant DDI XSD schema - for example, a DDI codebook document 
-describing study metadata would conform to the [DDI2.5 XSD Schema](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd)
-
-Beyond XSD schema conformity, "DDI Profiles" provide an additional level of validation for DDI documents in the context of a particular use case.  
-For example, the [CESSDA Data Catalogue](https://datacatalogue.cessda.eu/) 
-harvests DDI metadata from service providers.  There is no mechanism to declare an element as "Recommended" 
-in an XSD Schema but this is possible in a DDI Profile.
-
-Each DDI Profile is designed to reflect a specific use case.  For example, there is a DDI Profile for checking DDI 2.5 metadata submitted
-to the CESSDA Metadata Catalogue.  Another profile exists for checking DDI 1.2.2 Metadata documents.
-
-DDI Profiles are themselves DDI3.2 XML documents which must conform to the [DDI Profile XSD specification](https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd).
-All profiles have been written and validated in [Oxygen XML Editor](https://www.oxygenxml.com/)
+[DDI Profiles](https://ddialliance.org/resources/ddi-profiles) are formal, machine-actionable XML documents that specify additional constraintson the content of a DDI XML document, 
+over and above those specified by the document's associated XSD schema.  These DDI profiles are intended to be used in the context 
+of validating DDI2.5 and DDI1.2.2 documents that are being submitted to [CESSDA Data Catalogue](https://datacatalogue.cessda.eu/) from participating Service Providers.  
+Firstly, the Profiles provide human-readable guidance for metadata professionals e.g. whether an element is optional, recommended 
+or mandatory.  Secondly, they support machine-actionable validation by the CESSDA Metadata Validator, an online and command-line 
+based set of tools, whose primary goal is to improve metadata quality so that resulting aggregations of such metadata in the CESSDA 
+Data Catalogue have improved utility for the research community.
 
 
 ## Repository structure

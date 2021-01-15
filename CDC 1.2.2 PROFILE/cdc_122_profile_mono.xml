@@ -4,9 +4,11 @@ ________________________________________________________________________________
 © Copyright 2020, CESSDA ERIC
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
-Created: 2020-10-20
+Created: 2020-12-02
 Version: v1.0.3
-Change summary from v1.0.2: See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
+Change summary: 
+NEW MONOLINGUAL VERSION OF PROFILE based on v1.0.3 of CDC_DDI122_PROFILE
+See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
 Last modified 2021-01-15 Darren Bell
 ____________________________________________________________________________________
 -->
@@ -15,11 +17,11 @@ ________________________________________________________________________________
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
     versionDate="2021-01-15">
     <r:Agency>CESSDA</r:Agency>
-    <r:ID>CDC_DDI122_PROFILE</r:ID>
+    <r:ID>CDC_DDI122_PROFILE_MONOLINGUAL</r:ID>
     <r:Version>1.0.3</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
-        <r:String>CESSDA DATA CATALOGUE (CDC) DDI 1.2.2 PROFILE</r:String>
+        <r:String>CESSDA DATA CATALOGUE (CDC) DDI 1.2.2 PROFILE - MONOLINGUAL</r:String>
     </pr:DDIProfileName>
     <pr:XPathVersion>1.0</pr:XPathVersion>
     <pr:DDINamespace>1.22</pr:DDINamespace>
@@ -35,19 +37,12 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ROOT ELEMENT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/@xml-lang" isRequired="false">
+    <pr:Used xpath="/codeBook/@xml-lang" isRequired="true">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
         </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/@xsi:schemaLocation"
         defaultValue="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd"
@@ -78,22 +73,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'titl' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
         <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
@@ -102,13 +81,6 @@ ________________________________________________________________________________
             <r:Content>Usage: Title of the Study. If additional titles are required in other
                 languages, use the parTitl element</r:Content>
             <r:Content>CDC UI Label: Study title</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl/@xml-lang" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl" isRequired="false">
@@ -129,22 +101,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'parTitl' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the translated study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
@@ -157,21 +113,6 @@ ________________________________________________________________________________
                 it is not mandatory.</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage:  Language is recommended when the @agency attribute contains an organisation name, for example, in the context of 'IDNo'
-                being used to display the internal study number</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
@@ -181,22 +122,6 @@ ________________________________________________________________________________
                 ARK or DOI or Handle or URN
             </r:Content>
         </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/holdings/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the study description page at the SP website (there can be
-                multiple 'holding' elements for study description pages in different languages. ISO
-                639-1 codes are strongly encouraged to be used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/holdings/@URI" isRequired="true">
         <r:Description>
@@ -216,22 +141,6 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Principal investigator Person OR Institution</r:Content>
             <r:Content>CDC UI Label: Creator</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Organisation name, which may be the contents of
-                the AuthEnty element or the @affiliation attribute of AuthEnty specifies a person. 
-                ISO 639-1 codes codes are strongly encouraged to be used.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -268,14 +177,6 @@ ________________________________________________________________________________
                 published the metadata for the harvested study description. This is usually the
                 SP.</r:Content>
             <r:Content>CDC UI Label: Publisher</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@xml-lang" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the organisation name. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@abbr" isRequired="false">
@@ -350,22 +251,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the keyword. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@vocab" defaultValue="ELSST"
         fixedValue="false" isRequired="false">
         <r:Description>
@@ -416,23 +301,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'topcClas' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the subject classification term. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocab"
         defaultValue="CESSDA Topic Classification" fixedValue="false" isRequired="false">
         <r:Description>
@@ -474,13 +342,6 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: The abstract for the study</r:Content>
             <r:Content>CDC UI Label: Abstract</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract/@xml-lang" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the abstract. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -557,23 +418,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'nation' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@abbr" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -606,23 +450,6 @@ ________________________________________________________________________________
 				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'anlyUnit' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Analysis Unit CV item. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept" isRequired="false">
@@ -690,23 +517,6 @@ ________________________________________________________________________________
 				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'timeMeth' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Time Method CV item. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept" isRequired="false">
@@ -777,23 +587,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'sampProc' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Sampling Procedure CV item or freetext description.
-                ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept" isRequired="false">
         <r:Description>
             <r:Content>Recommended</r:Content>
@@ -861,23 +654,6 @@ ________________________________________________________________________________
 				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'collMode' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Mode of Collection CV item. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept" isRequired="false">
@@ -951,23 +727,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'restrctn' is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Access statement. ISO 639-1 codes are strongly encouraged to be
-                used.</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <!--****************************************************************************************-->
     <!--FILE DESCRIPTIONS-->
     <!--****************************************************************************************-->
@@ -977,23 +736,6 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Language-specific name of file </r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName/@xml-lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language(s) of data files. The only information necessary for CDC is
-                the language of the files, as this is needed for the filter. The values or content
-                of 'fileName' are not extracted. ISO 639-1 codes are strongly encouraged to be used. </r:Content>
-            <r:Content>CDC UI Label: Language of data file(s).</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
