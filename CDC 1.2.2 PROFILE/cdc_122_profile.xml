@@ -177,7 +177,7 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Agency responsible for the identifier of the study. If you are using IDNo for a 
-                Persistent Identifer, value should be one of https://vocabularies.cessda.eu/#!detail/CessdaPersistentIdentifierTypes i.e.
+                Persistent Identifer, value should be one of https://vocabularies.cessda.eu/vocabulary/CessdaPersistentIdentifierTypes i.e.
                 ARK or DOI or Handle or URN
             </r:Content>
         </r:Description>
@@ -454,7 +454,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v1/vocabulary-details/TopicClassification/en/4.0</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/TopicClassification/4.0?languageVersion=en-4.0</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -663,7 +663,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v1/vocabulary-details/AnalysisUnit/en/1.0</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/1.0?languageVersion=en-1.0</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -747,7 +747,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v1/vocabulary-details/TimeMethod/en/1.2</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2?languageVersion=en-1.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -832,8 +832,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g. 
-                https://vocabularies.cessda.eu/v1/vocabulary-details/SamplingProcedure/en/1.1</r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1?languageVersion=en-1.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -919,7 +919,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v1/vocabulary-details/ModeOfCollection/en/3.0</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/3.0?languageVersion=en-3.0</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
