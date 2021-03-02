@@ -13,7 +13,14 @@ Each profile is versioned independently so the following contains discrete chang
  
 ## DDI CDC 2.5 Profile
 
-### 2021-01-15 [v1.0.3 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%202.5%20PROFILE/cdc25_profile.xml)
+### 2021-03-02 [v1.0.4 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%202.5%20PROFILE/cdc25_profile.xml)
+Minor changes to usage notes.   
+'../keyword/@vocab' attribute changed from Mandatory to Recommended.
+- Fixed issue [30](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/30/)
+- Fixed issue [31](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/31/)
+- Fixed issue [32](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/32/)
+
+### 2021-01-15 [v1.0.3](https://bitbucket.org/cessda/cessda.metadata.profiles/commits/df5d526e0e3852281354f3256fc90ebfc5435fe3)
 - Fixed issue [13](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/13/)
 - Fixed issue [17](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/17/)
 - Fixed issue [18](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/18/)
@@ -86,7 +93,14 @@ Each profile is versioned independently so the following contains discrete chang
 
 ## DDI CDC 1.2.2 Profile
 
-### 2021-01-15 [v1.0.3 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%201.2.2%20PROFILE/cdc_122_profile.xml)
+### 2021-03-02 [v1.0.4 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%201.2.2%20PROFILE/cdc_122_profile.xml)
+Minor changes to usage notes.   
+'../keyword/@vocab' attribute changed from Mandatory to Recommended.
+- Fixed issue [30](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/30/)
+- Fixed issue [31](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/31/)
+- Fixed issue [32](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/32/)
+
+### 2021-01-15 [v1.0.3](https://bitbucket.org/cessda/cessda.metadata.profiles/commits/df5d526e0e3852281354f3256fc90ebfc5435fe3)
 - Fixed issue [13](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/13/)
 - Fixed issue [17](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/17/)
 - Fixed issue [18](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/18/)
@@ -152,7 +166,14 @@ Each profile is versioned independently so the following contains discrete chang
 
 ## DDI CDC 2.5 Monolingual Profile
 
-### 2021-01-15 [v1.0.3 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%202.5%20PROFILE/cdc25_profile_mono.xml)
+### 2021-03-02 [v1.0.4 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%202.5%20PROFILE/cdc25_profile_mono.xml)
+Minor changes to usage notes.   
+'../keyword/@vocab' attribute changed from Mandatory to Recommended.
+- Fixed issue [30](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/30/)
+- Fixed issue [31](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/31/)
+- Fixed issue [32](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/32/)
+
+### 2021-01-15 [v1.0.3](https://bitbucket.org/cessda/cessda.metadata.profiles/commits/df5d526e0e3852281354f3256fc90ebfc5435fe3)
 - First commit of new monolingual version of existing cdc25_profile.xml (v1.03)
 - Issue [20](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/20/)
 
@@ -160,7 +181,14 @@ Each profile is versioned independently so the following contains discrete chang
 
 ## DDI CDC 1.2.2 Monolingual Profile
 
-### 2021-01-15 [v1.0.3 CURRENT](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%201.2.2%20PROFILE/cdc_122_profile_mono.xml)
+### 2021-03-02 [v1.0.4](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%201.2.2%20PROFILE/cdc_122_profile_mono.xml)
+Minor changes to usage notes.   
+'../keyword/@vocab' attribute changed from Mandatory to Recommended.
+- Fixed issue [30](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/30/)
+- Fixed issue [31](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/31/)
+- Fixed issue [32](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/32/)
+
+### 2021-01-15 [v1.0.3](https://bitbucket.org/cessda/cessda.metadata.profiles/commits/df5d526e0e3852281354f3256fc90ebfc5435fe3)
 - First commit of new monolingual version of existing cdc122_profile.xml (v1.03)
 - Issue [20](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/20/)
 - Issue [8](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/8)

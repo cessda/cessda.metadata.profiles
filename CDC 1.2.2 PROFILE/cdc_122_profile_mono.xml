@@ -5,20 +5,18 @@ ________________________________________________________________________________
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2020-12-02
-Version: v1.0.3
-Change summary: 
-NEW MONOLINGUAL VERSION OF PROFILE based on v1.0.3 of CDC_DDI122_PROFILE
-See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
-Last modified 2021-01-15 Darren Bell
+Version: v1.0.4
+Change summary from v1.0.3: See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
+Last modified 2021-03-01 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2021-01-15">
+    versionDate="2021-03-01">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI122_PROFILE_MONOLINGUAL</r:ID>
-    <r:Version>1.0.3</r:Version>
+    <r:Version>1.0.4</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI 1.2.2 PROFILE - MONOLINGUAL</r:String>
@@ -106,11 +104,10 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The content of this element serves two purposes. First it is used for
-                the study/archival number given by the SP and secondly it is used for the PID. These
-                two cases have different specifications. IDNo in the sense of study number is
-                mandatory. An additional IDNo element may be provided for the purposes of a PID but
-                it is not mandatory.</r:Content>
+            <r:Content>Usage: The content of this element serves two purposes. 
+                It is used both for the PID and for the study/archival number given by the SP. 
+                These two cases have different specifications. IDNo in the sense of study
+                number is optional. PID is mandatory</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="true">
@@ -254,19 +251,17 @@ ________________________________________________________________________________
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@vocab" defaultValue="ELSST"
         fixedValue="false" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
+            <r:Content>Required: Recommended if 'keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Source of keywords - ELSST is recommended but other vocabularies can
                 be referenced.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@vocabURI" isRequired="false">
@@ -422,8 +417,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: ISO 3166-1 2-letter code must be used if this attribute is
-                present</r:Content>
+            <r:Content>Usage: Use this attribute only if the country in the 'nation' element has an ISO 3166-1 2-letter code.</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
