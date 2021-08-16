@@ -275,8 +275,7 @@ ________________________________________________________________________________
     <!--STUDY PID-->
     <!--****************************************************************************************-->
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent
-        "
+        xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent"
         isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
@@ -514,8 +513,8 @@ ________________________________________________________________________________
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Use this attribute only if the country has an
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>Usage: Use this element only if the country has an
                 ISO 3166-1 2-letter code.</r:Content>
         </r:Description>
         <pr:Instructions>

@@ -1,0 +1,2289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--____________________________________________________________________________________
+© Copyright 2021, CESSDA ERIC
+Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
+Author: Darren Bell - UK Data Archive
+Created: 2021-06-02
+Version: v0.0.1
+Last modified 2021-08-14 Darren Bell
+____________________________________________________________________________________
+-->
+<pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
+    versionDate="2021-08-14">
+    <r:Agency>CESSDA</r:Agency>
+    <r:ID>EQB_DDI25_PROFILE</r:ID>
+    <r:Version>0.1.0</r:Version>
+    <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
+    <pr:DDIProfileName>
+        <r:String>EUROPEAN QUESTION BANK(EQB) DDI2.5 PROFILE</r:String>
+    </pr:DDIProfileName>
+    <pr:XPathVersion>1.0</pr:XPathVersion>
+    <pr:DDINamespace>2.5</pr:DDINamespace>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix/>
+        <pr:XMLNamespace>ddi:codebook:2_5</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>xsi</pr:XMLPrefix>
+        <pr:XMLNamespace>http://www.w3.org/2001/XMLSchema-instance</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <!--****************************************************************************************-->
+    <!--ROOT ELEMENT-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Title of the EQB XML document - note that the Study Title goes in
+                /codeBook/stdyDscr/citation/titlStmt/titl</r:Content>
+            <r:Content>EQB_ID_Element: none</r:Content>
+            <r:Content>EQB_UI_Label: none.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'titl' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
+            <r:Content>EQB_ID_Element: none</r:Content>
+            <r:Content>EQB_UI_Label: none.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <pr:Used xpath="/codeBook/docDscr/citation/prodStmt/copyright" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 11.1 documentationCopyright</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/prodStmt/copyright[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 11.1 documentationCopyright</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/distStmt/distrbtr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 9.2 institutionName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/holdings" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element:
+                URI='https://datacatalogue.cessda.eu/detail?q=%22GESIS__oai:dbk.gesis.org:DBK/ZA2324%22'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/docDscr/citation/holdings[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element:
+                URI='https://datacatalogue.cessda.eu/detail?q=%22GESIS__oai:dbk.gesis.org:DBK/ZA2324%22'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.6 studyTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.6 studyTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.6 studyTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.6 studyTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.3 studyNumber</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.3 studyNumber</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.2 studyPID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo[4]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.2 studyPID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 8.2 personName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 8.2 personName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 8.2 personName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty[4]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 8.2 personName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty[5]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: affiliation='9.2 institutionName' xml:lang='en'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty[6]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: affiliation='9.2 institutionName' xml:lang='de'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/copyright" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.21.3 metadataAccessStudy</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/copyright[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.21.3 metadataAccessStudy</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.11 publisherName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.11 publisherName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: date='1980' xml:lang='en'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: date='1980' xml:lang='de'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serName" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.3 studyGroupTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serName[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.3 studyGroupTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serInfo/ExtLink" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.2 studyGroupID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serInfo/ExtLink[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.2 studyGroupID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt[2]/serName" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.3 studyGroupTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt[2]/serName[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.3 studyGroupTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt[2]/serInfo/ExtLink" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.2 studyGroupID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt[2]/serInfo/ExtLink[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 7.2 studyGroupID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/verStmt/version" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.4 studyVersionNumber</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/verStmt/version[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.4 studyVersionNumber</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/holdings" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: URI='https://dbk.gesis.org/dbksearch/sdesc2.asp?no=1053db=e'
+                xml:lang='en'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/holdings[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: URI='https://dbk.gesis.org/dbksearch/sdesc2.asp?no=1053db=d'
+                xml:lang='de'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.20.1 topicControlledDescriptive</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Conflict, security and peace</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Konflikte, Sicherheit und Frieden</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.7 studyDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.7 studyDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: date='1980-01' event='start'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: date='1980-11' event='end'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Germany</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Deutschland</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: United States</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation[4]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Vereinigte Staaten</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Household</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Household</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/dataKind" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Still image</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/dataKind/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: StillImage</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.15.2 timeMethodDescriptive</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.15.1 timeMethodControlled</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Longitudinal: Trend/Repeated cross-section</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth[2]/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Longitudinal.TrendRepeatedCrossSection</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Längsschnitt: Trend/Wiederholter Querschnitt</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth[3]/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Longitudinal.TrendRepeatedCrossSection</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.17.2 samplingProcedureDescriptive</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.17.1 samplingProcedureControlled</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Probability: Stratified</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc[2]/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Probability.Stratified</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Wahrscheinlichkeitsauswahl: Geschichtete
+                Zufallsauswahl</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc[3]/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Probability.Stratified</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.18.2 modeOfCollectionDescriptive</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.18.1 modeOfCollectionControlled</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Face-to-face interview: Paper-and-pencil (PAPI)</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode[2]/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Interview.FaceToFace.PAPI</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Persönliches Interview : Papier-und-Bleistift
+                (PAPI)</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode[3]/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: Interview.FaceToFace.PAPI</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: xml:lang='en'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru/list/itm/label" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: instrumentName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru/list/itm/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 5.2 instrumentName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru/list/itm[2]/label"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: instrumentNameTrans</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru/list/itm[2]/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 5.2.2 instrumentNameTrans</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru/list/itm[3]/label"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: instrumentLanguage</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru/list/itm[3]/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 5.3 instrumentLanguage</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: xml:lang='fr'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]/list/itm/label"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: instrumentName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]/list/itm/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 5.2 instrumentName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]/list/itm[2]/label"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: instrumentNameTrans</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]/list/itm[2]/p"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 5.2.2 instrumentNameTrans</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]/list/itm[3]/label"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: instrumentLanguage</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/resInstru[2]/list/itm[3]/p"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 5.3 instrumentLanguage</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/specPerm" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 11.3 metadataAccessConditionAll</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/specPerm[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 11.3 metadataAccessConditionAll</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.21.1 dataAccess</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.21.1 dataAccess</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/conditions" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.21.2 dataAccessCondition</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/conditions[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 6.21.2 dataAccessCondition</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relMat" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: label='Link to corresponding /var/@name '
+                type='ShowCard'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relMat/citation/titlStmt/titl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.11.1 showcardFileName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relMat/citation/titlStmt/parTitl"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.11.1 showcardFileName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relMat/citation/prodStmt/copyright"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.3.1 metadataAccessQuestion</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relMat/citation/prodStmt/copyright[2]"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.3.1 metadataAccessQuestion</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relMat/citation/holdings" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: URI='1.1.12 showcardURL'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.3 datasetFileName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.3 datasetFileName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.3 datasetFileName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileCitation/titlStmt/IDNo" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.2 datasetPID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileCitation/titlStmt/IDNo[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.2 datasetPID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileCitation/titlStmt/IDNo[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.2 datasetPID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: name='4.5.2 variableName' nature='ordinal' qstn='QID1 QID2'
+                representationType='code'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/location" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: width='12'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.3 variableLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/labl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.3 variableLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: ID='QID1' elementVersion='1.1.2 questionItemVersion'
+                seqNo='QuestionNo'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/ExtLink" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.3 questionItemID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/ExtLink[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.3 questionItemID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/list/label" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.4 questionItemName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/list/label[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.4 questionItemName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/list[2]/itm" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.8 questionItemNumber</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/list[2]/itm[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.8 questionItemNumber</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/preQTxt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.6 questionItemStatement</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/preQTxt[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.6 questionItemStatement</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/qstnLit" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.5 questionItemText</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/qstnLit[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.5 questionItemText</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/ivuInstr" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.7 questionItemInterviewerinstruction</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/qstn/ivuInstr[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.7 questionItemInterviewerinstruction</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/valrng/range" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: max='2.2.5 numericDomainRangeHigh' min='2.2.4
+                numericDomainRangeLow'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: catgry='Ctgry1 Ctgry2' levelnm='2.1.1.2 codelistID'
+                levelno='2.1.1.2 codelistResponseCardinality'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp/labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.3 codelistName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp/labl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.4 codelistLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp/labl[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.5 codelistDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp/txt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.3 codelistName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp/txt/list/itm/label" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.4 codelistLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgryGrp/txt/list/itm/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.5 codelistDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: ID='Ctgry1' missing='N'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry/catValu" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.3 answerCode</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry/labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.4.1 answerCategory</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry/labl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.4.1 answerCategory</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: ID='Ctgry2' missing='Y'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry[2]/catValu" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.3 answerCode</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry[2]/labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.4.1 answerCategory</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/catgry[2]/labl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 2.1.1.4.1 answerCategory</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.2 conceptName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.2 conceptName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.2 conceptName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[3]/list/itm/label" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.3 conceptLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[3]/list/itm/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.4 conceptDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[4]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.2 conceptName</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[4]/list/itm/label" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.3 conceptLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/concept[4]/list/itm/p" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 3.4 conceptDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/notes" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4 variableDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var/notes[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4 variableDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: name='V2' nature='ordinal' qstn='QID1 QID2'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[2]/labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.3 variableLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[2]/labl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.3 variableLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[2]/notes" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4 variableDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[2]/notes[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4 variableDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[3]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: name='V3' nature='ordinal' qstn='QID1 QID2'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[3]/labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.3 variableLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[3]/labl[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.3 variableLabel</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[3]/notes" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4 variableDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[3]/notes[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4 variableDescription</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[4]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: name='V4'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[4]/qstn" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: ID='QID2'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[5]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: name='V5'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[5]/qstn" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: qstn='QID2'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[5]/txt" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.2.10.2 subQuestionText</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/dataDscr/var[5]/txt[2]" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 1.2.10.2 subQuestionText</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/otherMat" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: level='study' type='10.3 documentType'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/otherMat/citation/titlStmt/titl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 10.2 documentTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/otherMat/citation/titlStmt/parTitl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 10.2 documentTitle</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/otherMat/citation/titlStmt/IDNo" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: 10.1 documentID</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/otherMat/citation/holdings" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: xxxxxxxxxxxxxxxxxxxxx</r:Content>
+            <r:Content>EQB_ID_Element: URI='10.4 documentURL'</r:Content>
+            <r:Content>EQB_UI_Label: xxxxxxxxxxxxxxx.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>xxxxxxxxxxxxxxxxxxxxxxxxCONSTRAINT</r:Content>
+        </pr:Instructions>
+    </pr:Used>
+
+
+
+
+
+</pr:DDIProfile>
