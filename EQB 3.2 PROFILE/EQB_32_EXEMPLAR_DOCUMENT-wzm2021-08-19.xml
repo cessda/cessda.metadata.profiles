@@ -51,8 +51,6 @@
 			</r:Title>
 		</r:Citation>
 	
-	
-
 		
 		
 		<r:StudyUnitReference>
@@ -208,7 +206,7 @@
 			<r:Agency>ExampleAgency</r:Agency>
 			<r:ID>ExampleID</r:ID>
 			<r:Version>1.0.0</r:Version>
-			<d:Instruction>
+			<d:Instruction><!-- WZM: reference to this InterviewerInstruction at QuestionItem and QuestionGrid added -->
 				<r:Agency>ExampleAgency</r:Agency>
 				<r:ID>ExampleID</r:ID>
 				<r:Version>1.0.0</r:Version>
@@ -230,13 +228,12 @@
 			<r:Agency>ExampleAgency</r:Agency>
 			<r:ID>ExampleID</r:ID>
 			<r:Version>1.0.0</r:Version>
-
 			<!--EQB_ID_1.1.6-->
 			<!--		TO QUERY
 			EQB_ID_1.2.6;
 			EQB_ID_1.2.6.1;
 			EQB_ID_1.2.6.2-->
-			<d:StatementItem>
+			<d:StatementItem><!-- WZM: reference (ControlConstructReference) to this StatementItem at Sequence added -->
 				<r:Agency>ExampleAgency</r:Agency>
 				<r:ID>ExampleID</r:ID>
 				<r:Version>1.0.0</r:Version>
@@ -247,6 +244,61 @@
 				</d:DisplayText>
 			</d:StatementItem>
 		</d:ControlConstructScheme>
+	
+	
+		
+		<!-- WZM: top level sequence, referenced from Instrument (and this is within StudyUnit, so this is the connection to the study;  
+			top level sequence references 1 sequence per question to have the actual questions of instrument in ordered sequence-->
+		<!-- I left the example IDs from ZA7599, so you can follow the structure -->
+		
+		<!-- This ControlConstructScheme holds only Sequences and is for Instrument, another Instrument might reference another one -->
+		<d:ControlConstructScheme>
+			<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_ControlConstructSchemeForTopLevelSequence</r:ID><r:Version>1.0.0</r:Version>
+			<d:Sequence>
+				<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_TopLevelSequence</r:ID><r:Version>1.0.0</r:Version>
+				<d:ControlConstructReference>
+					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Sequence_SubQ2</r:ID><r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>Sequence</r:TypeOfObject>
+				</d:ControlConstructReference>
+				<!-- more ControlConstructReferences to Sequences here, this defines the order of the questions -->
+			</d:Sequence>
+			
+			<!-- WZM issue #59 -->
+			<!-- EQB_ID_1.1 / 1.2 -->			
+			<!-- here come all the Sequences, 1 per question; each with reference to QuestionConstruct -->
+			<d:Sequence>
+				<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Sequence_SubQ2</r:ID><r:Version>1.0.0</r:Version>
+				<d:ControlConstructReference>
+					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Construct_SubQ2</r:ID><r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>QuestionConstruct</r:TypeOfObject>
+				</d:ControlConstructReference>
+				
+				<!-- WZM (EQB_ID_1.2.6 + 1.1.6) optional reference to StatementItem if needed to connect the statement with its question -->
+				<d:ControlConstructReference>
+					<r:Agency>de.gesis</r:Agency><r:ID>Example_Statement_ID</r:ID><r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>StatementItem</r:TypeOfObject>
+				</d:ControlConstructReference>
+				
+			</d:Sequence>
+			<!-- more Sequences here, 1 per question -->
+		</d:ControlConstructScheme>
+		
+		<!--EQB_ID_1.1 / 1.2 -->
+		<!-- This ControlConstructScheme holds only QuestionConstructs, 1 per question; each with reference to QuestionItem/QuestionGrid -->
+		<d:ControlConstructScheme>
+			<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_ConCon</r:ID><r:Version>1.0.0</r:Version>
+			
+			<d:QuestionConstruct>
+				<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Construct_SubQ2</r:ID><r:Version>1.0.0</r:Version>
+				<r:QuestionReference><!-- might point to QuestionItem (EQB_ID_1.1) or QuestionGrid (EQB_ID_1.2) --> 
+					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Q13_QueGri</r:ID><r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>QuestionGrid</r:TypeOfObject>
+				</r:QuestionReference>
+			</d:QuestionConstruct>
+			<!-- more QuestionConstructs here -->
+		</d:ControlConstructScheme>
+		
+		
 	
 		<d:QuestionScheme>
 			<!--EQB_ID_1-->
@@ -286,6 +338,11 @@
 					<d:LiteralText>
 						<d:Text xml:lang="en" isTranslated="false">QUESTION TEXT</d:Text>
 					</d:LiteralText>
+				
+					<d:LiteralText><!-- WZM example for another language -->
+						<d:Text xml:lang="de" isTranslated="false">QUESTION TEXT IN GERMAN</d:Text>
+					</d:LiteralText>
+
 				</d:QuestionText>
 
 				<!--***********************************************-->
@@ -382,6 +439,15 @@
 					<r:ExternalURLReference>showcardURL</r:ExternalURLReference>
 					<!--EQB_ID_1.1.12-->
 				</d:ExternalAid>
+				
+				<!-- WZM this is needed (optional) to connect the interviewerinstruction with question, even if not mentioned in the EQB spreadsheet -->
+				<d:InterviewerInstructionReference>
+					<r:Agency>ExampleAgency</r:Agency>
+					<r:ID>ExampleID</r:ID>
+					<r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>Instruction</r:TypeOfObject>
+				</d:InterviewerInstructionReference>
+				
 			</d:QuestionItem>
 
 			<!--EQB_ID_1.2-->
@@ -445,7 +511,6 @@
 						</r:Description>
 					</d:CodeDomain>
 				</d:GridDimension>
-				
 				
 				<!--QUESTION GRID RESPONSE DOMAIN SUBSTITUTION GROUP-->
 <!--				<d:DateTimeDomainReference>
@@ -532,7 +597,15 @@
 					<!--EQB_ID_1.2.11.2-->
 					<r:ExternalURLReference>showcardURL</r:ExternalURLReference>
 				</d:ExternalAid>
-
+				
+				<!-- WZM this is needed (optional) to connect the interviewerinstruction with question, even if not mentioned in the EQB spreadsheet -->
+				<d:InterviewerInstructionReference>
+					<r:Agency>ExampleAgency</r:Agency>
+					<r:ID>ExampleID</r:ID>
+					<r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>Instruction</r:TypeOfObject>
+				</d:InterviewerInstructionReference>	
+				
 			</d:QuestionGrid>
 
 		</d:QuestionScheme>
@@ -688,7 +761,30 @@
 					<!--EQB_ID_5.2.2-->
 					<r:String xml:lang="en" isTranslated="false">instrumentName</r:String>
 				</d:InstrumentName>
+				
+				<!--  WZM issue #56 
+					this is the top level sequence, from there the hierarchy allows to access all sub-sequences, 
+					controlconstructs, questionconstructs and questionitems/grids  -->
+				<d:ControlConstructReference objectLanguage="en"><!-- EQB_ID 5.3 in @objectLanguage -->
+					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_TopLevelSequence</r:ID><r:Version>1.0.0</r:Version>
+					<r:TypeOfObject>Sequence</r:TypeOfObject>
+				</d:ControlConstructReference>
+				
+				
+				<!-- EQB_ID 5.4 referenceInstrumentToQuestion and 5.5 referenceInstrumentToQuestionType 
+					definitions in in the EQB Excel spreadsheet are misleading:
+				to get from Instrument to Question, you have to follow:
+				-reference to TopLevelSequence
+				-has reference to Sequence (for each question there is 1)
+				-has reference to QuestionConstruct
+				-has reference to QuestionGrid or QuestionItem
+				
+				see example above
+				-->
+				
+				
 			</d:Instrument>
+			<!-- more Instruments might exits, they can reference the same TopLevelSequence with other language or even a different TopLevelSequence -->
 
 		</d:InstrumentScheme>
 

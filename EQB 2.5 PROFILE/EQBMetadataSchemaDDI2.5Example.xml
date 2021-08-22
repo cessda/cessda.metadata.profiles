@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codeBook 
+  xmlns="ddi:codebook:2_5" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd" 
+  version="2.5"
+  xml:lang="de"  ><!-- documentation language -->
+  
+  
+  <!-- 
+  
+  Example DDI-Codebook 2.5 file
+  showing elements from the EQB Metadata Schema 1.0 mapping
+  Author: Wolfgang Zenk-Möltgen, GESIS, 2021-05-25
+  
+  
+*************************************************
+Readme for the Example DDI-Codebook 2.5 file
+*************************************************
+The example file is showing elements from the EQB Metadata Schema 1.0 mapping.
+
+Author: Wolfgang Zenk-Möltgen, GESIS, 2021-05-25
+
+The file shows all EQB Metadata Schema elements within the proposed mapping structure. 
+For testing occurence, several repeated elements of the same type are shown.
+
+*************************************************
+For some proposals, alternative solutions are provided
+*************************************************
+- Principle Investigator Person and Institution:
+(Alternative A) The CDC uses AuthEnty content for person, and @affiliation for Institution. This can be repeated for several languages.
+(Alternative B) If we need to use EQB approach with <firstname> <middlename> <lastname>, we need to specify the rule for AuthEnty: Invert first and last name and use commas.
+We also need to allow empty AuthEnty (only using @affiliation for Institution). 
+
+- Response Categories List Name, Label, and Description:
+(Alternative A) Use catgryGrp/labl@level attribute to specify if it holds codeListName, codelistLabel, or codelistDescription
+(Alternative B) Use catgryGrp/txt/ with codeListName and catgryGrp/txt/list/itm/label for codelistLabel and catgryGrp/txt/list/itm/p for codelistDescription (mixed content)
+
+*************************************************
+EQB DDI2.5 Mapping Problems
+*************************************************
+Summary: The EQB Metadata Schema contains 228 XPathes to be mapped. 
+All elements could be mapped, except the following:
+*************************************************
+- A lot of elements should have the "is Translated" propoerty. This could only be included in few elements,
+but not in the following ones:
+This is indicated by [NOT SUPOORTED]
+1.1.6.2 	questionItemStatementTrans
+1.1.7.2		questionItemInterviewerinstructionTrans
+1.1.8.3		questionItemNumberTrans
+1.1.11.1.2	showcardFileNameTrans (@type would be possible in relMat)
+1.2.10.1.2	subQuestionNumberTrans
+1.2.10.2.2	subQuestionTextTrans
+4.5.2.2	variableNameTrans
+4.5.3.2	variableLabelTrans
+4.5.4.2	variableDescriptionTrans
+5.2.2	instrumentNameTrans (resInstru@type is possible)
+6.11.2	publisherNameTrans
+7.3.2	studyGroupTitleTrans
+
+- A lot of controlled vocabulary (CV) items should have the "Agency" property. This could not be included in the following ones:
+This is indicated by [NOT SUPOORTED]
+6.15.4	timeMethodAgency
+6.16.2	Study Area Vocabulary Agency
+6.17.4	samplingProcedureAgency
+6.18.4	modeOfCollectionAgency
+6.20.3	topicAgency
+
+- Several elements in the EQB Metadata Schema are specifically included to support DDI-Lifecycle, and these were not needed. 
+This is indicated by [not needed] or [DDI3 specific]
+
+*************************************************
+Further limitations of the mapping:
+*************************************************
+4.5.2	variableName is not repeatable, and not multilingual: /codeBook/dataDscr/var/@name
+4.5.2.1	variableNameLang
+
+2.1.1.2	codelistID is not repeatable: /codeBook/dataDscr/var/catgryGrp/@levelnm
+
+If used for Principle Investigator:
+9.2	institutionName is not repeatable, and not multilingual: /codeBook/stdyDscr/citation/rspStmt/AuthEnty/@affiliation
+9.2.1	institutionNameLang
+9.3	institutionAbbreviation is not supported
+
+*************************************************
+  
+  -->
+  
+<docDscr>
+ <citation>
+  <titlStmt>
+    <!-- document title lanuage in xml:lang -->
+    <titl xml:lang="en">document title</titl>
+  </titlStmt>
+   <prodStmt>
+    <copyright xml:lang="en">11.1	documentationCopyright</copyright>
+    <copyright xml:lang="de">11.1	documentationCopyright</copyright>
+  </prodStmt>
+    
+    <!-- 11.2	documentationPublisherReference uses:
+      9.2	institutionName
+      9.2.1	institutionNameLang
+      9.3	institutionAbbreviation
+    -->
+    <distStmt>
+      <distrbtr xml:lang="en" abbr="9.3	institutionAbbreviation" >9.2	institutionName</distrbtr>
+      <distrbtr xml:lang="de" abbr="9.3	institutionAbbreviation">9.2	institutionName</distrbtr>
+    </distStmt>
+  <!--  6.9	CDCURL -->
+  <holdings URI="https://datacatalogue.cessda.eu/detail?q=%22GESIS__oai:dbk.gesis.org:DBK/ZA2324%22"/>
+  <holdings URI="https://datacatalogue.cessda.eu/detail?q=%22GESIS__oai:dbk.gesis.org:DBK/ZA2324%22"/>
+ </citation>
+</docDscr>
+ 
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <!-- 6.6	studyTitle in titl: only once
+   other translated titles (6.6.2	studyTitleTrans = Yes) in parTitl 
+   6.6.1	studyTitleLang in xml:lang -->
+        <titl xml:lang="en">6.6	studyTitle</titl>
+        <parTitl xml:lang="de">6.6	studyTitle</parTitl>
+        <parTitl xml:lang="fr">6.6	studyTitle</parTitl>
+        <parTitl xml:lang="es">6.6	studyTitle</parTitl>
+   <!-- if 6.3.1	studyNumberType = DOI, ARK, URN, Handle: studyNumber is PID -->
+   <IDNo xml:lang="en" agency="6.3.1	studyNumberType">6.3	studyNumber</IDNo>
+   <IDNo xml:lang="de" agency="6.3.1	studyNumberType">6.3	studyNumber</IDNo>
+   <IDNo xml:lang="en" agency="6.3.1	studyNumberType">6.2	studyPID</IDNo>
+   <IDNo xml:lang="de" agency="6.3.1	studyNumberType">6.2	studyPID</IDNo>
+  </titlStmt>
+
+  <rspStmt>
+    <!-- if we can stick to CDC Metadata Schema: -->
+    <!-- language of the PI Person Name in xml:lang -->
+    <AuthEnty xml:lang="en" affiliation="9.2	institutionName">8.2	personName</AuthEnty>
+    <AuthEnty xml:lang="de" affiliation="9.2	institutionName">8.2	personName</AuthEnty>
+    
+    <!-- if we need to adopt EQB Metadata Schema: -->
+    <!-- 6.12	referenceStudyPerson is Principle Investigator Person -->
+    <!-- Need person name in the form "lastname, firstname middlename": 
+      AU  - Carey, John M.
+      AU  - Niemi, Richard G.
+      AU  - Powell, Lynda W.
+      AU  - Moncrief, Gary
+    from the DDI field level documentation: "Invert first and last name and use commas."
+    -->
+    <!-- language of the PI Person Name in xml:lang -->
+    <AuthEnty xml:lang="en" affiliation="9.2	institutionName">8.2	personName</AuthEnty>
+    <AuthEnty xml:lang="de" affiliation="9.2	institutionName">8.2	personName</AuthEnty>
+  
+    <!-- 6.13	referenceStudyToInstitution is Principle Investigator Institution -->
+    <AuthEnty xml:lang="en" affiliation="9.2	institutionName"/>
+    <AuthEnty xml:lang="de" affiliation="9.2	institutionName"/>
+  </rspStmt>
+  
+  <prodStmt>
+    <copyright xml:lang="en">6.21.3	metadataAccessStudy</copyright>
+    <copyright xml:lang="de">6.21.3	metadataAccessStudy</copyright>
+        
+  </prodStmt>
+  <distStmt>
+    <!-- 6.11.1	publisherNameLang in xml:lang    -->
+    <distrbtr xml:lang="en">6.11	publisherName</distrbtr>
+    <distrbtr xml:lang="de">6.11	publisherName</distrbtr>
+  
+    <!-- 6.10	publicationDate, need for xml:lang ? need for freetext ?-->
+    <distDate date="1980" xml:lang="en">1980</distDate>
+    <distDate date="1980" xml:lang="de" />
+  </distStmt>
+  
+  <!-- 7	studyGroupInformation -->
+  <serStmt>    
+    <serName xml:lang="en">7.3	studyGroupTitle</serName>
+    <serName xml:lang="de">7.3	studyGroupTitle</serName>
+       
+    <serInfo>
+      <!-- workaround for studyGroupID (PID) and studyGroupIDType (PID Agency) -->
+      <ExtLink xml:lang="en" URI="7.4	studyGroupUrl" title="7.2.1	studyGroupIDType">7.2	studyGroupID</ExtLink>
+      <ExtLink xml:lang="de" URI="7.4	studyGroupUrl" title="7.2.1	studyGroupIDType">7.2	studyGroupID</ExtLink>
+    </serInfo>
+  </serStmt>
+  <serStmt>
+    <serName xml:lang="en">7.3	studyGroupTitle</serName>
+    <serName xml:lang="de">7.3	studyGroupTitle</serName>
+    <serInfo>
+      <!-- workaround for studyGroupID (PID) and studyGroupIDType (PID Agency) -->
+      <ExtLink xml:lang="en" URI="7.4	studyGroupUrl" title="7.2.1	studyGroupIDType">7.2	studyGroupID</ExtLink>
+      <ExtLink xml:lang="de" URI="7.4	studyGroupUrl" title="7.2.1	studyGroupIDType">7.2	studyGroupID</ExtLink>
+    </serInfo>
+  </serStmt>
+      <verStmt>
+        <!-- 6.5	studyVersiondate in @date, need xml:lang?? -->
+        <version date="2018-03-27">6.4	studyVersionNumber</version>
+        <version date="2018-03-27">6.4	studyVersionNumber</version>
+      </verStmt>
+  
+      <!-- 6.8	SPURL, add language like in CDC?-->
+      <holdings URI="https://dbk.gesis.org/dbksearch/sdesc2.asp?no=1053&amp;db=e" xml:lang="en" />
+      <holdings URI="https://dbk.gesis.org/dbksearch/sdesc2.asp?no=1053&amp;db=d" xml:lang="de" />
+    </citation>
+  
+ <stdyInfo>
+  <subject>
+    <!-- 6.20.1.1	topicLang in xml:lang -->
+    <topcClas 
+    xml:lang="en" 
+    vocab="6.20.2	topicName" 
+    vocabURI="6.20.4	topicURL"
+    >6.20.1	topicControlledDescriptive</topcClas>
+    <topcClas xml:lang="en" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/TopicClassification/4.0?languageVersion=en-4.0">Conflict, security and peace</topcClas>
+    <topcClas xml:lang="de" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/TopicClassification/4.0?languageVersion=de-4.0.1">Konflikte, Sicherheit und Frieden</topcClas>
+  </subject>
+
+  <!--  6.7.1	studyDescriptionLang in xml:lang -->
+  <abstract xml:lang="en">6.7	studyDescription</abstract>
+  <abstract xml:lang="de">6.7	studyDescription</abstract>
+
+   <sumDscr>
+     <!--  6.19.1	dataCollectionStartdate 
+  6.19.1.1	date
+  6.19.1.2	monthyear
+  6.19.1.3	year
+  -->
+     <collDate date="1980-01" event="start" />
+     <!-- 6.19.2	dataCollectionEnddate contains one of:
+  6.19.2.1	date
+  6.19.2.2	monthyear
+  6.19.2.3	year
+  -->
+     <collDate date="1980-11" event="end" />
+     
+     <!-- 6.16	country (ISO code in @abbr) -->
+     <!--  country name in local language in nation-elementcontent -->
+     <!--  language of the country name in xml:lang -->
+     <nation xml:lang="en" abbr="de">Germany</nation>
+     <nation xml:lang="de" abbr="de">Deutschland</nation>
+     <nation xml:lang="en" abbr="us">United States</nation>
+     <nation xml:lang="de" abbr="us">Vereinigte Staaten</nation>
+  
+     <!--  anlyUnit not present in EQB but in CDC  -->
+     <anlyUnit xml:lang="en">Household<concept vocab="Analysis Unit" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/2.1?languageVersion=en-2.1">Household</concept></anlyUnit>
+     <!--  dataKind not present in EQB but in CDC  -->
+     <dataKind xml:lang="en">Still image<concept vocab="General Data Format" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/GeneralDataFormat/2.0?languageVersion=en-2.0">StillImage</concept></dataKind>
+   </sumDscr>
+ </stdyInfo>  
+   
+
+ <method>
+   <dataColl>
+	  <!-- 6.15.2.1	timeMethodLang in xml:lang -->	  
+	  <timeMeth xml:lang="en">6.15.2	timeMethodDescriptive<concept 
+	    vocab="6.15.3	timeMethodName" 
+	    vocabURI="6.15.5	timeMethodURL"
+	    >6.15.1	timeMethodControlled</concept></timeMeth>
+	  
+	  <timeMeth xml:lang="en">Longitudinal: Trend/Repeated cross-section<concept vocab="Time Method" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2?languageVersion=en-1.2">Longitudinal.TrendRepeatedCrossSection</concept></timeMeth>
+    <timeMeth xml:lang="de">Längsschnitt: Trend/Wiederholter Querschnitt<concept vocab="Time Method" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2?languageVersion=de-1.2.1">Longitudinal.TrendRepeatedCrossSection</concept></timeMeth>
+
+	  <!-- 6.17.2.1	samplingProcedureLang in xml:lang -->
+	  <sampProc xml:lang="en">6.17.2	samplingProcedureDescriptive<concept 
+	    vocab="6.17.3	samplingProcedureName" 
+	    vocabURI="6.17.5	samplingProcedureURL"
+	    >6.17.1	samplingProcedureControlled</concept></sampProc>
+	  
+	  <sampProc xml:lang="en">Probability: Stratified<concept vocab="Sampling Procedure" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1?languageVersion=en-1.1">Probability.Stratified</concept></sampProc>
+    <sampProc xml:lang="de">Wahrscheinlichkeitsauswahl: Geschichtete Zufallsauswahl<concept vocab="Sampling Procedure" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1?languageVersion=de-1.1.1">Probability.Stratified</concept></sampProc>
+
+	  <!-- 6.18.2.1	modeOfCollectionLang in xml:lang -->
+	  <collMode xml:lang="en">6.18.2	modeOfCollectionDescriptive<concept
+	    vocab="6.18.3	modeOfCollectionName" 
+      vocabURI="6.18.5	modeOfCollectionURL"
+      >6.18.1	modeOfCollectionControlled</concept></collMode>
+
+	  <collMode xml:lang="en">Face-to-face interview: Paper-and-pencil (PAPI)<concept vocab="Mode Of Collection" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/ModeOfCollection/4.0?languageVersion=en-4.0">Interview.FaceToFace.PAPI</concept></collMode>
+    <collMode xml:lang="de">Persönliches Interview : Papier-und-Bleistift (PAPI)<concept vocab="Mode Of Collection" vocabURI="https://vocabularies.cessda.eu/v2/vocabularies/ModeOfCollection/4.0?languageVersion=de-4.0.1">Interview.FaceToFace.PAPI</concept></collMode>
+	
+	  <!-- 5.2.1	instrumentNameLang in xml:lang -->
+     <resInstru  xml:lang="en">5.2	instrumentName</resInstru>
+	
+  </dataColl>
+ </method>
+    <dataAccs>
+      <useStmt>    
+        <!-- language of the metadataAccessConditionAll in xml:lang  -->
+        <specPerm xml:lang="en">11.3	metadataAccessConditionAll</specPerm>
+        <specPerm xml:lang="de">11.3	metadataAccessConditionAll</specPerm>
+        
+        <restrctn xml:lang="en">6.21.1	dataAccess</restrctn>
+        <restrctn xml:lang="de">6.21.1	dataAccess</restrctn>
+        
+        <conditions xml:lang="en">6.21.2	dataAccessCondition</conditions>
+        <conditions xml:lang="de">6.21.2	dataAccessCondition</conditions>
+      </useStmt>
+    </dataAccs>
+    
+  <othrStdyMat>
+    
+    <!-- 1.1.11.1	showcardFileName  is linked to the variable by using the 
+      /var/@name value for the relMat/@label value here -->
+    <relMat  label="Link to corresponding /var/@name " type="ShowCard">
+      <citation>        
+        <titlStmt>
+          <!-- 1.1.11.1	showcardFileName in titl: only once
+          other translated titles (1.1.11.1.2	showcardFileNameTrans = Yes) in parTitl 
+          1.1.11.1.1	showcardFileNameLang in xml:lang -->
+          <titl  xml:lang="en">1.1.11.1	showcardFileName</titl>
+          <parTitl  xml:lang="de">1.1.11.1	showcardFileName</parTitl>
+        </titlStmt>
+        <prodStmt>
+        <!--  1.3.1.1	metadataAccessQuestionLang in xml:lang -->
+          <copyright xml:lang="en">1.3.1	metadataAccessQuestion</copyright>
+          <copyright xml:lang="de">1.3.1	metadataAccessQuestion</copyright>
+        </prodStmt>
+        <holdings URI="1.1.12	showcardURL"/>
+      </citation>
+    </relMat>
+        
+  </othrStdyMat>
+    
+ </stdyDscr>
+  
+  
+  <fileDscr>
+    <fileTxt>
+      <!-- 4.3.1	datasetFileNameLang in xml:lang -->
+      <fileName xml:lang="en">4.3	datasetFileName</fileName>
+      <fileName xml:lang="de">4.3	datasetFileName</fileName>
+      <fileName xml:lang="fr">4.3	datasetFileName</fileName>
+
+     <fileCitation>
+      <titlStmt>
+       <titl></titl><!-- titl is DDI mandatory -->
+        <IDNo agency="4.2.1	datasetPIDType">4.2	datasetPID</IDNo>
+        <IDNo agency="4.2.1	datasetPIDType">4.2	datasetPID</IDNo>
+        <IDNo agency="4.2.1	datasetPIDType">4.2	datasetPID</IDNo>
+      </titlStmt>
+     </fileCitation>
+    </fileTxt>
+  </fileDscr>
+  
+  <dataDscr>
+      
+    <!-- 4.5.2	variableName in @name, not repeatable! -->
+    <!-- 4.5.5	variableType in @nature -->
+    <!-- 4.5.7	referenceVariableToQuestion in @qstn 
+    DDI2: var may have several inline qstn elements, but can also reference qstn by ID with @qstn attribute) 
+    1.1.9.1	referenceItemToResponseType in representationType    
+    -->  
+    <var  name="4.5.2	variableName" xml:lang="en"  
+      qstn="QID1 QID2" 
+      nature="ordinal"
+      representationType="code">
+      
+      <!-- 2.3.4	textDomainMinLength uses location/@width  -->
+      <location width="12"/>
+      
+      <!-- 4.5.3.1	variableLabelLang in xml:lang -->
+      <labl xml:lang="en">4.5.3	variableLabel</labl>
+      <labl xml:lang="fr">4.5.3	variableLabel</labl>
+       
+      <qstn  seqNo="QuestionNo" elementVersion="1.1.2	questionItemVersion"  ID="QID1">
+        
+        <!-- workaround for questionItemID (PID etc) and questionItemIDType (PID Agency) -->
+        <!-- ExtLink@URI is DDI mandatory, but may be empty -->
+        <ExtLink URI="" title="1.1.3.1	questionItemIDType">1.1.3	questionItemID</ExtLink>
+        <ExtLink URI="" title="1.1.3.1	questionItemIDType">1.1.3	questionItemID</ExtLink>
+        
+        <!-- 1.1.4.2	questionItemNameLang in xml:lang -->
+        <list>
+          <label xml:lang="en">1.1.4	questionItemName</label>
+          <label xml:lang="de">1.1.4	questionItemName</label>
+        </list>
+        
+        <!-- 1.1.8.2	questionItemNumberLang in xml:lang -->
+        <list>
+          <itm xml:lang="en">1.1.8	questionItemNumber</itm>
+          <itm xml:lang="de">1.1.8	questionItemNumber</itm>
+        </list>
+        <!-- 1.1.6.1	questionItemStatementLang in xml:lang -->
+        <preQTxt xml:lang="en">1.1.6	questionItemStatement</preQTxt>
+        <preQTxt xml:lang="de">1.1.6	questionItemStatement</preQTxt>
+        
+        <!-- 1.1.5.1	questionItemTextLang in xml:lang -->
+        <qstnLit xml:lang="en">1.1.5	questionItemText</qstnLit>
+        <qstnLit xml:lang="de">1.1.5	questionItemText</qstnLit>
+        
+        <!-- 1.1.7.1	questionItemInterviewerinstructionLang in xml:lang -->
+        <ivuInstr xml:lang="en">1.1.7	questionItemInterviewerinstruction</ivuInstr>
+        <ivuInstr xml:lang="de">1.1.7	questionItemInterviewerinstruction</ivuInstr>
+      
+      </qstn>
+      
+      <!-- 1.1.9.1	referenceItemToResponseType
+           selects the ResponseDomain in /var/@representationType
+           - codeDomain = code
+           - numericDomain = numeric
+           - textDomain = text -->
+      
+      <!-- 2.2	numericDomain uses valrng -->
+      <valrng> 
+        <range min="2.2.4	numericDomainRangeLow" max="2.2.5	numericDomainRangeHigh"/> 
+      </valrng>
+   
+      <!-- 2.1	codeDomain uses Codelist as cargryGrp -->
+      <!-- workaround: use levelnm attribute for codelistID, is not repeatable! -->
+      <!-- workaround: use levelno attribute for ResponseCardinality -->
+      <catgryGrp catgry="Ctgry1 Ctgry2" 
+          levelnm="2.1.1.2	codelistID"
+          levelno="2.1.1.2	codelistResponseCardinality">
+        <!-- 2.1.1.3.1	codelistNameLang in xml:lang -->
+        <!-- no support for Label and Description -->
+        <labl level="name" xml:lang="en">2.1.1.3	codelistName</labl>
+        <labl level="label" xml:lang="en">2.1.1.4	codelistLabel</labl>
+        <labl level="description" xml:lang="en">2.1.1.5	codelistDescription</labl>
+        
+<!--        <!-\- possible alternate approach: use list workaround 
+              may also be used for numericDomain or textDomain -\->
+        <txt xml:lang="en">
+          <list>
+            <itm>
+              <!-\- 2.1.1.4.1	codelistLabelLang in xml:lang -\->
+              <label xml:lang="en">2.1.1.4	codelistLabel</label>
+              <!-\- 2.1.1.5.1	codelistDescriptionLang in xml:lang -\->
+              <p xml:lang="en">2.1.1.5	codelistDescription
+              </p>
+            </itm>
+          </list>
+          2.1.1.3	codelistName
+        </txt>-->
+      </catgryGrp>
+   
+      <!-- 2.1.1.4.2	answerMissingValue in @missing -->
+      <catgry ID="Ctgry1" missing="N">
+        <catValu>2.1.1.3	answerCode</catValu>
+        
+        <!-- 2.1.1.4.1.1	answerCategoryLang in xml:lang -->
+        <labl xml:lang="en">2.1.1.4.1	answerCategory</labl>
+        <labl xml:lang="fr">2.1.1.4.1	answerCategory</labl>
+      </catgry>
+      <catgry ID="Ctgry2" missing="Y">
+        <catValu>2.1.1.3	answerCode</catValu>
+        <!-- 2.1.1.4.1.1	answerCategoryLang in xml:lang -->
+        <labl xml:lang="en">2.1.1.4.1	answerCategory</labl>
+        <labl xml:lang="fr">2.1.1.4.1	answerCategory</labl>
+      </catgry>
+      
+ 
+      <!-- 3.2.1	conceptNameLang in xml:lang -->
+      <concept xml:lang="en">3.2	conceptName</concept>
+      <concept xml:lang="fr">3.2	conceptName</concept>
+      <!-- possible alternate approach: use list workaround -->
+      <!-- 3.2.1	conceptNameLang in xml:lang -->      
+      <concept xml:lang="en">3.2 ConceptName
+        <list>
+          <itm>
+            <!-- 3.3.1	conceptLabelLang in xml:lang -->
+            <label xml:lang="en">3.3	conceptLabel</label>
+            <!-- 3.4.1	conceptDescriptionLang in xml:lang -->
+            <p xml:lang="en">3.4	conceptDescription</p>
+          </itm>
+        </list>
+      </concept>
+      <concept xml:lang="fr">
+        <list>
+          <itm>
+            <!-- 3.3.1	conceptLabelLang in xml:lang -->
+            <label xml:lang="fr">3.3	conceptLabel</label>
+            <!-- 3.4.1	conceptDescriptionLang in xml:lang -->
+            <p xml:lang="fr">3.4	conceptDescription</p>
+          </itm>
+        </list>
+        3.2	conceptName
+      </concept>
+      
+      <!-- 4.5.4.1	variableDescriptionLang in xml:lang -->
+      <notes xml:lang="en" type="description">4.5.4	variableDescription</notes>
+      <notes xml:lang="fr" type="description">4.5.4	variableDescription</notes>
+      
+    </var>
+
+    <!-- more example vars -->
+    <var name="V2" qstn="QID1 QID2" nature="ordinal">
+      <!-- 4.5.3.1	variableLabelLang in xml:lang -->
+      <labl xml:lang="en">4.5.3	variableLabel</labl>
+      <labl xml:lang="fr">4.5.3	variableLabel</labl>
+      <!-- 4.5.4.1	variableDescriptionLang in xml:lang -->
+      <notes xml:lang="en" type="description">4.5.4	variableDescription</notes>
+      <notes xml:lang="fr" type="description">4.5.4	variableDescription</notes>
+    </var>
+    <var name="V3" qstn="QID1 QID2" nature="ordinal">
+      <!-- 4.5.3.1	variableLabelLang in xml:lang -->
+      <labl xml:lang="en">4.5.3	variableLabel</labl>
+      <labl xml:lang="fr">4.5.3	variableLabel</labl>
+      <!-- 4.5.4.1	variableDescriptionLang in xml:lang -->
+      <notes xml:lang="en" type="description">4.5.4	variableDescription</notes>
+      <notes xml:lang="fr" type="description">4.5.4	variableDescription</notes>
+    </var>
+    
+    <var name="V4"> <!-- this example variable defines qstn with ID QID2 -->
+      <qstn ID="QID2">
+      </qstn>
+    </var>
+    
+    <var name="V5"><!-- this example variable re-uses qstn with ID QID2 -->
+      <qstn qstn="QID2">
+      </qstn>
+      <!-- txt is used for sub-questions -->
+      <!-- 1.2.10.2.1	subQuestionTextLang in xml:lang -->
+      <txt level="1.2.10.1	subQuestionNumber" xml:lang="en">1.2.10.2	subQuestionText</txt>
+      <txt level="1.2.10.1	subQuestionNumber" xml:lang="de">1.2.10.2	subQuestionText</txt>
+
+    </var>
+        
+  </dataDscr>
+    
+  <otherMat type="10.3	documentType" level="study" > <!-- @level is DDI mandatory -->
+    <citation>
+      <titlStmt>         
+        <titl xml:lang="en">10.2	documentTitle</titl>     <!-- 10.2.1	documentTitleLang  -->
+        <!-- use parTitl if need for more than 1 language -->
+        <parTitl xml:lang="de">10.2	documentTitle</parTitl>  
+        <IDNo agency="10.1.1	documentIDType">10.1	documentID</IDNo>
+      </titlStmt>
+      <holdings URI="10.4	documentURL"></holdings>
+    </citation>
+  </otherMat>
+    
+</codeBook>

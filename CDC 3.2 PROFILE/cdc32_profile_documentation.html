@@ -1,0 +1,567 @@
+<html xmlns:pr="ddi:ddiprofile:3_2" xmlns:r="ddi:reusable:3_2">
+   <body>
+      <h2 style="font-family:Arial">DDI CDC 3.2 PROFILE Documentation v0.1.0</h2>
+      <table border="1">
+         <tr>
+            <td style="font-family:Arial;background-color:white; color:black"><b>DDI_XPath</b></td>
+            <td style="font-family:Arial;background-color:white; color:black"><b>Required</b></td>
+            <td style="font-family:Arial;background-color:white; color:black"><b>CDC Label</b></td>
+            <td style="font-family:Arial;background-color:white; color:black"><b>Type</b></td>
+            <td style="font-family:Arial;background-color:white; color:black"><b>Repeatable</b></td>
+            <td style="font-family:Arial;background-color:white; color:black"><b>Usage note</b></td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">ISO 639-1 codes are strongly encouraged to be used</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/@xsi:schemaLocation</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">System-required information - always "ddi:instance:3_2
+               http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd"
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/r:Citation/r:Title/r:String</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">No</td>
+            <td style="font-size:80%;font-family:Arial">Title of the CDC XML document - note that the Study Title goes in
+               /ddi:DDIInstance/s:StudyUnit/r:Citation/r:Title/r:String
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/r:Citation/r:Title/r:String/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if '..r:Title/r:String' element is present</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">ISO 639-1 codes are strongly encouraged to be used</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/r:ResourcePackage/pi:PhysicalInstance/r:Citation/r:Language</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Language of data file(s)</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">ISO 639-1 codes are strongly encouraged to be used if available for the language.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:UserID</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">This element serves two use cases. 
+               (1) Unique archival number. 
+               If no such number available, a PID may be used alternatively (and  in such a case,
+               
+               the PID must be captured in this element *as well as* in  
+               "/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent").
+               
+               The @typeOfUserID attribute must be "StudyNumber". 
+               (2) A URL or URN (a reference to a web resource that specifies its location) 
+               linking to the study description on the SP website. CDC provides a link from 
+               the study information there to the study description on the SP website, 
+               to allow users to access the data. [This element not visible in the UI, it is only
+               needed for the link]. 
+               The @typeOfUserID attribute must be "URLServiceProvider". 
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:UserID/@typeOfUserID</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Must be specifed when the "ddi:DDIInstance/s:StudyUnit/r:UserID"
+               element is used for the unique archival number. 
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:UserID/@typeOfUserID</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Must be specifed when the "ddi:DDIInstance/s:StudyUnit/r:UserID"
+               element is used for the URL of the study description at the SP website.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Title/r:String</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Study title</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Title of the Study (as opposed to the title of the XML document). </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Title/r:String/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the study title. ISO 639-1 codes are strongly encouraged
+               to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorName/r:String</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Creator</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Principal investigator Person OR Institution</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorName/r:String/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the Organisation name, which may be the contents of the
+               "r:CreatorName/r:String" element or the @affiliation attribute of
+               "r:CreatorName/r:String" if it specifies a person. ISO 639-1 codes codes are
+               strongly encouraged to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorName/@affiliation</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">If "r:CreatorName/r:String" is a person, the organisational
+               affiliation of that person
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherName/r:String</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Publisher</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">The element should contain the name of the organisation who has
+               published the metadata for the harvested study description. This is usually the SP.
+               Note that there is no requirement to use an @abbr attribute, as in the DDI2.5 CDC
+               profile, as the @abbr attribute is not available in the DDI3.2 schema.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherName/r:String/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the organisation name. ISO codes are strongly encouraged
+               to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:PublicationDate/r:SimpleDate</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Year of publication</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">The year (use ISO format YYYY) when the study description was
+               published. 
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Used for the study PID. PID must be one of these four types: ARK, DOI, Handle or URN.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:ManagingAgency</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Agency responsible for the persistent identifier of the study. Value
+               should be one of
+               https://vocabularies.cessda.eu/vocabulary/CessdaPersistentIdentifierTypes i.e. ARK
+               or DOI or Handle or URN 
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Abstract/r:Content</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Abstract</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">The abstract for the study</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Abstract/r:Content/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the abstract. ISO 639-1 codes are strongly encouraged to
+               be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Subject</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Topic</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Subject classifcation term for the study in the local language. Use
+               descriptive terms from https://vocabularies.cessda.eu/vocabulary/TopicClassification
+               if possible but other vocabularies are permitted.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Subject/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if "/r:TopicalCoverage/r:Subject" element is
+               present
+            </td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the subject classification term. ISO 639-1 codes are
+               strongly encouraged to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Subject/@codeListName</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">name of the vocabulary. If possible, use "CESSDA Topic Classification"
+               (regardless of language) but other vocabularies are permitted.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Subject/@codeListURN</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">The Canonical URL of the CV version that is being used e.g.
+               https://vocabularies.cessda.eu/v2/vocabularies/TopicClassification/4.0?languageVersion=en-4.0
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Keyword</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Keyword</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Keyword for the study in the local language.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Keyword/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if 'keyword' element is present</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the keyword. ISO 639-1 codes are strongly encouraged to be
+               used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Keyword/@codeListName</td>
+            <td style="font-size:80%;font-family:Arial">Recommended if 'keyword' element is present</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Source of keywords - ELSST is recommended but other vocabularies can
+               be referenced.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Keyword/@codeListURN</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial"></td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:SpatialCoverage/r:Description/r:Content</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Country</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Countries relevant to the study area</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:SpatialCoverage/r:Description/r:Content/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if '..r:SpatialCoverage/r:Description/r:Content' element
+               is present
+            </td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the country label. ISO 639-1 codes are strongly encouraged
+               to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:SpatialCoverage/r:Country_2</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Use this element only if the country has an
+               ISO 3166-1 2-letter code.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Contains the Analysis Unit code value in English</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@CodeListName</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Use the string "DDI Analysis Unit" regardless of language.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@CodeListURN</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">The Canonical URL of the CV version that is being used e.g.
+               https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/1.0?languageVersion=en-1.0
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Analysis unit</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Descriptive term of Analysis Unit CV item in the local language.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/r:r:AnalysisUnitsCovered/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if 'AnalysisUnitsCovered' element is
+               present
+            </td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the Analysis Unit descriptive term. ISO 639-1
+               codes are strongly encouraged to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeofTimeMethod</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Code value of the CV "DDI Time Method". Describes the time dimension
+               of the data collection. 
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeofTimeMethod/@CodeListName</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Use the string "DDI Time Method" regardless of language.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeofTimeMethod/@CodeListURN</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">The Canonical URL of the CV version that is being used e.g.
+               https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2?languageVersion=en-1.2
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/r:Description/r:Content</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Time dimension</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Descriptive term of Time Method CV item in the local language.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/r:Description/r:Content/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if 'TypeofTimeMethod' element is present</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the Time Dimenstion descriptive term. ISO 639-1 codes are
+               strongly encouraged to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:SamplingProcedure/d:TypeOfSamplingProcedure</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Type of sampling procedure used for data collection. Controlled
+               vocabulary includes a typology of sampling methods. Code value of the CV "DDI
+               Sampling Procedure"
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:SamplingProcedure/d:TypeOfSamplingProcedure/@codeListName</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Use the string "DDI Sampling Procedure" regardless of
+               language.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:SamplingProcedure/d:TypeOfSamplingProcedure/@codeListURN</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">The Canonical URL of the CV version that is being used e.g.
+               https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1?languageVersion=en-1.1
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:SamplingProcedure/r:Description/r:Content</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Sampling procedure</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Descriptive term of the Sampling Procedure CV
+               item in the local language.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:SamplingProcedure/r:Description/r:Content/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if 'TypeOfSamplingProcedure' element is
+               present
+            </td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the Sampling Procedure Descriptive term. ISO 639-1 codes
+               are strongly encouraged to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:DataCollectionDate/r:StartDate</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory </td>
+            <td style="font-size:80%;font-family:Arial; color:red">Data collection period: start date</td>
+            <td style="font-size:80%;font-family:Arial">Element</td>
+            <td style="font-size:80%;font-family:Arial">No</td>
+            <td style="font-size:80%;font-family:Arial">Either a single point in time or start of a date range. Ideally
+               YYYY-MM-DDThh:mm:ssZ format, but can accept YYYY-MM-DD, YYYY-MM or YYYY.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:DataCollectionDate/r:EndDate</td>
+            <td style="font-size:80%;font-family:Arial">Recommended </td>
+            <td style="font-size:80%;font-family:Arial; color:red">Data collection period: End date</td>
+            <td style="font-size:80%;font-family:Arial">Element</td>
+            <td style="font-size:80%;font-family:Arial">No</td>
+            <td style="font-size:80%;font-family:Arial">End of a date range. If data collection period is a single event, then
+               this element is not required. Ideally YYYY-MM-DDThh:mm:ssZ format, but can accept
+               YYYY-MM-DD, YYYY-MM or YYYY.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeofModeofCollection</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Description of the method of data collection - the procedure,
+               technique, or mode of inquiry used to attain the data. Code value of the CV “DDI
+               Mode of Data Collection”" 
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeofModeofCollection@codeListName</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Use the string "DDI Mode of Collection" regardless of
+               language.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeofModeofCollection@codeListURN</td>
+            <td style="font-size:80%;font-family:Arial">Optional</td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">The Canonical URL of the CV version that is being used e.g.
+               https://vocabularies.cessda.eu/v2/vocabularies/ModeOfCollection/3.0?languageVersion=en-3.0
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/r:Description/r:Content</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Data collection method</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Descriptive term of the Mode of Data Collection CV item in the local langiage.</td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/r:Description/r:Content/@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if 'TypeofModeofCollection' element is
+               present
+            </td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the Mode of Data Collection descriptive term. ISO 639-1
+               codes are strongly encouraged to be used.
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/r:Description/r:Content</td>
+            <td style="font-size:80%;font-family:Arial">Recommended</td>
+            <td style="font-size:80%;font-family:Arial; color:red">Terms of data access</td>
+            <td style="font-size:80%;font-family:Arial">Content element</td>
+            <td style="font-size:80%;font-family:Arial">Yes</td>
+            <td style="font-size:80%;font-family:Arial">Refers to any information relating to the access and use conditions of
+               data that the SP wants to appear in the CDC
+            </td>
+         </tr>
+         <tr>
+            <td style="font-size:80%;font-family:Arial">/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/r:Description/r:Content@xml:lang</td>
+            <td style="font-size:80%;font-family:Arial">Mandatory if '..a:Access/r:Description/r:Content' element is
+               present
+            </td>
+            <td style="font-size:80%;font-family:Arial; color:red"></td>
+            <td style="font-size:80%;font-family:Arial">Attribute</td>
+            <td style="font-size:80%;font-family:Arial"></td>
+            <td style="font-size:80%;font-family:Arial">Language of the Access statement. ISO 639-1 codes are strongly
+               encouraged to be used.
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

@@ -6,13 +6,13 @@ Author: Darren Bell - UK Data Archive
 Created: 2021-05-22
 Version: v0.1.0
 Change summary: First release
-Last modified 2021-08-12 Darren Bell
+Last modified 2021-08-22 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2021-07-23">
+    versionDate="2021-08-22">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>EQB_DDI32_PROFILE</r:ID>
     <r:Version>0.1.0</r:Version>
@@ -30,7 +30,6 @@ ________________________________________________________________________________
         <pr:XMLPrefix>xsi</pr:XMLPrefix>
         <pr:XMLNamespace>http://www.w3.org/2001/XMLSchema-instance</pr:XMLNamespace>
     </pr:XMLPrefixMap>
-
     <!--****************************************************************************************-->
     <!--PUBLISHER AND COPYRIGHT-->
     <!--****************************************************************************************-->
@@ -81,28 +80,31 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--STUDY GROUP INFORMATION-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:UserID" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:UserID" isRequired="true">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
+            <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A value of a persistent identifier for the study group.</r:Content>
-            <r:Content>EQB_ID_Element: 7.2/studyGroupID</r:Content>
+            <r:Content>Usage: Two use cases:
+                (1) A value of a persistent identifier for the study group
+                (mandatory).
+                (2) An URL or URN (a reference to a web resource that specifies 
+                its location) linking to the study group (optional).
+            </r:Content>
+            <r:Content>EQB_ID_Element: 7.2/studyGroupID; 7.4/studyGroupUrl</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:UserID/@typeOfUserID" isRequired="false"
-        defaultValue="GroupID" fixedValue="true">
+    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:UserID/@typeOfUserID" isRequired="false">
         <r:Description>
             <r:Content>Required: Required: Mandatory if 'g:Group/r:UserID' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: A required attribute containing the local user identification system
-                that maintains and defines the UserID. Always 'GroupID'.</r:Content>
+            <r:Content>Usage: Two use cases as per r:UserID:
+                (1) A required attribute containing the local user identification system
+                that maintains and defines the UserID. Always 'GroupID'.
+                (2) A required attribute containing the local user identification system
+                that maintains and defines the UserID. Always 'URLServiceProvider'.
+            </r:Content>
             <r:Content>EQB_ID_Element: 7.2.1/studyGroupIDType</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
@@ -112,65 +114,20 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-<!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <!--NEXT 2 ENTRIES ARE DUPLICATE -SEE BITBUCKET #50-->
- <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:UserID" isRequired="true">
+    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:StudyUnitReference/r:TypeOfObject" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: An URL or URN (a reference to a web resource that specifies 
-                its location) linking to the study group..</r:Content>
-            <r:Content>EQB_ID_Element: 7.4/studyGroupUrl</r:Content>
-            <r:Content>EQB_UI_Label: included as hyperlink</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:UserID/@typeOfUserID" isRequired="false"
-        defaultValue="URLServiceProvider" fixedValue="true">
-        <r:Description>
-            <r:Content>Required: Required: Mandatory if 'g:Group/r:UserID' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: A required attribute containing the local user identification system
-                that maintains and defines the UserID. Always 'URLServiceProvider'.</r:Content>
-            <r:Content>EQB_ID_Element: 7.4/studyGroupUrl</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
+            <r:Content>Usage: Two use cases:
+                (1) States the type of object being referenced based on a persistent 
+                list of valid DDI object types.  Always 'StudyUnit' if referring to a Study..
+                (2) States the type of object being referenced based on a persistent 
+                list of valid DDI object types. Always 'OtherMaterial' if referrring to a document.
             </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:StudyUnitReference/r:TypeOfObject" isRequired="true" defaultValue="StudyUnit" fixedValue="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent 
-                list of valid DDI object types.  Always 'StudyUnit'.</r:Content>
-            <r:Content>EQB_ID_Element:  7.5.1/referenceGroupToStudyType</r:Content>
+            <r:Content>EQB_ID_Element:  7.5.1/referenceGroupToStudyType; 7.5.1/referenceGroupToDocument</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
-    </pr:Used>
-    <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <!--NEXT 1 ENTRIES ARE DUPLICATE -SEE BITBUCKET #50-->
-    <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <pr:Used xpath="/ddi:DDIInstance/g:Group/r:StudyUnitReference/r:TypeOfObject" isRequired="false" defaultValue="OtherMaterial" fixedValue="true">
-        <r:Description>
-            <r:Content>Required: Optional</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent 
-                list of valid DDI object types. Always 'OtherMaterial'.</r:Content>
-            <r:Content>EQB_ID_Element:  7.5.1/referenceGroupToDocument</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:Group/r:Citation/r:Title/r:String" isRequired="true">
         <r:Description>
@@ -316,7 +273,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: The first name of a person.</r:Content>
-            <r:Content>EQB_ID_Element: 8.2.1/firstName</r:Content>
+            <r:Content>EQB_ID_Element: distStmt/distrbtr.1/firstName</r:Content>
             <r:Content>EQB_UI_Label: Publisher.</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -505,14 +462,15 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
-    <!--(QUESTION ITEM(AND GRID?) INTERVIEWER INSTRUCTIONS-->
+    <!--(QUESTION ITEM(AND GRID) INTERVIEWER INSTRUCTIONS-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InterviewerInstructionScheme/d:Instruction/d:InstructionText/d:LiteralText/d:Text" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: An instruction for the interviewer.</r:Content>
+            <r:Content>Usage: An instruction for the interviewer.
+                Referenced by QuestionItem and QuestionGrid</r:Content>
             <r:Content>EQB_ID_Element: 1.1.7/questionItemInterviewerinstruction</r:Content>
             <r:Content>EQB_UI_Label: Interviewer instruction</r:Content>
         </r:Description>
@@ -600,6 +558,39 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+    <!--    https://bitbucket.org/cessda/cessda.metadata.profiles/issues/59/-->
+    <!--    https://bitbucket.org/cessda/cessda.metadata.profiles/issues/56-->
+   <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:Sequence/d:ControlConstructReference/r:TypeOfObject"
+        isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>Usage: Top level sequence, to be referenced from Instrument.  In this context, r:TypeOfObject='Sequence'
+                This top level sequence holds to one or more d:ControlConstructScheme/d:Sequence elements (one per question),
+                each of refers to (1) a QuestionConstruct (d:ControlConstructReference/r:TypeOfObject='QuestionConstruct') which itself refers to a QuestionItem
+                or QuestionGrid and (2)an optional Statement where d:ControlConstructReference/r:TypeOfObject='StatementItem'.
+            </r:Content>
+            <r:Content>EQB_ID_Element: 1.1/QuestionItem; 1.2 QuestionGrid</r:Content>
+            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
+        </r:Description>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:ControlConstructScheme/d:QuestionConstruct/d:QuestionReference/r:TypeOfObject"
+        isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>Usage: Either 'QuestionGrid' or 'QuestionItem', depending on whether this is a refernce to Question item or Question Grid.
+                In summary:
+                to get from Instrument to Question, you have to follow:
+                -reference to TopLevelSequence
+                -has reference to Sequence (for each question there is 1)
+                -has reference to QuestionConstruct
+                -has reference to QuestionGrid or QuestionItem
+            </r:Content>
+            <r:Content>EQB_ID_Element: 1.1/QuestionItem; 1.2 QuestionGrid</r:Content>
+            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
+        </r:Description>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--QUESTION ITEM(S)-->
     <!--****************************************************************************************-->
@@ -633,14 +624,31 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/@context" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..d:QuestionItem/d:QuestionItemName' element is present </r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Identify the context related to the question item name, 
+            <r:Content>Usage: Two use cases: 
+                (1) Identify the context related to the question item name, 
                 in this case to separate between number and label for example..
-                Examples: examples: 'title-english', 'title-originallang'</r:Content>
-            <r:Content>EQB_ID_Element: 1.1.4.1/questionItemNameCon</r:Content>
+                Examples: examples: 'title-english', 'title-originallang'
+                (2)  Identify the context related to the question item name, 
+                in this case to separate between number and label for example.Always 'questionNumber'.
+            </r:Content>
+            <r:Content>EQB_ID_Element: 1.1.4.1/questionItemNameCon; 1.1.8.1/questionItemNumberCon</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -654,10 +662,15 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A label of a question item the metadata refers to for display.</r:Content>
-            <r:Content>EQB_ID_Element: 1.1.4/questionItemName</r:Content>
-            <r:Content>EQB_UI_Label: Name.</r:Content>
+            <r:Content>Usage: Two use cases:
+                (1) A label of a question item the metadata refers to for display.
+                (2) A number of the question item the metadata refers to within the associated instrument.
+            </r:Content>
+            <r:Content>EQB_ID_Element: 1.1.4/questionItemName; 1.1.8/questionItemNumber</r:Content>
+            <r:Content>EQB_UI_Label: Name; Question number</r:Content>
         </r:Description>
+        
+        
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/r:String/@xml:lang" isRequired="false">
         <r:Description>
@@ -666,7 +679,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element.
                 ISO 639-1 codes are strongly encouraged to be used
             </r:Content>
-            <r:Content>EQB_ID_Element: 1.1.4.2/questionItemNameLang</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.4.2/questionItemNameLang; 1.1.8.2/questionItemNumberLang</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -680,66 +693,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Is the content of the element translated?</r:Content>
-            <r:Content>EQB_ID_Element: 1.1.4.3/questionItemNameTrans</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <!--NEXT 4 ENTRIES ARE DUPLICATE -SEE BITBUCKET #50-->
-    <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/@context" isRequired="false"
-         defaultValue="questionNumber" fixedValue="true">
-        <r:Description>
-            <r:Content>Required: Mandatory if '..d:QuestionItem/d:QuestionItemName' element is present </r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Identify the context related to the question item name, 
-                in this case to separate between number and label for example.Always 'questionNumber'</r:Content>
-            <r:Content>EQB_ID_Element: 1.1.8.1/questionItemNumberCon</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/r:String" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A number of the question item the metadata refers to within the associated instrument.</r:Content>
-            <r:Content>EQB_ID_Element: 1.1.8/questionItemNumber</r:Content>
-            <r:Content>EQB_UI_Label: Question number</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/r:String/@xml:lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if '..d:QuestionItemName/r:String/' element is present.</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The language of the content of the element.
-                ISO 639-1 codes are strongly encouraged to be used
-            </r:Content>
-            <r:Content>EQB_ID_Element: 1.1.8.2/questionItemNameLang</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/r:String/@isTranslated" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Is the content of the element translated?</r:Content>
-            <r:Content>EQB_ID_Element: 1.1.8.3/questionItemNameTrans</r:Content>
+            <r:Content>EQB_ID_Element: 1.1.4.3/questionItemNameTrans;  1.1.8.3/questionItemNumberTrans</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -963,6 +917,22 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:InterviewerInstructionReference/r:TypeOfObject" isRequired="false"
+        defaultValue="Instruction" fixedValue="true">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Needed to connect the interviewerinstruction with the question item.</r:Content>
+            <r:Content>EQB_ID_Element: None/none</r:Content>
+            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--QUESTION GRID(S)-->
     <!--****************************************************************************************-->
@@ -997,14 +967,18 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/@context" isRequired="false">
+       <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/@context" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..d:QuestionGrid/d:QuestionGridName' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Identify the context related to the question grid name, 
+            <r:Content>Usage: Two use cases: 
+                (1)Identify the context related to the question grid name, 
                 in this case to separate between Question Number and Label, for example:
-                 'title-english', 'title-originallang'</r:Content>
-            <r:Content>EQB_ID_Element: 1.2.4.1/questionGridNameCont</r:Content>
+                 'title-english', 'title-originallang'
+                 (2) Identify the context related to the question grid name, 
+                 in this case to separate between Question Number and Label, for example.  Always 'questionNumber'.
+            </r:Content>
+            <r:Content>EQB_ID_Element: 1.2.4.1/questionGridNameCont; 1.2.8.1/questionGridNumberCon</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1013,13 +987,16 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/r:String" isRequired="true">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/r:String" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A label of a question grid the metadata refer to for display.</r:Content>
-            <r:Content>EQB_ID_Element: 1.2.4/questionGridName</r:Content>
+            <r:Content>Usage: Two use cases:
+                (1) A label of a question grid the metadata refer to for display.
+                (2) A number of the question grid the metadata refers to within the associated instrument.
+            </r:Content>
+            <r:Content>EQB_ID_Element: 1.2.4/questionGridName;  1.2.8/questionGridNumber</r:Content>
             <r:Content>EQB_UI_Label: Name.</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1035,7 +1012,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element.
                 ISO 639-1 codes are strongly encouraged to be used
             </r:Content>
-            <r:Content>EQB_ID_Element: 1.2.4.2/questionGridNameLang</r:Content>
+            <r:Content>EQB_ID_Element: 1.2.4.2/questionGridNameLang; 1.2.8.2/questionGridNumberLang</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1049,7 +1026,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Is the content of the element translated?</r:Content>
-            <r:Content>EQB_ID_Element: 1.2.4.3/questionItemNameTrans</r:Content>
+            <r:Content>EQB_ID_Element: 1.2.4.3/questionItemNameTrans; 1.2.8.3/questionItemNumberTrans</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1058,72 +1035,6 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <!--NEXT 4 ENTRIES ARE DUPLICATE -SEE BITBUCKET #50-->
-    <!---\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-->
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/@context" isRequired="false"
-         defaultValue="questionNumber" fixedValue="true">
-        <r:Description>
-            <r:Content>Required: Mandatory if '..d:QuestionGrid/d:QuestionGridName' element is present in context of Question Number</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Identify the context related to the question grid name, 
-                in this case to separate between Question Number and Label, for example.  Always 'questionNumber'.</r:Content>
-            <r:Content>EQB_ID_Element: 1.2.8.1/questionGridNumberCont</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/r:String" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Optional</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A number of the question grid the metadata refers to within the associated instrument.</r:Content>
-            <r:Content>EQB_ID_Element: 1.2.8/questionGridNumber</r:Content>
-            <r:Content>EQB_UI_Label: Question number</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/r:String/@xml:lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if '..d:QuestionGridName/r:String/' element is present.</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The language of the content of the element.
-                ISO 639-1 codes are strongly encouraged to be used
-            </r:Content>
-            <r:Content>EQB_ID_Element: 1.2.8.2/questionGridNumberLang</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionGridName/r:String/@isTranslated" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Is the content of the element translated?</r:Content>
-            <r:Content>EQB_ID_Element: 1.2.8.3/questionItemNumberTrans</r:Content>
-            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    
-    
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:QuestionText/d:LiteralText/d:Text" isRequired="true">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1441,6 +1352,22 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:InterviewerInstructionReference/r:TypeOfObject" isRequired="false"
+        defaultValue="Instruction" fixedValue="true">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Needed to connect the interviewerinstruction with the question grid.</r:Content>
+            <r:Content>EQB_ID_Element: None/none</r:Content>
+            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--CATEGORY SCHEME-->
     <!--****************************************************************************************-->
@@ -1569,12 +1496,13 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/r:UserID/@typeOfUserID" isRequired="false">
-        <r:Description>
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/r:UserID/@typeOfUserID" isRequired="false"
+         defaultValue="UserID" fixedValue="true">
+         <r:Description>
             <r:Content>Required: Mandatory if '../l:CodeList/r:UserID/' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: ????????????????????????????????.</r:Content>
+            <r:Content>Usage: Use 'UserID' for the attribute value. </r:Content>
             <r:Content>EQB_ID_Element: 2.1.1.2/codelistIDType</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
@@ -1823,7 +1751,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: An additional description of the variable or the file content.</r:Content>
-            <r:Content>EQB_ID_Element: 4.5.4/variableLabel</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4/variableDescription</r:Content>
             <r:Content>EQB_UI_Label: Variables.</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1839,7 +1767,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element.
                 ISO 639-1 codes are strongly encouraged to be used.
             </r:Content>
-            <r:Content>EQB_ID_Element: 4.5.4.1/variableLabelLang</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4.1/variableDescriptionLang</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1854,7 +1782,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Is the content of the element translated?
             </r:Content>
-            <r:Content>EQB_ID_Element: 4.5.4.2/variableLabelTran</r:Content>
+            <r:Content>EQB_ID_Element: 4.5.4.2/variableDescriptionTran</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1932,6 +1860,47 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--https://bitbucket.org/cessda/cessda.metadata.profiles/issues/56-->
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/@objectLanguage"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if '..d:InstrumentScheme/d:Instrument/d:ControlConstructReference' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: A language for the instrument that is being used in the study. 
+                ISO 639-1 codes are strongly encouraged to be used.</r:Content>
+            <r:Content>EQB_ID_Element: 5.3/instrumentLanguage</r:Content>
+            <r:Content>EQB_UI_Label: Interview Language</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>         
+                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:TypeOfObject"
+        isRequired="false" defaultValue="Sequence" fixedValue="true">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Mandatory if '..d:InstrumentScheme/d:Instrument/d:ControlConstructReference' element is present.</r:Content>
+            <r:Content>Usage: Part of structure for the reference to the top level sequence; 
+                from there the hierarchy allows access to all sub-sequences, 
+                controlconstructs, questionconstructs and questionitems/grids.
+                NB - 5.4 and 5.5 definitions in in the EQB Excel spreadsheet are misleading.
+                to get from Instrument to Question, you have to follow:
+                -From here, refer to TopLevelSequence
+                -has reference to Sequence (for each question there is 1)
+                -has reference to QuestionConstruct
+                -has reference to QuestionGrid or QuestionItem
+            </r:Content>
+            <r:Content>EQB_ID_Element: 5.4/referenceInstrumentToQuestion</r:Content>
+            <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>         
+                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -2269,9 +2238,9 @@ ________________________________________________________________________________
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:UserID/@typeOfUserID"
-        defaultValue="Versionnumber" fixedValue="true" isRequired="true">
+        defaultValue="Versionnumber" fixedValue="true" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Must be specifed when the "ddi:DDIInstance/s:StudyUnit/r:UserID"
                 element is used for the date of the version that the Service Provider uses to 
@@ -2279,11 +2248,16 @@ ________________________________________________________________________________
             <r:Content>EQB_ID_Element: 6.4/studyVersionNumber</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content> 
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:UserID/@typeOfUserID"
-        defaultValue="Versiondate" fixedValue="true" isRequired="true">
+        defaultValue="Versiondate" fixedValue="true" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Must be specifed when the "ddi:DDIInstance/s:StudyUnit/r:UserID"
                 element is used for the number of the version (free text) that the Service Provider 
@@ -2291,6 +2265,11 @@ ________________________________________________________________________________
             <r:Content>EQB_ID_Element: 6.5/studyVersiondate</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content> 
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--STUDY TITLE -->
@@ -2945,9 +2924,9 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <pr:Used
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:DataCollectionDate/r:StartDate"
-        isRequired="true">
+        isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory </r:Content>
+            <r:Content>Required: Recommended </r:Content>
             <r:Content>ElementType: Element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Either a single point in time or start of a date range. Ideally
@@ -2955,6 +2934,11 @@ ________________________________________________________________________________
             <r:Content>EQB_ID_Element: 6.19.1/dataCollectionStartdate</r:Content>
             <r:Content>EQB_UI_Label: Data collection period</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content>                
+                <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
+            </r:Content>
+        </pr:Instructions>
     </pr:Used>
     <pr:Used
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:DataCollectionDate/r:EndDate"
@@ -3209,7 +3193,10 @@ ________________________________________________________________________________
                 study-related information only. Examples of such conditions are the copyright status, usage regulations 
                 based on legislation, a license, or other agreement concerning the metadata usage. Use in conjunction with 
                 ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Collection/a:Item/a:CallNumber 
-                (='ZA1234' Studynumber, for example)</r:Content>
+                (='ZA1234' Studynumber, for example)
+            Can also be used for Question-related access info etc. etc.  Could refer to question call number from here
+            
+            </r:Content>
             <r:Content>EQB_ID_Element: 6.21.3/metadataAccessStudy</r:Content>
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
