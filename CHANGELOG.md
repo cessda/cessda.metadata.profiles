@@ -6,9 +6,12 @@ Each profile is versioned independently so the following contains discrete chang
 2. DDI CDC 1.2.2 Profile
 3. DDI CDC 2.5 Monolingual Profile
 4. DDI CDC 1.2.2 Monolingual Profile
-5. XSL Stylesheet - converts DDI Profile into HTML documentation
+5. DDI CDC 3.2 Profile
+6. DDI EQB 2.5 Profile
+7. DDI EQB 3.2 Profile
+8. XSL Stylesheet - converts DDI Profile into HTML documentation
   
-***
+
  
  
 ## DDI CDC 2.5 Profile
@@ -192,6 +195,29 @@ Minor changes to usage notes.
 - First commit of new monolingual version of existing cdc122_profile.xml (v1.03)
 - Issue [20](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/20/)
 - Issue [8](https://bitbucket.org/cessda/cessda.metadata.profiles/issues/8)
+
+***
+
+## DDI CDC 3.2 Profile
+
+### 2021-08-25 [v0.1.1](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CDC%203.2%20PROFILE/cdc32_profile.xml)
+--First commit to master, along with derived HTML documentation.
+
+
+***
+
+## DDI EQB 2.5 Profile
+
+### 2021-08-25 [v0.1.0](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/EQB%202.5%20PROFILE/eqb25_profile.xml)
+--First commit to master, along with derived HTML documentation and example DDI2.5 document that conforms to the EQB 2.5 profile.
+
+***
+
+
+## DDI EQB 3.2 Profile
+
+### 2021-08-25 [v0.1.0](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/EQB%203.2%20PROFILE/eqb32_profile.xml)
+--First commit to master, along with derived HTML documentation and example DDI3.2 document that conforms to the EQB 3.2 profile.
 
 ***
 
