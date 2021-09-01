@@ -2,12 +2,13 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pr="ddi:ddiprofile:3_2"
     xmlns:r="ddi:reusable:3_2" exclude-result-prefixes="xs" version="2.0">
+	<xsl:output method="html" encoding="utf-8" indent="yes" />
     <xsl:template match="/">
         <html lang="en">
 		<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD6xoP/+saD//rGg//6xoP/+saD//rGg/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADztFX/+saD//rGg//6xoP/+saD//rGg//6xoP/+saD/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADxrkb/8a5G//GuRv/6xoP////////////6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAADxrkb/8a5G//GuRv/xrkb///////////////////////rGg//6xoP/+saD//rGg/8AAAAAAAAAAAAAAADxrkb/8a5G//GuRv/xrkb/////////////////////////////////+saD//rGg//6xoP/+saD/wAAAADxrkb/8a5G//GuRv/xrkb////////////////////////////////////////////6xoP/+saD//rGg//6xoP/8a5G//GuRv/xrkb//////////////////////01NTf9NTU3///////////////////////rGg//6xoP/+saD//GuRv/xrkb/8a5G//////////////////////9NTU3/TU1N///////////////////////6xoP/+saD//rGg//xrkbN8a5G//GuRv/xrkb////////////////////////////////////////////6xoP/+saD//rGg/99Y0I1AAAAAPGuRv/xrkb/8a5G//GuRv/////////////////////////////////6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAA8a5G//GuRv/xrkb/8a5G///////////////////////6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAADxrkb/8a5G//GuRv/xrkb////////////xrkb/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPGuRv/xrkb/8a5G//GuRv/xrkb/8a5G//GuRv/xrkb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8a5G//GuRv/xrkb/8a5G//GuRv/xrkb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8a5G//GuRv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPgfAADwDwAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAEAAIABAADAAwAA4AcAAPAPAAD4HwAA/n8AAA==" rel="icon" type="image/x-icon" />
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD6xoP/+saD//rGg//6xoP/+saD//rGg/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADztFX/+saD//rGg//6xoP/+saD//rGg//6xoP/+saD/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADxrkb/8a5G//GuRv/6xoP////////////6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAADxrkb/8a5G//GuRv/xrkb///////////////////////rGg//6xoP/+saD//rGg/8AAAAAAAAAAAAAAADxrkb/8a5G//GuRv/xrkb/////////////////////////////////+saD//rGg//6xoP/+saD/wAAAADxrkb/8a5G//GuRv/xrkb////////////////////////////////////////////6xoP/+saD//rGg//6xoP/8a5G//GuRv/xrkb//////////////////////01NTf9NTU3///////////////////////rGg//6xoP/+saD//GuRv/xrkb/8a5G//////////////////////9NTU3/TU1N///////////////////////6xoP/+saD//rGg//xrkbN8a5G//GuRv/xrkb////////////////////////////////////////////6xoP/+saD//rGg/99Y0I1AAAAAPGuRv/xrkb/8a5G//GuRv/////////////////////////////////6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAA8a5G//GuRv/xrkb/8a5G///////////////////////6xoP/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAADxrkb/8a5G//GuRv/xrkb////////////xrkb/+saD//rGg//6xoP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPGuRv/xrkb/8a5G//GuRv/xrkb/8a5G//GuRv/xrkb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8a5G//GuRv/xrkb/8a5G//GuRv/xrkb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8a5G//GuRv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/D8AAPgfAADwDwAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAEAAIABAADAAwAA4AcAAPAPAAD4HwAA/n8AAA==" rel="icon" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
   <style>
   body, td, th {
@@ -40,8 +41,9 @@
   #home {
   display: block;
   width: 140px;
+  
   }
-   #footerlogo {
+  #footerlogo {
   width:100px;
   height: auto;
   }
@@ -63,9 +65,10 @@
 
   }
   </style>
- <title><xsl:value-of select="//pr:DDIProfileName/r:String" /></title> 
+  <title><xsl:value-of select="//pr:DDIProfileName/r:String" /></title> 
   </head>
-            <body><header class="bg-light mb-4">
+            <body>
+			<header class="bg-light mb-4">
 <div class="container-xxl">
 <div class="row py-4">
 <div class="col">
@@ -78,7 +81,8 @@
             <path d="M181.667 553.333c-2.5 0-5 0-7.084-.416-11.666-1.667-22.5-6.667-30.833-15l-95.417-95C17.5 411.25 0 369.583 0 325s17.083-86.25 48.333-117.5l75.834-75.833 74.583 77.083-74.583 74.583c-11.25 11.25-17.084 25.834-17.084 41.667 0 15.833 6.25 30.417 17.084 41.667l95.416 95c10 10 15.834 23.75 15.834 37.916 0 14.167-5.417 27.917-15.834 37.917-10 10.417-23.333 15.833-37.916 15.833z" fill="#46aef1" fill-rule="nonzero"></path>
           </svg></a>
 		</div>
-<div class="col-10">
+		<div class="col-10">
+
                 <h1><xsl:value-of select="//pr:DDIProfileName/r:String" /></h1>
 				</div>
 				</div>
@@ -88,43 +92,44 @@
 				<div class="row">
 				<div class="col mt-2">
                 <table class="table table-sm table-striped">
-                    <tr>
-                        <td>
-                            <b>DDI_XPath</b>
-                        </td>
-                        <td>
-                            <b>Required</b>
-                        </td>
-                        <td>
-                            <b>EQB Label</b>
-                        </td>
-                        <td>
-                            <b>Type</b>
-                        </td>
-                        <td>
-                            <b>Repeatable</b>
-                        </td>
-                        <td>
-                            <b>Usage note</b>
-                        </td>
+                   <thead> <tr>
+                        <th class="xpath">
+                            DDI_XPath
+                        </th>
+                        <th>
+                            Required
+                        </th>
+                        <th>
+                            CDC Label
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Repeatable
+                        </th>
+                        <th>
+                            Usage note
+                        </th>
                     </tr>
+					</thead>
                     <xsl:for-each select="//pr:Used/r:Description">
                         <xsl:choose>
                             <xsl:when test="current()/r:Content[contains(text(),'Structural')]">
                                 <tr>
-                                     <td class="xpath wrap">
+                                    <td class="xpath wrap">
                                         <xsl:value-of
                                             select="parent::node()/@xpath"
                                         />
                                     </td>
-                             <td class="wrap">
+                            <td class="wrap">
                                 <xsl:value-of
                                     select="substring-after(current()/r:Content[starts-with(text(),'Required')],'Required: ')"
                                 />
                             </td>
-                           <td class="text-danger">
+                            <td class="text-danger">
                                 <xsl:value-of
-                                    select="substring-after(current()/r:Content[starts-with(text(),'EQB_UI')],'EQB_UI_Label: ')"
+                                    select="substring-after(current()/r:Content[starts-with(text(),'CDC')],'CDC UI Label: ')"
                                 />
                             </td>
                             <td>
@@ -146,7 +151,9 @@
                         </xsl:when>
                             <xsl:otherwise>
                                 <tr>
-                                     <td class="xpath wrap">
+                                    <td class="xpath wrap">
+									
+									
                                         <xsl:value-of
                                             select="parent::node()/@xpath"
                                         />
@@ -158,7 +165,7 @@
                                     </td>
                                     <td class="text-danger">
                                         <xsl:value-of
-                                            select="substring-after(current()/r:Content[starts-with(text(),'EQB_UI')],'EQB_UI_Label: ')"
+                                            select="substring-after(current()/r:Content[starts-with(text(),'CDC')],'CDC UI Label: ')"
                                         />
                                     </td>
                                     <td>
@@ -171,7 +178,7 @@
                                             select="substring-after(current()/r:Content[starts-with(text(),'ElementRepeatable')],'ElementRepeatable: ')"
                                         />
                                     </td>
-                                     <td class="usage wrap">
+                                    <td class="usage wrap">
                                         <xsl:value-of
                                             select="substring-after(current()/r:Content[starts-with(text(),'Usage')],'Usage: ')"
                                         />
@@ -182,10 +189,11 @@
                             
                     </xsl:for-each>
                 </table>
+				
 				</div>
 				</div>
 				</div>
-				<footer class="bg-grey-dk-200 py-2">
+<footer class="bg-grey-dk-200 py-2">
 <div class="container-xxl">
 <div class="row">
 <div class="col">
