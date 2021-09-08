@@ -120,16 +120,16 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: This element serves two use cases. 
-                (1) Unique archival number. 
-                If no such number available, a PID may be used alternatively (and  in such a case, 
-                the PID must be captured in this element *as well as* in  
-                "/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent").  
-                The @typeOfUserID attribute must be "StudyNumber". 
-                (2) A URL or URN (a reference to a web resource that specifies its location) 
-                linking to the study description on the SP website. CDC provides a link from 
-                the study information there to the study description on the SP website, 
-                to allow users to access the data. [This element not visible in the UI, it is only needed for the link]. 
+            <r:Content>Usage: This element serves two use cases.
+                (1) Unique archival number.
+                If no such number available, a PID may be used alternatively (and  in such a case,
+                the PID must be captured in this element *as well as* in
+                "/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent").
+                The @typeOfUserID attribute must be "StudyNumber".
+                (2) A URL or URN (a reference to a web resource that specifies its location)
+                linking to the study description on the SP website. CDC provides a link from
+                the study information there to the study description on the SP website,
+                to allow users to access the data. [This element not visible in the UI, it is only needed for the link].
                 The @typeOfUserID attribute must be "URLServiceProvider". </r:Content>
         </r:Description>
     </pr:Used>

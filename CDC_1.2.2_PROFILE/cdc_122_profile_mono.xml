@@ -104,8 +104,8 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The content of this element serves two purposes. 
-                It is used both for the PID and for the study/archival number given by the SP. 
+            <r:Content>Usage: The content of this element serves two purposes.
+                It is used both for the PID and for the study/archival number given by the SP.
                 These two cases have different specifications. IDNo in the sense of study
                 number is optional. PID is mandatory</r:Content>
         </r:Description>
@@ -114,7 +114,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Agency responsible for the identifier of the study. If you are using IDNo for a 
+            <r:Content>Usage: Agency responsible for the identifier of the study. If you are using IDNo for a
                 Persistent Identifer, value should be one of https://vocabularies.cessda.eu/vocabulary/CessdaPersistentIdentifierTypes i.e.
                 ARK or DOI or Handle or URN
             </r:Content>
@@ -199,7 +199,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The year or freetext date of when the study description was published.  
+            <r:Content>Usage: The year or freetext date of when the study description was published.
                 This element may be empty.</r:Content>
             <r:Content>CDC_UI_Label: Year of publication</r:Content>
         </r:Description>
@@ -347,7 +347,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: This is the free text expression of the collection period. 
+            <r:Content>Usage: This is the free text expression of the collection period.
                 This element may be empty.</r:Content>
             <r:Content>CDC_UI_Label: Data collection period</r:Content>
         </r:Description>
@@ -520,7 +520,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Time Method Controlled Vocabulary "Code value" that is the same across
                 languages. e.g if the 'timeMeth' element is 'Pitkittäisaineisto' for Finnish, the
-                'concept' element is 'Longitudinal'. See example at 
+                'concept' element is 'Longitudinal'. See example at
                 https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TimeMethod</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -619,7 +619,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g. 
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
                 https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1?languageVersion=en-1.1</r:Content>
         </r:Description>
         <pr:Instructions>

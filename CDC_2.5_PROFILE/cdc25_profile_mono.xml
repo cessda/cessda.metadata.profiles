@@ -102,8 +102,8 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The content of this element serves two purposes. 
-                It is used both for the PID and for the study/archival number given by the SP. 
+            <r:Content>Usage: The content of this element serves two purposes.
+                It is used both for the PID and for the study/archival number given by the SP.
                 These two cases have different specifications. IDNo in the sense of study
                 number is optional. PID is mandatory</r:Content>
         </r:Description>
