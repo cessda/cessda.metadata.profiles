@@ -950,7 +950,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/r:Description/r:Content@xml:lang"
+        xpath="/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..a:Access/r:Description/r:Content' element is
