@@ -1480,7 +1480,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1495,7 +1495,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Version.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1510,7 +1510,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1525,7 +1525,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Question ID</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1539,7 +1539,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1554,11 +1554,11 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Name.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
-    </pr:Used>    
+    </pr:Used>
     <pr:Used xpath="/codeBook/dataDscr/var/qstn/list/label/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..dataDscr/var/qstn/list/label' element is present.</r:Content>
@@ -1570,7 +1570,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1585,7 +1585,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Question number.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1601,7 +1601,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1611,13 +1611,13 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A prequestion and/or postquestion and other statements as part 
+            <r:Content>Usage: A prequestion and/or postquestion and other statements as part
                 of the question item text.</r:Content>
             <r:Content>EQB_ID_Element: 1.1.6/questionItemStatement</r:Content>
             <r:Content>EQB_UI_Label: Pre-/Post-question text.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1633,7 +1633,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1648,7 +1648,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Question text</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1664,7 +1664,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1679,7 +1679,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Interviewer instruction .</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1695,7 +1695,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1709,7 +1709,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1723,7 +1723,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1740,7 +1740,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1754,7 +1754,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1768,7 +1768,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1785,7 +1785,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
        <pr:Instructions>
-           <r:Content>         
+           <r:Content>
                <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
            </r:Content>
        </pr:Instructions>
@@ -1801,7 +1801,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1810,13 +1810,13 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if '..dataDscr/var/catgry' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: A value for missing data. If the category is describing a classification of 
+            <r:Content>Usage: A value for missing data. If the category is describing a classification of
                 "missing data" set the value of isMissing to "true".</r:Content>
             <r:Content>EQB_ID_Element: 2.1.1.4.2/answerMissingValue</r:Content>
             <r:Content>EQB_UI_Label: Answer code/Response category</r:Content>
         </r:Description>
          <pr:Instructions>
-             <r:Content>         
+             <r:Content>
                  <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
              </r:Content>
          </pr:Instructions>
@@ -1831,7 +1831,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Answer code.</r:Content>
         </r:Description>
       <pr:Instructions>
-          <r:Content>         
+          <r:Content>
               <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
           </r:Content>
       </pr:Instructions>
@@ -1846,7 +1846,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Response category</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1863,7 +1863,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1881,7 +1881,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Concepts.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1897,7 +1897,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1912,7 +1912,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Concepts</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1928,7 +1928,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1943,7 +1943,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Concept Descriptions</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1959,7 +1959,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1977,7 +1977,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Variables.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1994,7 +1994,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2011,7 +2011,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Type.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2025,7 +2025,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2041,7 +2041,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Title</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2057,7 +2057,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2072,7 +2072,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Title.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2088,7 +2088,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2103,7 +2103,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: ID.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2117,7 +2117,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2132,7 +2132,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: displayed as hyperlink</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>

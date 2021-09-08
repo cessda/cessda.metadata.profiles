@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--____________________________________________________________________________________
+© Copyright 2021, CESSDA ERIC
+Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
+Author: Darren Bell - UK Data Archive, Daniel Arnrup-Øien - Open Concept AS
+Created: 2021-09-01
+Version: v1.0.0
+Last modified 2021-09-08 Carsten Thiel
+____________________________________________________________________________________
+-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pr="ddi:ddiprofile:3_2"
     xmlns:r="ddi:reusable:3_2" exclude-result-prefixes="xs" version="2.0">

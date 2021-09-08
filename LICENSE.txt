@@ -1,4 +1,4 @@
-Copyright: 2020 CESSDA Metadata Office
+Copyright: 2021 CESSDA ERIC
 
 Creative Commons Attribution 4.0 International Public License
 https://creativecommons.org/licenses/by/4.0/

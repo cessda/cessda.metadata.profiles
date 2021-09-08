@@ -88,7 +88,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Two use cases:
                 (1) A value of a persistent identifier for the study group
                 (mandatory).
-                (2) An URL or URN (a reference to a web resource that specifies 
+                (2) An URL or URN (a reference to a web resource that specifies
                 its location) linking to the study group (optional).
             </r:Content>
             <r:Content>EQB_ID_Element: 7.2/studyGroupID; 7.4/studyGroupUrl</r:Content>
@@ -120,9 +120,9 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Two use cases:
-                (1) States the type of object being referenced based on a persistent 
+                (1) States the type of object being referenced based on a persistent
                 list of valid DDI object types.  Always 'StudyUnit' if referring to a Study..
-                (2) States the type of object being referenced based on a persistent 
+                (2) States the type of object being referenced based on a persistent
                 list of valid DDI object types. Always 'OtherMaterial' if referrring to a document.
             </r:Content>
             <r:Content>EQB_ID_Element:  7.5.1/referenceGroupToStudyType; 7.5.1/referenceGroupToDocument</r:Content>
@@ -205,7 +205,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: An identifier that captures information on the type and value of a PID.
-                For the associated r:ManagingAgency element, specify the identification of the agency 
+                For the associated r:ManagingAgency element, specify the identification of the agency
                 which assigns and manages the identifier, i.e., ISBN, ISSN, DOI, etc.</r:Content>
             <r:Content>EQB_ID_Element: 4.2/datasetPID</r:Content>
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
@@ -321,7 +321,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent 
+            <r:Content>Usage: States the type of object being referenced based on a persistent
                 list of valid DDI object types. Always 'Individual'.</r:Content>
             <r:Content>EQB_ID_Element: 8.3.1.1/sourceObjectReferenceType</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
@@ -354,7 +354,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent list of valid DDI object 
+            <r:Content>Usage: States the type of object being referenced based on a persistent list of valid DDI object
                 types.  Always 'Organization'.</r:Content>
             <r:Content>EQB_ID_Element: 8.3.3.1/targetObjectReferenceType</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
@@ -491,7 +491,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -505,7 +505,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>               
+            <r:Content>
                       <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -539,7 +539,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -553,7 +553,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>               
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -624,28 +624,15 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/@context" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..d:QuestionItem/d:QuestionItemName' element is present </r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Two use cases: 
-                (1) Identify the context related to the question item name, 
+            <r:Content>Usage: Two use cases:
+                (1) Identify the context related to the question item name,
                 in this case to separate between number and label for example..
                 Examples: examples: 'title-english', 'title-originallang'
-                (2)  Identify the context related to the question item name, 
+                (2)  Identify the context related to the question item name,
                 in this case to separate between number and label for example.Always 'questionNumber'.
             </r:Content>
             <r:Content>EQB_ID_Element: 1.1.4.1/questionItemNameCon; 1.1.8.1/questionItemNumberCon</r:Content>
@@ -669,8 +656,8 @@ ________________________________________________________________________________
             <r:Content>EQB_ID_Element: 1.1.4/questionItemName; 1.1.8/questionItemNumber</r:Content>
             <r:Content>EQB_UI_Label: Name; Question number</r:Content>
         </r:Description>
-        
-        
+
+
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:QuestionItemName/r:String/@xml:lang" isRequired="false">
         <r:Description>
@@ -867,7 +854,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -883,7 +870,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -897,7 +884,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                 
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -971,11 +958,11 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if '..d:QuestionGrid/d:QuestionGridName' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Two use cases: 
-                (1)Identify the context related to the question grid name, 
+            <r:Content>Usage: Two use cases:
+                (1)Identify the context related to the question grid name,
                 in this case to separate between Question Number and Label, for example:
                  'title-english', 'title-originallang'
-                 (2) Identify the context related to the question grid name, 
+                 (2) Identify the context related to the question grid name,
                  in this case to separate between Question Number and Label, for example.  Always 'questionNumber'.
             </r:Content>
             <r:Content>EQB_ID_Element: 1.2.4.1/questionGridNameCont; 1.2.8.1/questionGridNumberCon</r:Content>
@@ -1085,7 +1072,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--QUESTION GRID DIMENSION-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:GridDimension/d:CodeDomain/r:CodeListReference/r:TypeOfObject" 
+    <pr:Used xpath="ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:GridDimension/d:CodeDomain/r:CodeListReference/r:TypeOfObject"
         isRequired="false" defaultValue="CodeList" fixedValue="true">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1302,7 +1289,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1318,7 +1305,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1332,7 +1319,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                 
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1376,7 +1363,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A statement/or question which is part of the question grid 
+            <r:Content>Usage: A statement/or question which is part of the question grid
                 and comes after the preceding question grid text.</r:Content>
             <r:Content>EQB_ID_Element: 1.2.10.2/subQuestionText</r:Content>
             <r:Content>EQB_UI_Label: Subquestion text</r:Content>
@@ -1398,7 +1385,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1412,7 +1399,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1422,7 +1409,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: A value for missing data. If the category is describing a classification of 
+            <r:Content>Usage: A value for missing data. If the category is describing a classification of
                 "missing data" set the value of isMissing to "true".</r:Content>
             <r:Content>EQB_ID_Element: 2.1.1.4.2/answerMissingValue</r:Content>
             <r:Content>EQB_UI_Label: Answer code/Response category</r:Content>
@@ -1459,7 +1446,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1473,7 +1460,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1507,7 +1494,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1605,13 +1592,13 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/l:Code/r:CategoryReference/r:TypeOfObject" 
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/l:CodeListScheme/l:CodeList/l:Code/r:CategoryReference/r:TypeOfObject"
         isRequired="false" defaultValue="Category" fixedValue="true">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent list 
+            <r:Content>Usage: States the type of object being referenced based on a persistent list
                 of valid DDI object types.  Always 'Category'.</r:Content>
             <r:Content>EQB_ID_Element: 2.1.1.6/referenceCodeToCategoryType</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
@@ -1647,7 +1634,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>ElementRepeatable: xxxxx</r:Content>
             <r:Content>Usage: Required attribute indicating that the 'l:Variable/r:UserID' element defines the variable type
-                (e.g. "numeric") according to the ways that the variable can be studied, measured, and presented.  
+                (e.g. "numeric") according to the ways that the variable can be studied, measured, and presented.
                 Always 'variableType'.</r:Content>
             <r:Content>EQB_ID_Element: 4.5.5/variableType</r:Content>
             <r:Content>EQB_UI_Label: Variables.</r:Content>
@@ -1869,13 +1856,13 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if '..d:InstrumentScheme/d:Instrument/d:ControlConstructReference' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: A language for the instrument that is being used in the study. 
+            <r:Content>Usage: A language for the instrument that is being used in the study.
                 ISO 639-1 codes are strongly encouraged to be used.</r:Content>
             <r:Content>EQB_ID_Element: 5.3/instrumentLanguage</r:Content>
             <r:Content>EQB_UI_Label: Interview Language</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -1883,10 +1870,9 @@ ________________________________________________________________________________
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:TypeOfObject"
         isRequired="false" defaultValue="Sequence" fixedValue="true">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
             <r:Content>Required: Mandatory if '..d:InstrumentScheme/d:Instrument/d:ControlConstructReference' element is present.</r:Content>
-            <r:Content>Usage: Part of structure for the reference to the top level sequence; 
-                from there the hierarchy allows access to all sub-sequences, 
+            <r:Content>Usage: Part of structure for the reference to the top level sequence;
+                from there the hierarchy allows access to all sub-sequences,
                 controlconstructs, questionconstructs and questionitems/grids.
                 NB - 5.4 and 5.5 definitions in in the EQB Excel spreadsheet are misleading.
                 to get from Instrument to Question, you have to follow:
@@ -1899,7 +1885,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>         
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2194,18 +2180,18 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: This element serves four use cases. 
-                (1) Unique archival number. 
-                If no such number available, a PID may be used alternatively (and  in such a case, 
-                the PID must be captured in this element *as well as* in  
-                "/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent").  
-                The @typeOfUserID attribute must be "StudyNumber". 
-                (2) A URL or URN (a reference to a web resource that specifies its location) 
-                linking to the study description on the SP website. CDC provides a link from 
-                the study information there to the study description on the SP website, 
-                to allow users to access the data. [This element not visible in the UI, it is only needed for the link]. 
+            <r:Content>Usage: This element serves four use cases.
+                (1) Unique archival number.
+                If no such number available, a PID may be used alternatively (and  in such a case,
+                the PID must be captured in this element *as well as* in
+                "/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:IdentifierContent").
+                The @typeOfUserID attribute must be "StudyNumber".
+                (2) A URL or URN (a reference to a web resource that specifies its location)
+                linking to the study description on the SP website. CDC provides a link from
+                the study information there to the study description on the SP website,
+                to allow users to access the data. [This element not visible in the UI, it is only needed for the link].
                 The @typeOfUserID attribute must be "URLServiceProvider".
-                (3) A number of the version (free text) that the Service Provider uses to 
+                (3) A number of the version (free text) that the Service Provider uses to
                 identify this version of the study.
                 The @typeOfUserID attribute must be "Versionnumber".
                 (4) A date of the version that the Service Provider uses to identify this version of the study.
@@ -2243,13 +2229,13 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Must be specifed when the "ddi:DDIInstance/s:StudyUnit/r:UserID"
-                element is used for the date of the version that the Service Provider uses to 
+                element is used for the date of the version that the Service Provider uses to
                 identify this version of the study.  NOT used in CDC.</r:Content>
             <r:Content>EQB_ID_Element: 6.4/studyVersionNumber</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2260,13 +2246,13 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Must be specifed when the "ddi:DDIInstance/s:StudyUnit/r:UserID"
-                element is used for the number of the version (free text) that the Service Provider 
+                element is used for the number of the version (free text) that the Service Provider
                 uses to identify this version of the study.  NOT used in CDC.</r:Content>
             <r:Content>EQB_ID_Element: 6.5/studyVersiondate</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info)</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> 
+            <r:Content>
                 <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2280,7 +2266,6 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Title of the Study (as opposed to the title of the XML document). </r:Content>
-            <r:Content>CDC UI Label: Study title</r:Content>
             <r:Content>EQB_ID_Element: 6.6/studyTitle</r:Content>
             <r:Content>EQB_UI_Label: Title.</r:Content>
         </r:Description>
@@ -2320,7 +2305,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Used when r:CreatorReference is a reference of a study to a person who is a principal investigator.  
+            <r:Content>Usage: Used when r:CreatorReference is a reference of a study to a person who is a principal investigator.
                 Principal investigators are the main researchers involved in producing the data. </r:Content>
             <r:Content>EQB_ID_Element: 6.12/referenceStudyPerson</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
@@ -2337,7 +2322,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Used when r:CreatorReference is a reference of a study to an organization who is a principal investigator.  
+            <r:Content>Usage: Used when r:CreatorReference is a reference of a study to an organization who is a principal investigator.
                 Principal investigators are the main institutions involved in producing the data.</r:Content>
             <r:Content>EQB_ID_Element: 6.13/referenceStudyOrganization</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
@@ -2354,8 +2339,8 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The name of the institution publishing the metadata (at the study level) i.e. CESSDA Service Provider 
-                providing the metadata information or the name of the actual publisher of the metadata , who 
+            <r:Content>Usage: The name of the institution publishing the metadata (at the study level) i.e. CESSDA Service Provider
+                providing the metadata information or the name of the actual publisher of the metadata , who
                 is not the SP.</r:Content>
             <r:Content>EQB_ID_Element: 6.11/publisherName</r:Content>
             <r:Content>EQB_UI_Label: Publisher.</r:Content>
@@ -2384,7 +2369,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -2398,8 +2383,8 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: This element refers to the date (ISO 8601) when the data of the study was 
-                or will be made publicly available. If there is an embargo on the data in effect, use 
+            <r:Content>Usage: This element refers to the date (ISO 8601) when the data of the study was
+                or will be made publicly available. If there is an embargo on the data in effect, use
                 the date when the embargo period ends.</r:Content>
             <r:Content>EQB_ID_Element: 6.10/publicationDate</r:Content>
             <r:Content>EQB_UI_Label: Publication date.</r:Content>
@@ -2440,7 +2425,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A URL or URN (a reference to a web resource that specifies its location) 
+            <r:Content>Usage: A URL or URN (a reference to a web resource that specifies its location)
                 linking to the study to a CDC page.</r:Content>
             <r:Content>EQB_ID_Element: 6.9/CDCURL</r:Content>
             <r:Content>EQB_UI_Label: Link to study in CESSDA Data Catalogue.</r:Content>
@@ -2935,7 +2920,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: Data collection period</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -3067,13 +3052,13 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--REFERENCE TO INSTRUMENT FROM STUDY-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:InstrumentScheme/d:InstrumentReference/r:TypeOfObject" 
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:InstrumentScheme/d:InstrumentReference/r:TypeOfObject"
         isRequired="false" defaultValue="Instrument" fixedValue="true">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent 
+            <r:Content>Usage: States the type of object being referenced based on a persistent
                 list of valid DDI object types.  Always 'Instrument'.</r:Content>
             <r:Content>EQB_ID_Element:  6.14/referenceStudyToInstrument</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
@@ -3087,13 +3072,13 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--REFERENCE TO DATASET(S) FROM STUDY-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:PhysicalInstanceReference/r:TypeOfObject" 
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:PhysicalInstanceReference/r:TypeOfObject"
         isRequired="true" defaultValue="PhysicalInstance" fixedValue="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: States the type of object being referenced based on a persistent 
+            <r:Content>Usage: States the type of object being referenced based on a persistent
                 list of valid DDI object types.  Always 'PhysicalInstance'.</r:Content>
             <r:Content>EQB_ID_Element:  4.4/referenceDatasetToStudy</r:Content>
             <r:Content>EQB_UI_Label: not displayed (internal info).</r:Content>
@@ -3134,17 +3119,17 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: If the preserved content is subject to any access restrictions, those must be expressed in 
-                as much detail as possible in the information package in accordance with cataloguing rules and metadata 
-                formats used. Examples of such restrictions are the copyright status, usage restrictions based on 
-                legislation, a license, or other agreement concerning the content usage. Should the information package 
-                contain several digital objects with different restrictions, these restrictions should be attached 
+            <r:Content>Usage: If the preserved content is subject to any access restrictions, those must be expressed in
+                as much detail as possible in the information package in accordance with cataloguing rules and metadata
+                formats used. Examples of such restrictions are the copyright status, usage restrictions based on
+                legislation, a license, or other agreement concerning the content usage. Should the information package
+                contain several digital objects with different restrictions, these restrictions should be attached
                 correctly and individually to those objects that the restrictions concern.</r:Content>
             <r:Content>EQB_ID_Element: 6.21.2/dataAccessCondition</r:Content>
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -3171,9 +3156,9 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Freetext description on the metadata access conditions for the provided metadata if there 
-                is one access condition for both study- and question-related metadata. Examples of such conditions are 
-                the copyright status, usage regulations based on legislation, a license, or other agreement concerning 
+            <r:Content>Usage: Freetext description on the metadata access conditions for the provided metadata if there
+                is one access condition for both study- and question-related metadata. Examples of such conditions are
+                the copyright status, usage regulations based on legislation, a license, or other agreement concerning
                 the metadata usage.</r:Content>
             <r:Content>EQB_ID_Element: 11.3/metadataAccessConditionAll</r:Content>
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0</r:Content>
@@ -3189,19 +3174,19 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Freetext description on the metadata access conditions for the provided metadata for the 
-                study-related information only. Examples of such conditions are the copyright status, usage regulations 
-                based on legislation, a license, or other agreement concerning the metadata usage. Use in conjunction with 
-                ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Collection/a:Item/a:CallNumber 
+            <r:Content>Usage: Freetext description on the metadata access conditions for the provided metadata for the
+                study-related information only. Examples of such conditions are the copyright status, usage regulations
+                based on legislation, a license, or other agreement concerning the metadata usage. Use in conjunction with
+                ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Collection/a:Item/a:CallNumber
                 (='ZA1234' Studynumber, for example)
             Can also be used for Question-related access info etc. etc.  Could refer to question call number from here
-            
+
             </r:Content>
             <r:Content>EQB_ID_Element: 6.21.3/metadataAccessStudy</r:Content>
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><RecommendedNodeConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
@@ -3218,7 +3203,7 @@ ________________________________________________________________________________
             <r:Content>EQB_UI_Label: to be displayed in EQB v2.0.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>                
+            <r:Content>
                 <![CDATA[<Constraints><MandatoryNodeIfParentPresentConstraint/></Constraints>]]>
             </r:Content>
         </pr:Instructions>
