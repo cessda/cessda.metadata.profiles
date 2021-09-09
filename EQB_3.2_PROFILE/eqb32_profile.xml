@@ -4,18 +4,18 @@
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2021-05-22
-Version: v0.1.0
-Change summary: First release
-Last modified 2021-08-22 Darren Bell
+Version: v0.1.1
+Change summary: Replaced erronerous CDATA syntax for MutuallyExclusiveGroupConstraint with placeholder comment in 11 instances, fixed erronerous use of @xml@lang
+Last modified 2021-09-09 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2021-08-22">
+    versionDate="2021-09-09">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>EQB_DDI32_PROFILE</r:ID>
-    <r:Version>0.1.0</r:Version>
+    <r:Version>0.1.1</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA EUROPEAN QUESTION BANK (EQB) DDI3.2 PROFILE</r:String>
@@ -383,7 +383,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/c:ConceptScheme/c:Concept/c:ConceptName/r:String/@xml@lang" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/c:ConceptScheme/c:Concept/c:ConceptName/r:String/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..c:ConceptName/r:String' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -414,7 +414,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/c:ConceptScheme/c:Concept/r:Label/r:Content/@xml@lang" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/c:ConceptScheme/c:Concept/r:Label/r:Content/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..c:ConceptName/r:Label/r:Content' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -445,7 +445,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/c:ConceptScheme/c:Concept/r:Description/r:Content/@xml@lang" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/c:ConceptScheme/c:Concept/r:Description/r:Content/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..c:ConceptName/r:Description/r:Content' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -746,10 +746,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=1 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=1 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:MissingValuesDomainReference/r:TypeOfObject" isRequired="false"
@@ -764,10 +763,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=1 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=1 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:NumericDomainReference/r:TypeOfObject" isRequired="false"
@@ -782,10 +780,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=1 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=1 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:ScaleDomainReference/r:TypeOfObject" isRequired="false"
@@ -800,10 +797,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=1 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=1 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/d:TextDomainReference/r:TypeOfObject" isRequired="false"
@@ -818,10 +814,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=1 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=1 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionItem/r:ConceptReference/r:TypeOfObject" isRequired="false"
@@ -1148,10 +1143,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=2 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=2 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:MissingValuesDomainReference/r:TypeOfObject" isRequired="false"
@@ -1166,10 +1160,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=2 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=2 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:NumericDomainReference/r:TypeOfObject" isRequired="false"
@@ -1184,10 +1177,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=2 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=2 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:ScaleDomainReference/r:TypeOfObject" isRequired="false"
@@ -1202,10 +1194,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=2 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=2 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:TextDomainReference/r:TypeOfObject" isRequired="false"
@@ -1220,10 +1211,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=2 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=2 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:StructuredMixedGridResponseDomain/d:GridResponseDomain/d:CodeDomain/r:OutParameter" isRequired="false">
@@ -1239,10 +1229,9 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content>
-                <![CDATA[<Constraints>
-                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>
-                <groupID=2 MutuallyExclusiveGroupConstraint/></Constraints>]]>
+                <![CDATA[<Constraints><OptionalNodeConstraint/></Constraints>]]>
             </r:Content>
+            <!--ALSO HAS GROUPID=2 MutuallyExclusiveGroupConstraint-->
         </pr:Instructions>
     </pr:Used>
    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:QuestionScheme/d:QuestionGrid/d:StructuredMixedGridResponseDomain/d:GridResponseDomain/d:GridAttachment/d:CellCoordinatesAsDefined/d:SelectDimension/@rank" isRequired="false">
@@ -1870,7 +1859,7 @@ ________________________________________________________________________________
     <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/d:InstrumentScheme/d:Instrument/d:ControlConstructReference/r:TypeOfObject"
         isRequired="false" defaultValue="Sequence" fixedValue="true">
         <r:Description>
-            <r:Content>Required: Mandatory if '..d:InstrumentScheme/d:Instrument/d:ControlConstructReference' element is present.</r:Content>
+           <r:Content>Required: Mandatory if '..d:InstrumentScheme/d:Instrument/d:ControlConstructReference' element is present.</r:Content>
             <r:Content>Usage: Part of structure for the reference to the top level sequence;
                 from there the hierarchy allows access to all sub-sequences,
                 controlconstructs, questionconstructs and questionitems/grids.
@@ -2090,7 +2079,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:ManagedTextRepresentationName/r:String/@xml@lang" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:ManagedTextRepresentationName/r:String/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..r:ManagedTextRepresentationName/r:String' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -2121,7 +2110,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:Label/r:Content/@xml@lang" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:Label/r:Content/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..r:ManagedTextRepresentation/r:Label/r:Content' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -2152,7 +2141,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:Description/r:Content/@xml@lang" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/r:ManagedRepresentationScheme/r:ManagedTextRepresentation/r:Description/r:Content/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..r:ManagedTextRepresentation/r:Label/r:Content' is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
