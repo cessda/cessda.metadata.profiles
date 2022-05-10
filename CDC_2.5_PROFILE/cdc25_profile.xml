@@ -4,18 +4,18 @@
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2019-10-02
-Version: v1.0.4
-Change summary from v1.0.3: See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
-Last modified 2021-03-01 Darren Bell
+Version: v1.0.5
+Change summary from v1.0.4: See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
+Last modified 2022-05-11 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2021-03-01">
+    versionDate="2022-05-11">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI25_PROFILE</r:ID>
-    <r:Version>1.0.4</r:Version>
+    <r:Version>1.0.5</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE</r:String>
@@ -38,6 +38,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
+            <r:Content>CDC_UI_Label: Study description available in</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -154,6 +155,7 @@ ________________________________________________________________________________
                 It is used both for the PID and for the study/archival number given by the SP.
                 These two cases have different specifications. IDNo in the sense of study
                 number is optional. PID is mandatory</r:Content>
+            <r:Content>CDC_UI_Label: Study number / PID</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml:lang" isRequired="false">
@@ -179,6 +181,7 @@ ________________________________________________________________________________
                 IDNo for a Persistent Identifer, value should be one of
                 https://vocabularies.cessda.eu/vocabulary/CessdaPersistentIdentifierTypes i.e. ARK or
                 DOI or Handle or URN </r:Content>
+            <r:Content>CDC_UI_Label: Study number / PID</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/holdings/@xml:lang" isRequired="false">
@@ -203,6 +206,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: This is the document the metadata refers to, i.e. the URL of the study
                 description page at the SP website.</r:Content>
+            <r:Content>CDC_UI_Label: in the search result list with label "Access data"</r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -256,6 +260,58 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
+    <!--FUNDING INFORMATION-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The identification code of the grant or other monetary award which provided funding for the Study.
+                Required for OpenAire.  Indicate the appropriate agency using the "@agency" attribute.
+                If different funding agencies sponsored different stages of the production process, 
+                use the "@role" attribute to distinguish the grant numbers.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo/@agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Agency which provided the funding.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used> 
+    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo/@role" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'grantNo' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: If different funding agencies sponsored different stages of the production process, 
+                use the "@role" attribute to distinguish the grant numbers.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
     <!--PUBLISHER-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr" isRequired="true">
@@ -291,7 +347,7 @@ ________________________________________________________________________________
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
-    </pr:Used>
+    </pr:Used> 
     <!--****************************************************************************************-->
     <!--YEAR OF PUBLICATION-->
     <!--****************************************************************************************-->
@@ -302,7 +358,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: The year or freetext date of when the study description was published.
                 This element may be empty.</r:Content>
-            <r:Content>CDC_UI_Label: Year of publication</r:Content>
+            <r:Content>CDC_UI_Label: Publication year</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -312,13 +368,30 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'distDate' element is populated with a freetext expression.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate/@date" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'distDate' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept 'YYYY-MM-DD',
                 'YYYY-MM' or 'YYYY' as date format.</r:Content>
-            <r:Content>CDC_UI_Label: Year of publication</r:Content>
+            <r:Content>CDC_UI_Label: Publication year</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -339,7 +412,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Keyword for the study in the local language.</r:Content>
-            <r:Content>CDC_UI_Label: Keyword</r:Content>
+            <r:Content>CDC_UI_Label: Keywords</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -404,7 +477,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Subject classifcation term for the study in the local language. Use
                 descriptive terms from https://vocabularies.cessda.eu/vocabulary/TopicClassification
                 if possible but other vocabularies are permitted.</r:Content>
-            <r:Content>CDC_UI_Label: Topic</r:Content>
+            <r:Content>CDC_UI_Label: Topics</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -502,14 +575,30 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'collDate' element is populated with a freetext expression.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@event" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if parent is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Either 'start', 'end' or 'single' to indicate the type of @date
                 Attribute</r:Content>
-            <r:Content>CDC_UI_Label: Data collection period: start date OR Data collection period:
-                End date</r:Content>
+            <r:Content>CDC_UI_Label: Data collection period</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -854,7 +943,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Contains the Mode of Collection CV item in the local
                 language.</r:Content>
-            <r:Content>CDC_UI_Label: Data collection method</r:Content>
+            <r:Content>CDC_UI_Label: Data collection mode</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[

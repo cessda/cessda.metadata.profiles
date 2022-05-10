@@ -4,18 +4,18 @@
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2021-03-10
-Version: v0.1.1
-Change summary: Second draft for review - Resolved issues 37,40,42,43,45,46
-Last modified 2021-08-25 Darren Bell
+Version: v1.0.0
+Change summary: Interim release for review ahead of D6 deliverable
+Last modified 2022-05-11 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2021-04-28">
+    versionDate="2022-05-11">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI32_PROFILE</r:ID>
-    <r:Version>0.1.1</r:Version>
+    <r:Version>1.0.0</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI3.2 PROFILE</r:String>
@@ -38,6 +38,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
+            <r:Content>CDC_UI_Label: Study description available in</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -131,6 +132,7 @@ ________________________________________________________________________________
                 the study information there to the study description on the SP website,
                 to allow users to access the data. [This element not visible in the UI, it is only needed for the link].
                 The @typeOfUserID attribute must be "URLServiceProvider". </r:Content>
+            <r:Content>CDC_UI_Label: Study number / PID</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:UserID/@typeOfUserID" defaultValue="StudyNumber"
@@ -336,7 +338,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Subject classifcation term for the study in the local language. Use
                 descriptive terms from https://vocabularies.cessda.eu/vocabulary/TopicClassification
                 if possible but other vocabularies are permitted.</r:Content>
-            <r:Content>CDC_UI_Label: Topic</r:Content>
+            <r:Content>CDC_UI_Label: Topics</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -406,7 +408,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Keyword for the study in the local language.</r:Content>
-            <r:Content>CDC_UI_Label: Keyword</r:Content>
+            <r:Content>CDC_UI_Label: Keywords</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -810,7 +812,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Either a single point in time or start of a date range. Ideally
                 YYYY-MM-DDThh:mm:ssZ format, but can accept YYYY-MM-DD, YYYY-MM or YYYY.</r:Content>
-            <r:Content>CDC_UI_Label: Data collection period: start date</r:Content>
+            <r:Content>CDC_UI_Label: Data collection period</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used
@@ -823,7 +825,7 @@ ________________________________________________________________________________
             <r:Content>Usage: End of a date range. If data collection period is a single event, then
                 this element is not required. Ideally YYYY-MM-DDThh:mm:ssZ format, but can accept
                 YYYY-MM-DD, YYYY-MM or YYYY.</r:Content>
-            <r:Content>CDC_UI_Label: Data collection period: End date</r:Content>
+            <r:Content>CDC_UI_Label: Data collection period</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -897,7 +899,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Descriptive term of the Mode of Data Collection CV item in the local langiage.</r:Content>
-            <r:Content>CDC_UI_Label: Data collection method</r:Content>
+            <r:Content>CDC_UI_Label: Data collection mode</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
