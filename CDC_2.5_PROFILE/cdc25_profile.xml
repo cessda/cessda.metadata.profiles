@@ -38,7 +38,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
-            <r:Content>CDC_UI_Label: Study description available in</r:Content>
+            <r:Content>CDC_UI_Label: Study description available in.. (in the search result list)</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -268,8 +268,11 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: The identification code of the grant or other monetary award which provided funding for the Study.
-                Required for OpenAire.  Indicate the appropriate agency using the "@agency" attribute.
-                If different funding agencies sponsored different stages of the production process, 
+                Required for OpenAire. If you know that the funder is included in the OpenAire list of Funders,
+                see the instructions for grantNo syntax here: 
+                https://guidelines.openaire.eu/en/latest/data/field_contributor.html#nameidentifier-ma-o .
+                Indicate the appropriate agency using the "@agency" attribute.
+                If different funding agencies sponsored different stages of the production process,
                 use the "@role" attribute to distinguish the grant numbers.</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -287,13 +290,11 @@ ________________________________________________________________________________
             <r:Content>Usage: Agency which provided the funding.</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
         </pr:Instructions>
     </pr:Used> 
     <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo/@role" isRequired="false">
@@ -349,15 +350,15 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used> 
     <!--****************************************************************************************-->
-    <!--YEAR OF PUBLICATION-->
+    <!--DATE OF PUBLICATION-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The year or freetext date of when the study description was published.
-                This element may be empty.</r:Content>
+            <r:Content>Usage: The freetext date when the study description was published.
+                This element may be left empty.</r:Content>
             <r:Content>CDC_UI_Label: Publication year</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -389,8 +390,10 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'distDate' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept 'YYYY-MM-DD',
-                'YYYY-MM' or 'YYYY' as date format.</r:Content>
+            <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept
+                'YYYY-MM-DD', 'YYYY-MM' or 'YYYY' as date format. 
+                It is strongly recommended to provide the full date to allow 
+                sorting by publication date in CDC.</r:Content>
             <r:Content>CDC_UI_Label: Publication year</r:Content>
         </r:Description>
         <pr:Instructions>

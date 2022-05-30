@@ -253,7 +253,7 @@ ________________________________________________________________________________
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
-    <!--YEAR OF PUBLICATION-->
+    <!--DATE OF PUBLICATION-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:PublicationDate/r:SimpleDate"
         isRequired="false">
@@ -261,9 +261,11 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The year (use ISO format YYYY) when the study description was
-                published. </r:Content>
-            <r:Content>CDC_UI_Label: Year of publication</r:Content>
+            <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept
+                'YYYY-MM-DD', 'YYYY-MM' or 'YYYY' as date format. 
+                It is strongly recommended to provide the full date to allow 
+                sorting by publication date in CDC.</r:Content>
+            <r:Content>CDC_UI_Label: Publication year</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
