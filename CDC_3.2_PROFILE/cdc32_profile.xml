@@ -252,6 +252,17 @@ ________________________________________________________________________________
                 to be used.</r:Content>
         </r:Description>
     </pr:Used>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <!--****************************************************************************************-->
     <!--DATE OF PUBLICATION-->
     <!--****************************************************************************************-->
@@ -615,8 +626,75 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-   
-     <!--****************************************************************************************-->
+    <!--****************************************************************************************-->
+    <!--RELATED PUBLICATIONS (AND PID)-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:OtherMaterial/r:TypeOfMaterial" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Should always be set as 'related publication'.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:OtherMaterial/r:Citation/r:Title/r:String" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Title of the publication related to the data. 
+                Note that OpenAire will display in its portal only datasets 
+                related to a publication published in the portal.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:OtherMaterial/r:Citation/r:InternationalIdentifier/r:IdentifierContent" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: PID of the publication. Required by OpenAire to to relate the 
+                publication to a dataset.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:OtherMaterial/r:Citation/r:InternationalIdentifier/r:ManagingAgency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Agency responsible for the identifier of the publication. Required by OpenAire and 
+                the value has to come from their controlled list of relatedIdentifierTypes: 
+                https://guidelines.openaire.eu/en/latest/data/field_relatedidentifier.html#d-relatedidentifier..</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
     <!--TIME DIMENSION-->
     <!--****************************************************************************************-->
     <pr:Used
