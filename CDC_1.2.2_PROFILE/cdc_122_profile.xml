@@ -1094,7 +1094,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--RELATED PUBLICATIONS (AND PID)-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/title" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1109,6 +1109,23 @@ ________________________________________________________________________________
 				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl/@xml-lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'titl' is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the the Publication title. ISO 639-1 codes are strongly
+                encouraged to be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo" isRequired="false">

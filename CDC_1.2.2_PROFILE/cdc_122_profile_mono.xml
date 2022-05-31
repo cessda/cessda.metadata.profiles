@@ -800,7 +800,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--RELATED PUBLICATIONS (AND PID)-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/title" isRequired="false">
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
