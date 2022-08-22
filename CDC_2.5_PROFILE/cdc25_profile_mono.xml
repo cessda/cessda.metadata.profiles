@@ -411,7 +411,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<OptionalNodeConstraint/>
+				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
@@ -855,4 +855,3 @@ ________________________________________________________________________________
     </pr:Used>
 </pr:DDIProfile>
 
-</pr:DDIProfile>

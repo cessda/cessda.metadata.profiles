@@ -571,7 +571,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<OptionalNodeConstraint/>
+				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>

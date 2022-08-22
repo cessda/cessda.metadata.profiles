@@ -2936,6 +2936,64 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:DataCollectionDate/r:SimpleDate"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended </r:Content>
+            <r:Content>ElementType: Element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Use if data collection period is a single event. 
+                Ideally YYYY-MM-DDThh:mm:ssZ format, but can accept
+                YYYY-MM-DD, YYYY-MM or YYYY.</r:Content>
+            <r:Content>EQB_UI_Label: Data collection period.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used
+        xpath="/ddi:DDIInstance/s:StudyUnit/dc:DataCollection/dc:CollectionEvent/d:CollectionSituation/r:Description/r:Content"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended </r:Content>
+            <r:Content>ElementType: Element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: This is the free text expression of the collection period. This
+                element may be empty.</r:Content>
+            <r:Content>EQB_UI_Label: Data collection period</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used
+        xpath="/ddi:DDIInstance/s:StudyUnit/dc:DataCollection/dc:CollectionEvent/d:CollectionSituation/r:Description/r:Content/@xml:lang"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if '.Content' element is populated with a freetext expression.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--DATA COLLECTION METHOD-->
     <!--****************************************************************************************-->
