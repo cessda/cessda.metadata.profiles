@@ -2957,7 +2957,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/dc:DataCollection/dc:CollectionEvent/d:CollectionSituation/r:Description/r:Content"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:CollectionSituation/r:Description/r:Content"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended </r:Content>
@@ -2976,7 +2976,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/dc:DataCollection/dc:CollectionEvent/d:CollectionSituation/r:Description/r:Content/@xml:lang"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:CollectionSituation/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '.Content' element is populated with a freetext expression.</r:Content>
