@@ -749,9 +749,6 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    
-    
-    
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:OtherMaterial/r:Citation/r:InternationalIdentifier/r:IdentifierContent" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>

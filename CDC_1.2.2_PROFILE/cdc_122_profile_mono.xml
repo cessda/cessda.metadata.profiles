@@ -800,6 +800,24 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--RELATED PUBLICATIONS (AND PID)-->
     <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Simple description/title of the publication related to the data, if 
+                the more detailed relPubl/citation/titlStmt/titl (and its child elements) are not being used.
+                Note that OpenAire will display in its portal only datasets 
+                related to a publication published in the portal.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
