@@ -809,7 +809,7 @@ ________________________________________________________________________________
     <!--TIME DIMENSION-->
     <!--****************************************************************************************-->
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeofTimeMethod"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -828,7 +828,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeofTimeMethod/@CodeListName"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod/@CodeListName"
         defaultValue="DDI Time Method" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -845,7 +845,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeofTimeMethod/@CodeListURN"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod/@CodeListURN"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -885,7 +885,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'TypeofTimeMethod' element is present</r:Content>
+            <r:Content>Required: Mandatory if 'TypeOfTimeMethod' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Time Dimenstion descriptive term. ISO 639-1 codes are
                 strongly encouraged to be used.</r:Content>
@@ -1111,7 +1111,7 @@ ________________________________________________________________________________
     <!--DATA COLLECTION METHOD-->
     <!--****************************************************************************************-->
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeofModeofCollection"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1131,7 +1131,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeofModeofCollection@codeListName"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection@codeListName"
         defaultValue="DDI Mode of Collection" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1149,7 +1149,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeofModeofCollection@codeListURN"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection@codeListURN"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1189,7 +1189,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'TypeofModeofCollection' element is
+            <r:Content>Required: Mandatory if 'TypeOfModeOfCollection' element is
                 present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Mode of Data Collection descriptive term. ISO 639-1
