@@ -609,7 +609,7 @@ ________________________________________________________________________________
             <r:Content>Usage: This is the free text expression of the collection period. This
                 element may be empty.</r:Content>
             <r:Content>CDC_UI_Label: Data collection period</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 1.3.7.4</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -624,9 +624,9 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory if 'collDate' element is populated with a freetext
                 expression.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
-                to be used.</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>Usage: Language of the free text expression of the collection period. 
+                ISO 639-1 codes are strongly encouraged to be used.</r:Content>
+            <r:Content>CMM_Mapping: 1.3.7.4.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -645,7 +645,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Either 'start', 'end' or 'single' to indicate the type of @date
                 Attribute</r:Content>
             <r:Content>CDC_UI_Label: Data collection period</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 1.3.7.1/1.3.7.2/1.3.7.3</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -664,7 +664,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Ideally YYYY-MM-DDThh:mm:ssZ format, but can accept YYYY-MM-DD,
                 YYYY-MM or YYYY as date attribute. If there are multiple end dates, use the
                 last.</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 1.3.7.1/1.3.7.2/1.3.7.3</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
