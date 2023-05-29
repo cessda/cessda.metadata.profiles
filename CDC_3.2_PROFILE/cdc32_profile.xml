@@ -39,7 +39,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
             <r:Content>CDC_UI_Label: Study description available in</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+         <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -57,7 +57,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: System-required information - always "ddi:instance:3_2
                 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd"</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+         <r:Content>CMM_Mapping: 11.2.1</r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -185,17 +185,17 @@ ________________________________________________________________________________
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
-    <!--PRINCIPAL INVESTIGATOR (CREATOR) / PUBLISHER-->
+    <!--PRINCIPAL INVESTIGATOR (CREATOR) PERSON/ORGANIZATION REFERENCE-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorName/r:String"
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Principal investigator Person OR Institution</r:Content>
+            <r:Content>Usage: Reference to Principal investigator Person OR Institution</r:Content>
             <r:Content>CDC_UI_Label: Creator</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+         <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -205,16 +205,16 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorName/r:String/@xml:lang"
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:URN"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the Organisation name, which may be the contents of the
-                "r:CreatorName/r:String" element or the @affiliation attribute of
-                "r:CreatorName/r:String" if it specifies a person. ISO 639-1 codes codes are
-                strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Valid URN of Principal investigator Person OR Institution reference. If no URN is specified
+            then r:Agency, r:ID and r:Version must be specified instead. </r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -224,58 +224,193 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorName/@affiliation"
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:Agency"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: If "r:CreatorName/r:String" is a person, the organisational
-                affiliation of that person</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Agency of Principal investigator Person OR Institution URN reference.</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<OptionalNodeConstraint/>
+				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherName/r:String"
-        isRequired="true">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:ID"
+        isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The element should contain the name of the organisation who has
-                published the metadata for the harvested study description. This is usually the SP.
-                Note that there is no requirement to use an @abbr attribute, as in the DDI2.5 CDC
-                profile, as the @abbr attribute is not available in the DDI3.2 schema.</r:Content>
-            <r:Content>CDC_UI_Label: Publisher</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>Usage: ID of Principal investigator Person OR Institution URN reference.</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherName/r:String/@xml:lang"
-        isRequired="true">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:Version"
+        isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the organisation name. ISO codes are strongly encouraged
-                to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Version of Principal investigator Person OR Institution URN reference.</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
     </pr:Used>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:TypeOfObject"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Type of object being referenced - in this case, it should always be either
+            "Individual" or "Organization".</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 11.7.1.1.1/11.7.1.2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used> 
+    <!--****************************************************************************************-->
+    <!--PUBLISHER ORGANIZATION REFERENCE-->
+    <!--****************************************************************************************-->   
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: A reference to the name of the institution publishing the metadata, 
+                i.e. the name of the actual CESSDA Service Provider providing the metadata information. Only on study level.</r:Content>
+            <r:Content>CDC_UI_Label: Publisher</r:Content>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:URN"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Valid URN reference of Institution publishing the metadata. If no URN is specified
+                then r:Agency, r:ID and r:Version must be specified instead. </r:Content>
+            <r:Content>CDC_UI_Label: Publisher</r:Content>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:Agency"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: URN Agency of Institution publishing the metadata.</r:Content>
+            <r:Content>CDC_UI_Label: Publisher</r:Content>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:ID"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: URN ID of Institution publishing the metadata.</r:Content>
+            <r:Content>CDC_UI_Label: Publisher</r:Content>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:Version"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: URN Version of Institution publishing the metadata.</r:Content>
+            <r:Content>CDC_UI_Label: Publisher</r:Content>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:TypeOfObject"
+        defaultValue="Organization" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Type of object being referenced - in this case, it should always be either
+                "Individual" or "Organization".</r:Content>
+            <r:Content>CDC_UI_Label: Publisher</r:Content>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used> 
     <!--****************************************************************************************-->
     <!--DATE OF PUBLICATION-->
     <!--****************************************************************************************-->

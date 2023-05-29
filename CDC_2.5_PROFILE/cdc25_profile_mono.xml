@@ -33,15 +33,22 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ROOT ELEMENT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/@xml:lang" isRequired="true">
+    <pr:Used xpath="/codeBook/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
             <r:Content>CDC_UI_Label: Study description available in.. (in the search result
                 list)</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/@xsi:schemaLocation"
         defaultValue="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
@@ -51,7 +58,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: System-required information - always "ddi:codebook:2_5
                 codebook.xsd"</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 11.2.1</r:Content>
         </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
