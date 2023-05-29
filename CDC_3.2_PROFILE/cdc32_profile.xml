@@ -205,83 +205,10 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:URN"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Valid URN of Principal investigator Person OR Institution reference. If no URN is specified
-            then r:Agency, r:ID and r:Version must be specified instead. </r:Content>
-            <r:Content>CDC_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:Agency"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Agency of Principal investigator Person OR Institution URN reference.</r:Content>
-            <r:Content>CDC_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:ID"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: ID of Principal investigator Person OR Institution URN reference.</r:Content>
-            <r:Content>CDC_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:Version"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Version of Principal investigator Person OR Institution URN reference.</r:Content>
-            <r:Content>CDC_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 11.7.1.1/11.7.1.2</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:TypeOfObject"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Mandatory of 'r:CreatorReference' is present.</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Type of object being referenced - in this case, it should always be either
@@ -290,11 +217,13 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 11.7.1.1.1/11.7.1.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
         </pr:Instructions>
     </pr:Used> 
     <!--****************************************************************************************-->
@@ -319,83 +248,10 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:URN"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Valid URN reference of Institution publishing the metadata. If no URN is specified
-                then r:Agency, r:ID and r:Version must be specified instead. </r:Content>
-            <r:Content>CDC_UI_Label: Publisher</r:Content>
-            <r:Content>CMM_Mapping: 1.1.8</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:Agency"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: URN Agency of Institution publishing the metadata.</r:Content>
-            <r:Content>CDC_UI_Label: Publisher</r:Content>
-            <r:Content>CMM_Mapping: 1.1.8</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:ID"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: URN ID of Institution publishing the metadata.</r:Content>
-            <r:Content>CDC_UI_Label: Publisher</r:Content>
-            <r:Content>CMM_Mapping: 1.1.8</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:Version"
-        isRequired="false">
-        <r:Description>
-            <r:Content>Required: Recommended</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: URN Version of Institution publishing the metadata.</r:Content>
-            <r:Content>CDC_UI_Label: Publisher</r:Content>
-            <r:Content>CMM_Mapping: 1.1.8</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:TypeOfObject"
+   <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:TypeOfObject"
         defaultValue="Organization" fixedValue="true" isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Mandatory if 'r:PublisherReference' is present</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Type of object being referenced - in this case, it should always be either
@@ -403,13 +259,15 @@ ________________________________________________________________________________
             <r:Content>CDC_UI_Label: Publisher</r:Content>
             <r:Content>CMM_Mapping: 1.1.8</r:Content>
         </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
+       <pr:Instructions>
+           <r:Content>
+               <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+           </r:Content>
+       </pr:Instructions>
     </pr:Used> 
     <!--****************************************************************************************-->
     <!--DATE OF PUBLICATION-->
@@ -936,6 +794,66 @@ ________________________________________________________________________________
             <r:Content><![CDATA[
 			<Constraints>
 				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
+    <!--UNIVERSE-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/c:ConceptualComponent/c:UniverseScheme/c:Universe/r:Description/r:Content" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Description of population or other elements studied or measured (freetext).</r:Content>
+            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CMM_Mapping: 1.3.4</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/c:ConceptualComponent/c:UniverseScheme/c:Universe/r:Description/r:Content/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if '../c:Universe/r:Description/r:Content' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the Universe item. ISO 639-1 codes are strongly
+                encouraged to be used.</r:Content>
+            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CMM_Mapping: 1.3.4.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/c:ConceptualComponent/c:UniverseScheme/c:Universe/@isInclusive" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The default value is "true" in DDI-L. The description statement of a 
+                universe is generally stated in inclusive terms such as "All persons residing in Europe". 
+                Occasionally a universe is defined by what it excludes, i.e., "All persons residing 
+                in Europe except for those residing on U.S. Military bases". 
+                In this case the value would be changed to "false". 
+                In DDI-C, attribute clusion states the inclusion/exclusion with values "I" and "E" respectively.</r:Content>
+            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CMM_Mapping: 1.3.4.2</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
