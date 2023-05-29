@@ -1194,6 +1194,41 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
+    <!--ACCESS CATEGORY - OPEN OR RESTRICTED-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/conditions" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
+                CDC will use the same Access Rights vocabulary as OpenAIRE. 
+                The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
+                http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
+                Only the codes “restrictedAccess” and “openAccess” will be used.</r:Content>
+            <r:Content>CDC_UI_Label: Open/Closed</r:Content>
+            <r:Content>CMM_Mapping: 1.4.1</r:Content>
+        </r:Description>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/conditions/@elementVersion" 
+        defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'conditions' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Always 'info:eu-repo-Access-Terms vocabulary'.</r:Content>
+            <r:Content>CMM_Mapping: 1.4.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
     <!--FILE DESCRIPTIONS-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName" isRequired="false">
