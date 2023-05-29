@@ -4,18 +4,18 @@
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2021-03-10
-Version: v1.0.0
-Change summary: Interim release for review ahead of D6 deliverable
-Last modified 2022-05-11 Darren Bell
+Version: v2.0.0_DRAFT
+Change summary: Draft release ahead of D6 deliverable
+Last modified 2023-05-29 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2022-05-11">
+    versionDate="2023-05-29">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI32_PROFILE</r:ID>
-    <r:Version>1.0.0</r:Version>
+    <r:Version>2.0.0</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI3.2 PROFILE</r:String>
@@ -492,8 +492,10 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/TopicClassification/4.0?languageVersion=en-4.0</r:Content>
+            <r:Content>Usage: Use the URI of the CV version that is being used based on the pattern 
+                "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:[version number]"
+                For example, for version 4.2 of CESSDA Topic Classification, use
+                "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2"</r:Content>
          <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1294,24 +1296,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--****************************************************************************************-->
+      <!--****************************************************************************************-->
     <!--ACCESS STATEMENT-->
     <!--****************************************************************************************-->
     <pr:Used
