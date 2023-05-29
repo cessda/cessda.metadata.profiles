@@ -1020,7 +1020,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'TypeOfTimeMethod' element is present</r:Content>
+            <r:Content>Required: Mandatory if '.../d:TimeMethod/r:Description/r:Content' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Time Dimenstion descriptive term. ISO 639-1 codes are
                 strongly encouraged to be used.</r:Content>
@@ -1120,7 +1120,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:SamplingProcedure/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'TypeOfSamplingProcedure' element is
+            <r:Content>Required: Mandatory if '.../d:SamplingProcedure/r:Description/r:Content' element is
                 present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Sampling Procedure Descriptive term. ISO 639-1 codes
@@ -1226,7 +1226,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:CollectionSituation/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if '.Content' element is populated with a freetext expression.</r:Content>
+            <r:Content>Required: Mandatory if '...Content' element is populated with a freetext expression.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the free text expression of the collection period. 
                 ISO 639-1 codes are strongly encouraged to be used.</r:Content>
@@ -1324,7 +1324,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/r:Description/r:Content/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'TypeOfModeOfCollection' element is
+            <r:Content>Required: Mandatory if '.../d:ModeOfCollection/r:Description/r:Content' element is
                 present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Mode of Data Collection descriptive term. ISO 639-1
