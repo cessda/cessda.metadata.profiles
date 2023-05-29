@@ -51,14 +51,21 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/@xsi:schemaLocation"
         defaultValue="ddi:instance:3_2 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd"
-        fixedValue="true" isRequired="true">
+        fixedValue="false" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: System-required information - always "ddi:instance:3_2
+            <r:Content>Usage: System-required information - nearly always "ddi:instance:3_2
                 http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd"</r:Content>
          <r:Content>CMM_Mapping: 11.2.1</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--XML DOCUMENT TITLE-->

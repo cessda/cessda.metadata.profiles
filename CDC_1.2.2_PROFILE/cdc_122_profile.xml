@@ -5,18 +5,18 @@ ________________________________________________________________________________
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2020-10-20
-Version: v1.0.5
+Version: v2.0.0_DRAFT
 Change summary from v1.0.4: See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
-Last modified 2022-05-11 Darren Bell
+Last modified 2023-05-29 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2022-05-11">
+    versionDate="2023-05-29">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI122_PROFILE</r:ID>
-    <r:Version>1.0.5</r:Version>
+    <r:Version>2.0.0</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI 1.2.2 PROFILE</r:String>
@@ -52,13 +52,20 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/codeBook/@xsi:schemaLocation"
         defaultValue="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd"
-        fixedValue="true" isRequired="true">
+        fixedValue="false" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: System-required information - always "http://www.icpsr.umich.edu/DDI
+            <r:Content>Usage: System-required information - nearly always "http://www.icpsr.umich.edu/DDI
                 http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd"</r:Content>
          <r:Content>CMM_Mapping: 11.2.1</r:Content> </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--TITLE AND IDENTIFIERS-->
