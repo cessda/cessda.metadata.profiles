@@ -191,7 +191,13 @@ Minor changes to usage notes.
 
 ## DDI CDC 2.5 Monolingual Profile
 
-### 2021-03-02 [v1.0.4 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
+### 2023-05-31 [v1.0.5 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_2.5_PROFILE/cdc25_profile.xml)
+
+`/codebook/@xml:lang` attribute changed from Mandatory to Recommended in the monolingual profile.
+
+- Fixed issue [149](https://github.com/cessda/cessda.metadata.profiles/issues/149)
+
+### 2021-03-02 [v1.0.4](https://github.com/cessda/cessda.metadata.profiles/commit/64534269d084153c85b5baa7e2351866c26090c6)
 
 Minor changes to usage notes.  
 '../keyword/@vocab' attribute changed from Mandatory to Recommended.
@@ -209,7 +215,13 @@ Minor changes to usage notes.
 
 ## DDI CDC 1.2.2 Monolingual Profile
 
-### 2021-03-02 [v1.0.4](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
+### 2023-05-31 [v1.0.5 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile.xml)
+
+`/codebook/@xml-lang` attribute changed from Mandatory to Recommended in the monolingual profile.
+
+- Fixed issue [149](https://github.com/cessda/cessda.metadata.profiles/issues/149)
+
+### 2021-03-02 [v1.0.4](https://github.com/cessda/cessda.metadata.profiles/commit/64534269d084153c85b5baa7e2351866c26090c6)
 
 Minor changes to usage notes.  
 '../keyword/@vocab' attribute changed from Mandatory to Recommended.
