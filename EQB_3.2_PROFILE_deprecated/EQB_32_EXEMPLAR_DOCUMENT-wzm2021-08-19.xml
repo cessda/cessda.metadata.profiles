@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ddi:DDIInstance versionDate="2020-05-13" xmlns:ddi="ddi:instance:3_2" xmlns:s="ddi:studyunit:3_2"
-	xmlns:p="ddi:physicaldataproduct:3_2" xmlns:pi="ddi:physicalinstance:3_2"
-	xmlns:c="ddi:conceptualcomponent:3_2" xmlns:l="ddi:logicalproduct:3_2"
+	xmlns:pi="ddi:physicalinstance:3_2" xmlns:c="ddi:conceptualcomponent:3_2" xmlns:l="ddi:logicalproduct:3_2"
 	xmlns:r="ddi:reusable:3_2" xmlns:d="ddi:datacollection:3_2" xmlns:a="ddi:archive:3_2"
-	xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:dc="http://purl.org/dc/terms/" xmlns:m2="ddi:physicaldataproduct_ncube_tabular:3_2"
-	xmlns:g="ddi:group:3_2" xmlns:ds="ddi:dataSet:3_2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/terms/" xmlns:g="ddi:group:3_2"
 	xsi:schemaLocation="ddi:instance:3_2 https://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/instance.xsd"
 	xml:lang="en">
 	<r:Agency>ExampleAgency</r:Agency>
@@ -30,8 +27,8 @@
 			<r:String xml:lang="en">documentationCopyright</r:String>
 		</r:Copyright>
 	</r:Citation>
-	
-	<g:Group> 
+
+	<g:Group>
 		<!--EQB_ID_7-->
 		<!--EQB_ID_7.1-->
 		<r:Agency>ExampleAgency</r:Agency>
@@ -50,9 +47,9 @@
 				<r:String xml:lang="en" isTranslated="false">studyGroupTitle</r:String>
 			</r:Title>
 		</r:Citation>
-	
-		
-		
+
+
+
 		<r:StudyUnitReference>
 			<!--EQB_ID_7.5-->
 			<r:Agency>ExampleAgency</r:Agency>
@@ -61,7 +58,7 @@
 			<!--EQB_ID_7.5.1-->
 			<r:TypeOfObject>StudyUnit</r:TypeOfObject>
 		</r:StudyUnitReference>
-		
+
 		<r:StudyUnitReference>
 			<!--EQB_ID_7.6-->
 			<r:Agency>ExampleAgency</r:Agency>
@@ -244,13 +241,13 @@
 				</d:DisplayText>
 			</d:StatementItem>
 		</d:ControlConstructScheme>
-	
-	
-		
-		<!-- WZM: top level sequence, referenced from Instrument (and this is within StudyUnit, so this is the connection to the study;  
+
+
+
+		<!-- WZM: top level sequence, referenced from Instrument (and this is within StudyUnit, so this is the connection to the study;
 			top level sequence references 1 sequence per question to have the actual questions of instrument in ordered sequence-->
 		<!-- I left the example IDs from ZA7599, so you can follow the structure -->
-		
+
 		<!-- This ControlConstructScheme holds only Sequences and is for Instrument, another Instrument might reference another one -->
 		<d:ControlConstructScheme>
 			<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_ControlConstructSchemeForTopLevelSequence</r:ID><r:Version>1.0.0</r:Version>
@@ -262,9 +259,9 @@
 				</d:ControlConstructReference>
 				<!-- more ControlConstructReferences to Sequences here, this defines the order of the questions -->
 			</d:Sequence>
-			
+
 			<!-- WZM issue #59 -->
-			<!-- EQB_ID_1.1 / 1.2 -->			
+			<!-- EQB_ID_1.1 / 1.2 -->
 			<!-- here come all the Sequences, 1 per question; each with reference to QuestionConstruct -->
 			<d:Sequence>
 				<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Sequence_SubQ2</r:ID><r:Version>1.0.0</r:Version>
@@ -272,34 +269,34 @@
 					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Construct_SubQ2</r:ID><r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>QuestionConstruct</r:TypeOfObject>
 				</d:ControlConstructReference>
-				
+
 				<!-- WZM (EQB_ID_1.2.6 + 1.1.6) optional reference to StatementItem if needed to connect the statement with its question -->
 				<d:ControlConstructReference>
 					<r:Agency>de.gesis</r:Agency><r:ID>Example_Statement_ID</r:ID><r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>StatementItem</r:TypeOfObject>
 				</d:ControlConstructReference>
-				
+
 			</d:Sequence>
 			<!-- more Sequences here, 1 per question -->
 		</d:ControlConstructScheme>
-		
+
 		<!--EQB_ID_1.1 / 1.2 -->
 		<!-- This ControlConstructScheme holds only QuestionConstructs, 1 per question; each with reference to QuestionItem/QuestionGrid -->
 		<d:ControlConstructScheme>
 			<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_ConCon</r:ID><r:Version>1.0.0</r:Version>
-			
+
 			<d:QuestionConstruct>
 				<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Construct_SubQ2</r:ID><r:Version>1.0.0</r:Version>
-				<r:QuestionReference><!-- might point to QuestionItem (EQB_ID_1.1) or QuestionGrid (EQB_ID_1.2) --> 
+				<r:QuestionReference><!-- might point to QuestionItem (EQB_ID_1.1) or QuestionGrid (EQB_ID_1.2) -->
 					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_Q13_QueGri</r:ID><r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>QuestionGrid</r:TypeOfObject>
 				</r:QuestionReference>
 			</d:QuestionConstruct>
 			<!-- more QuestionConstructs here -->
 		</d:ControlConstructScheme>
-		
-		
-	
+
+
+
 		<d:QuestionScheme>
 			<!--EQB_ID_1-->
 			<r:Agency>ExampleAgency</r:Agency>
@@ -338,7 +335,7 @@
 					<d:LiteralText>
 						<d:Text xml:lang="en" isTranslated="false">QUESTION TEXT</d:Text>
 					</d:LiteralText>
-				
+
 					<d:LiteralText><!-- WZM example for another language -->
 						<d:Text xml:lang="de" isTranslated="false">QUESTION TEXT IN GERMAN</d:Text>
 					</d:LiteralText>
@@ -348,14 +345,14 @@
 				<!--***********************************************-->
 				<!--REPSONSE DOMAIN REFERENC - SUBSITUTION GROUP UNDER QUESTION ITEM -->
 				<!--***********************************************-->
-				
+
 <!--				<d:DateTimeDomainReference>
 					<r:Agency>ExampleAgency</r:Agency>
 					<r:ID>ExampleID</r:ID>
 					<r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>ManagedDateTimeRepresentation</r:TypeOfObject>
 				</d:DateTimeDomainReference>-->
-				
+
 				<!--EQB_ID_1.1.9-->
 				<!--EQB_ID_1.1.9.1-->
 <!--							<d:MissingValuesDomainReference>
@@ -382,15 +379,15 @@
 					<r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>ManagedTextRepresentation</r:TypeOfObject>
 				</d:TextDomainReference>-->
-				
-				
-				
+
+
+
 
 
 				<!--EQB_ID_2.1.1.2_x-->
-	
+
 <!--					<r:ResponseCardinality maximumResponses="1" minimumResponses="1"/>-->
-				
+
 
 
 
@@ -439,7 +436,7 @@
 					<r:ExternalURLReference>showcardURL</r:ExternalURLReference>
 					<!--EQB_ID_1.1.12-->
 				</d:ExternalAid>
-				
+
 				<!-- WZM this is needed (optional) to connect the interviewerinstruction with question, even if not mentioned in the EQB spreadsheet -->
 				<d:InterviewerInstructionReference>
 					<r:Agency>ExampleAgency</r:Agency>
@@ -447,7 +444,7 @@
 					<r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>Instruction</r:TypeOfObject>
 				</d:InterviewerInstructionReference>
-				
+
 			</d:QuestionItem>
 
 			<!--EQB_ID_1.2-->
@@ -482,7 +479,7 @@
 				</d:QuestionGridName>
 
 
-	
+
 
 				<!--EQB_ID_1.2.5 -->
 				<!--EQB_ID_1.2.5.1 -->
@@ -511,7 +508,7 @@
 						</r:Description>
 					</d:CodeDomain>
 				</d:GridDimension>
-				
+
 				<!--QUESTION GRID RESPONSE DOMAIN SUBSTITUTION GROUP-->
 <!--				<d:DateTimeDomainReference>
 					<r:Agency>ExampleAgency</r:Agency>
@@ -519,7 +516,7 @@
 					<r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>ManagedDateTimeRepresentation</r:TypeOfObject>
 				</d:DateTimeDomainReference>-->
-				
+
 
 				<!--EQB_ID_1.2.10.3-->
 				<!--SUBSITUTION GROUP - to query-->
@@ -548,10 +545,10 @@
 					<!-\-EQB_ID_1.2.10.3.1.1-\->
 					<r:TypeOfObject>ManagedTextRepresentation</r:TypeOfObject>
 				</d:TextDomainReference>-->
-				
-				
-				
-				<!--EQB_ID_1.2.10.3.2 
+
+
+
+				<!--EQB_ID_1.2.10.3.2
 				See query on 1.2.10.3 -->
 				<d:StructuredMixedGridResponseDomain>
 					<d:GridResponseDomain>
@@ -597,15 +594,15 @@
 					<!--EQB_ID_1.2.11.2-->
 					<r:ExternalURLReference>showcardURL</r:ExternalURLReference>
 				</d:ExternalAid>
-				
+
 				<!-- WZM this is needed (optional) to connect the interviewerinstruction with question, even if not mentioned in the EQB spreadsheet -->
 				<d:InterviewerInstructionReference>
 					<r:Agency>ExampleAgency</r:Agency>
 					<r:ID>ExampleID</r:ID>
 					<r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>Instruction</r:TypeOfObject>
-				</d:InterviewerInstructionReference>	
-				
+				</d:InterviewerInstructionReference>
+
 			</d:QuestionGrid>
 
 		</d:QuestionScheme>
@@ -667,7 +664,7 @@
 					<!--EQB_ID_2.1.1.5.1-->
 					<r:Content xml:lang="en">codelistDescription</r:Content>
 				</r:Description>
-				
+
 				<l:Code>
 					<r:Agency>ExampleAgency</r:Agency>
 					<r:ID>ExampleID</r:ID>
@@ -687,7 +684,7 @@
 		</l:CodeListScheme>
 
 
-	
+
 
 		<!--EQB_ID_4.5-->
 		<l:VariableScheme>
@@ -743,7 +740,7 @@
 
 
 
-	
+
 
 		<!--EQB_ID_5-->
 		<d:InstrumentScheme>
@@ -761,28 +758,28 @@
 					<!--EQB_ID_5.2.2-->
 					<r:String xml:lang="en" isTranslated="false">instrumentName</r:String>
 				</d:InstrumentName>
-				
-				<!--  WZM issue #56 
-					this is the top level sequence, from there the hierarchy allows to access all sub-sequences, 
+
+				<!--  WZM issue #56
+					this is the top level sequence, from there the hierarchy allows to access all sub-sequences,
 					controlconstructs, questionconstructs and questionitems/grids  -->
 				<d:ControlConstructReference objectLanguage="en"><!-- EQB_ID 5.3 in @objectLanguage -->
 					<r:Agency>de.gesis</r:Agency><r:ID>ZA7599_TopLevelSequence</r:ID><r:Version>1.0.0</r:Version>
 					<r:TypeOfObject>Sequence</r:TypeOfObject>
 				</d:ControlConstructReference>
-				
-				
-				<!-- EQB_ID 5.4 referenceInstrumentToQuestion and 5.5 referenceInstrumentToQuestionType 
+
+
+				<!-- EQB_ID 5.4 referenceInstrumentToQuestion and 5.5 referenceInstrumentToQuestionType
 					definitions in in the EQB Excel spreadsheet are misleading:
 				to get from Instrument to Question, you have to follow:
 				-reference to TopLevelSequence
 				-has reference to Sequence (for each question there is 1)
 				-has reference to QuestionConstruct
 				-has reference to QuestionGrid or QuestionItem
-				
+
 				see example above
 				-->
-				
-				
+
+
 			</d:Instrument>
 			<!-- more Instruments might exits, they can reference the same TopLevelSequence with other language or even a different TopLevelSequence -->
 
@@ -794,7 +791,7 @@
 			<r:Agency>ExampleAgency</r:Agency>
 			<r:ID>ExampleID</r:ID>
 			<r:Version>1.0.0</r:Version>
-			
+
 			<!--EQB_ID_NOT IN THE SPREADSHEET-->
 			<r:ManagedDateTimeRepresentation>
 				<r:Agency>ExampleAgency</r:Agency>
@@ -802,23 +799,23 @@
 				<r:Version>1.0.0</r:Version>
 				<r:DateTypeCode>DateTypeCode</r:DateTypeCode>
 			</r:ManagedDateTimeRepresentation>
-	
+
 			<!--EQB_ID_NOT IN THE SPREADSHEET-->
 			<r:ManagedMissingValuesRepresentation>
 				<r:Agency>ExampleAgency</r:Agency>
 				<r:ID>ExampleID</r:ID>
 				<r:Version>1.0.0</r:Version>
 			</r:ManagedMissingValuesRepresentation>
-			
-	
+
+
 			<!--EQB_ID_NOT IN THE SPREADSHEET-->
 			<r:ManagedScaleRepresentation>
 		<r:Agency>ExampleAgency</r:Agency>
 		<r:ID>ExampleID</r:ID>
 		<r:Version>1.0.0</r:Version>
 	</r:ManagedScaleRepresentation>
-	
-		
+
+
 			<r:ManagedNumericRepresentation>
 				<r:Agency>ExampleAgency</r:Agency>
 				<r:ID>ExampleID</r:ID>
@@ -842,7 +839,7 @@
 					<r:High>2</r:High>
 				</r:NumberRange>
 			</r:ManagedNumericRepresentation>
-			
+
 			<!--EQB_ID_2.3.4-->
 			<r:ManagedTextRepresentation minLength="1">
 				<r:Agency>ExampleAgency</r:Agency>
@@ -862,7 +859,7 @@
 					<r:Content xml:lang="en">textDomainDescription</r:Content>
 				</r:Description>
 			</r:ManagedTextRepresentation>
-			
+
 
 		</r:ManagedRepresentationScheme>
 
@@ -924,9 +921,9 @@
 				</r:PublisherName>
 			</r:Publisher>
 
-	
 
-			
+
+
 			<!--EQB_ID_6.10-->
 			<r:PublicationDate>
 				<r:SimpleDate>2012-08-22</r:SimpleDate>
@@ -945,9 +942,9 @@
 			<dc:extent>CDCURL-Link to study in CESSDA Data Catalogue</dc:extent>
 		</r:Citation>
 
-	
 
-		
+
+
 		<r:Abstract>
 			<!--EQB_ID_6.7-->
 			<!--EQB_ID_6.7.1-->
@@ -968,7 +965,7 @@
 				<r:Subject codeListName="CESSDA Topic Classification" codeListAgencyName="CESSDA" codeListURN="http://vocabURL" xml:lang="en">topicControlledDescriptive</r:Subject>
 			</r:TopicalCoverage>
 
-		
+
 
 				<r:SpatialCoverage>
 				<r:Agency>ExampleAgency</r:Agency>
@@ -1040,8 +1037,8 @@
 					</r:Description>
 				</d:TimeMethod>
 				<!--EQB_ID_6.17-->
-				
-				
+
+
 
 				<d:SamplingProcedure>
 					<r:Agency>ExampleAgency</r:Agency>
@@ -1058,9 +1055,9 @@
 						<r:Content xml:lang="en">samplingProcedureDescriptive</r:Content>
 					</r:Description>
 				</d:SamplingProcedure>
-				
-	
-				
+
+
+
 			</d:Methodology>
 
 
@@ -1072,16 +1069,16 @@
 				<r:Agency>ExampleAgency</r:Agency>
 				<r:ID>ExampleID</r:ID>
 				<r:Version>1.0.0</r:Version>
-				
+
 				<!--EQB_ID_6.19-->
 				<!--THIS USED INSTEAD OF TEMPORAL COVERAGE TO ALIGN WITH  AS D:COLLECTIONDATE IS USED IN CDC PROFILE-->
 				<d:DataCollectionDate>
 					<r:StartDate>2012-08-12</r:StartDate>
 					<r:EndDate>2012-08-24</r:EndDate>
 				</d:DataCollectionDate>
-				
-		
-				
+
+
+
 				<!--EQB_ID_6.18-->
 				<d:ModeOfCollection>
 					<r:Agency>ExampleAgency</r:Agency>
@@ -1100,11 +1097,11 @@
 						<r:Content xml:lang="en">modeOfCollectionDescriptive</r:Content>
 					</r:Description>
 				</d:ModeOfCollection>
-			
+
 			</d:CollectionEvent>
 
-	
-	
+
+
 			<d:InstrumentScheme>
 				<r:Agency>ExampleAgency</r:Agency>
 				<r:ID>ExampleID</r:ID>
@@ -1129,10 +1126,10 @@
 	<!--EQB_ID_4.4-->
 	<r:TypeOfObject>PhysicalInstance</r:TypeOfObject>
 </r:PhysicalInstanceReference>
-		
-	
 
-		
+
+
+
 		<!--EQB_ID_6.21-->
 		<a:Archive>
 			<r:Agency>ExampleAgency</r:Agency>
@@ -1172,7 +1169,7 @@
 							<r:Content>metadataAccessConditionAll</r:Content>
 						</a:AccessConditions>
 					</a:DefaultAccess>
-				
+
 					<a:Item>
 						<!--EQB_ID_6.23.1 same ID used for AccessConditions below-->
 						<a:CallNumber>STUDYNUMBER</a:CallNumber>
@@ -1191,8 +1188,8 @@
 				</a:Collection>
 			</a:ArchiveSpecific>
 		</a:Archive>
-	
-		
+
+
 	</s:StudyUnit>
 
 </ddi:DDIInstance>

@@ -10,12 +10,16 @@ General information on contributing to CESSDA Open Source Software can also be f
 
 ## User feedback
 
-### Reporting problems or Suggesting Enhancements
+### Reporting problems
 
 We welcome all feedback you may have when using any of our tools and services.
 
-If you encounter a problem, please [create a GitHub issue](https://github.com/cessda/cessda.metadata.profiles/issues/new) 
+If you encounter a problem, please [create an issue](https://github.com/cessda/cessda.metadata.profiles/issues/new) and label the issue with "bug".
 
+### Suggesting Enhancements
+
+To suggest new functionalities and possible future developments,
+please [create an issue](https://github.com/cessda/cessda.metadata.profiles/issues/new) and label the issue with "enhancement".
 
 ## Contributing to the development
 
