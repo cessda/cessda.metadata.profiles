@@ -5,15 +5,15 @@ ________________________________________________________________________________
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2020-10-20
-Version: v2.0.0_DRAFT
-Change summary from v1.0.4: See https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md
-Last modified 2023-05-29 Darren Bell
+Version: v2.0.0
+Change summary from v1.0.4: See https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
+Last modified 2023-08-31 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2023-05-29">
+    versionDate="2023-08-31">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI122_PROFILE</r:ID>
     <r:Version>2.0.0</r:Version>
@@ -77,7 +77,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Title of the CDC XML document - note that the Study Title goes in
                 /codeBook/stdyDscr/citation/titlStmt/titl</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 11.1.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -91,7 +91,7 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory if 'titl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 11.1.1.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -110,14 +110,14 @@ ________________________________________________________________________________
             <r:Content>Usage: Title of the Study. If additional titles are required in other
                 languages, use the parTitl element</r:Content>
             <r:Content>CDC_UI_Label: Study title</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.3</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.3.1</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl" isRequired="false">
         <r:Description>
@@ -128,7 +128,7 @@ ________________________________________________________________________________
                 element. It is preferable to include this element to hold an English version of the
                 title if the 'titl' element is not in English.</r:Content>
             <r:Content>CDC_UI_Label: Study title</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -142,7 +142,7 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory if 'parTitl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the translated study title. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.3.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -163,7 +163,7 @@ ________________________________________________________________________________
                 These two cases have different specifications. IDNo in the sense of study
                 number is optional. PID is mandatory</r:Content>
             <r:Content>CDC_UI_Label: Study number / PID</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.10.4/1.1.2</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml-lang" isRequired="false">
         <r:Description>
@@ -171,7 +171,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage:  Language is recommended when the @agency attribute contains an organisation name, for example, in the context of 'IDNo'
                 being used to display the internal study number</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+         <r:Content>CMM_Mapping: None</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -189,7 +189,7 @@ ________________________________________________________________________________
                 ARK or DOI or Handle or URN
             </r:Content>
             <r:Content>CDC_UI_Label: Study number / PID</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.10.4.1/1.1.2.1</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/holdings/@xml-lang" isRequired="false">
         <r:Description>
@@ -198,7 +198,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Language of the study description page at the SP website (there can be
                 multiple 'holding' elements for study description pages in different languages. ISO
                 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.10.5.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -214,7 +214,7 @@ ________________________________________________________________________________
             <r:Content>Usage: This is the document the metadata refers to, i.e. the URL of the study
                 description page at the SP website.</r:Content>
             <r:Content>CDC_UI_Label: in the search result list with label "Access data"</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.10.5</r:Content> </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--PRINCIPAL INVESTIGATOR / CREATOR-->
@@ -226,7 +226,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Principal investigator Person OR Institution</r:Content>
             <r:Content>CDC_UI_Label: Creator</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.7.1/1.1.7.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -242,7 +242,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Language of the Organisation name, which may be the contents of
                 the AuthEnty element or the @affiliation attribute of AuthEnty specifies a person.
                 ISO 639-1 codes codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: None</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -257,7 +257,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: If AuthEnty is a person, the organisational affiliation of that
                 person</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.7.1/1.1.7.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -334,7 +334,7 @@ ________________________________________________________________________________
                 published the metadata for the harvested study description. This is usually the
                 SP.</r:Content>
             <r:Content>CDC_UI_Label: Publisher</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.1.8</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@xml-lang" isRequired="true">
         <r:Description>
@@ -342,7 +342,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the organisation name. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: None</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@abbr" isRequired="false">
         <r:Description>
@@ -350,7 +350,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Abbreviated form of the Publisher name e.g. 'UKDA' for 'UK Data
                 Archive'</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: None</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -370,7 +370,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The freetext date when the study description was published.
                 This element may be left empty.</r:Content>
             <r:Content>CDC_UI_Label: Publication year</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: None</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -385,7 +385,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: None</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -405,7 +405,7 @@ ________________________________________________________________________________
                 It is strongly recommended to provide the full date to allow 
                 sorting by publication date in CDC.</r:Content>
             <r:Content>CDC_UI_Label: Publication year</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+         <r:Content>CMM_Mapping: None</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -426,7 +426,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Keyword for the study in the local language.</r:Content>
             <r:Content>CDC_UI_Label: Keywords</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -440,7 +440,7 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the keyword. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.3.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -458,7 +458,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Source of keywords - ELSST is recommended but other vocabularies can
                 be referenced.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.3.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -471,8 +471,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Optional but note that if @vocab=”ELSST”, then use “https://elsst.cessda.eu/id” here.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>Optional but note that if @vocab=”ELSST”, then use “https://elsst.cessda.eu/id/” here.</r:Content>
+            <r:Content>CMM_Mapping: 1.2.3.4</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -488,9 +488,9 @@ ________________________________________________________________________________
             <r:Content>Usage: Subject classifcation term for the study in the local language. Use
                 descriptive terms from https://vocabularies.cessda.eu/vocabulary/TopicClassification
                 if possible but other vocabularies are permitted.</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 1.2.2.1</r:Content>
             <r:Content>CDC_UI_Label: Topics</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+        </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -505,7 +505,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the subject classification term. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.2.1.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -523,7 +523,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: name of the vocabulary. If possible, use "CESSDA Topic Classification"
                 (regardless of language) but other vocabularies are permitted.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.2.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -538,9 +538,9 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use the URI of the CV version that is being used based on the pattern 
                 "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:[version number]"
-                For example, for version 4.2 of CESSDA Topic Classification, use
-                "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2"</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+                For example, for version 4.2.2 of CESSDA Topic Classification, use
+                "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2.2"</r:Content>
+            <r:Content>CMM_Mapping: 1.2.2.4</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -559,14 +559,14 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: The abstract for the study</r:Content>
             <r:Content>CDC_UI_Label: Abstract</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.1</r:Content> </r:Description>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract/@xml-lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the abstract. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.2.1.1</r:Content> </r:Description>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--DATA COLLECTION DATE(S)-->
@@ -653,7 +653,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Countries relevant to the study area</r:Content>
             <r:Content>CDC_UI_Label: Country</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -668,7 +668,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.3.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -684,7 +684,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use this attribute only if the country in the 'nation' element has an ISO 3166-1 2-letter code.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -703,7 +703,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Contains the Analysis Unit CV item in the local language.</r:Content>
             <r:Content>CDC_UI_Label: Analysis unit</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.5.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -718,7 +718,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Analysis Unit CV item. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.5.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -737,7 +737,7 @@ ________________________________________________________________________________
             <r:Content>Analysis Unit Controlled Vocabulary "Code value" that is the same across
                 languages. e.g if the "anlyUnit" element is 'Kotitalous' for Finnish, the "concept"
                 element is 'Household'. See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:AnalysisUnit.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.5.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -752,7 +752,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use the string "DDI Analysis Unit" regardless of language.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.5.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -767,8 +767,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/1.0?languageVersion=en-1.0</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+                https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/1.0.0?languageVersion=en-1.0.0</r:Content>
+            <r:Content>CMM_Mapping: 1.3.5.5</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -847,7 +847,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Contains the Time Method CV item in the local language</r:Content>
             <r:Content>CDC_UI_Label: Time dimension</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.1.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -862,7 +862,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Time Method CV item. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.1.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -882,7 +882,7 @@ ________________________________________________________________________________
                 languages. e.g if the 'timeMeth' element is 'Pitkittäisaineisto' for Finnish, the
                 'concept' element is 'Longitudinal'. See example at
                 https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TimeMethod</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.1.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -897,7 +897,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use the string "DDI Time Method" regardless of language.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.1.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -911,8 +911,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2?languageVersion=en-1.2</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+                https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2.0?languageVersion=en-1.2.0</r:Content>
+            <r:Content>CMM_Mapping: 1.3.1.5</r:Content>
+        </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -932,7 +933,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Contains the Sampling Procedure CV item in the local language and/or a
                 freetext description in the local language</r:Content>
             <r:Content>CDC_UI_Label: Sampling procedure</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.2.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -947,7 +948,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Sampling Procedure CV item or freetext description.
                 ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.2.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -966,7 +967,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Sampling Procedure Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'sampProc' element is 'Todennäköisyysotanta' for
                 Finnish, the 'concept' element is 'Probability'. See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:SamplingProcedure </r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -982,7 +983,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use the string "DDI Sampling Procedure" regardless of
                 language.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.2.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -997,8 +998,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1?languageVersion=en-1.1</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1.0?languageVersion=en-1.1.0</r:Content>
+            <r:Content>CMM_Mapping: 1.3.6.2.5</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1018,7 +1019,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Contains the Mode of Collection CV item in the local
                 language.</r:Content>
             <r:Content>CDC_UI_Label: Data collection mode</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.4.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1033,7 +1034,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Mode of Collection CV item. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.4.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -1052,7 +1053,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Mode of Collection Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'collMode' element is 'Haastattelu' for Finnish, the
                 'concept' element is 'Interview' See https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:ModeOfCollection </r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.4.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1068,7 +1069,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use the string "DDI Mode of Collection" regardless of
                 language.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.4.3</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1083,8 +1084,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/3.0?languageVersion=en-3.0</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/3.0.0?languageVersion=en-3.0.0</r:Content>
+            <r:Content>CMM_Mapping: 1.3.6.4.5</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1106,7 +1107,7 @@ ________________________________________________________________________________
                 'restrctn' the way they want it to appear in the CDC, if they use data from
                 different elements e.g.specPerm, restrctn, avlStatus etc. </r:Content>
             <r:Content>CDC_UI_Label: Terms of data access</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.4.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1121,7 +1122,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Access statement. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.4.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
@@ -1176,7 +1177,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Language-specific name of file </r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 4.2.2</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1193,7 +1194,7 @@ ________________________________________________________________________________
                 the language of the files, as this is needed for the filter. The values or content
                 of 'fileName' are not extracted. ISO 639-1 codes are strongly encouraged to be used. </r:Content>
             <r:Content>CDC_UI_Label: Language of data file(s).</r:Content>
-         <r:Content>CMM_Mapping: XXXXXXXXXXXXXXXXXXXXXXXXX</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 4.2.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>

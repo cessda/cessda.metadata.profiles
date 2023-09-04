@@ -1,9 +1,7 @@
-# WORKING BRANCH FOR D6
-
 # DDI Profiles
 
 This repository contains DDI Profiles that are used by the
-[CESSDA Metadata Validator Tool](https://bitbucket.org/cessda/cessda.cmv.server/src/master/README.md)
+[CESSDA Metadata Validator Tool](https://github.com/cessda/cessda.cmv.server/blob/main/README.md)
 
 ## Context
 
@@ -11,7 +9,7 @@ This repository contains DDI Profiles that are used by the
 machine-actionable XML documents that specify additional constraintson the content of a DDI XML document,
 over and above those specified by the document's associated XSD schema.
 These DDI profiles are intended to be used in the context
-of validating DDI2.5 and DDI1.2.2 documents that are being submitted to
+of validating DDI2.x, DDI3.x and DDI1.2.2 documents that are being submitted to
 [CESSDA Data Catalogue](https://datacatalogue.cessda.eu/) from participating Service Providers.
 
 Firstly, the Profiles provide human-readable guidance for metadata professionals e.g. whether an element is optional, recommended
@@ -22,9 +20,9 @@ Data Catalogue have improved utility for the research community.
 ## Repository structure
 
 Each DDI Profile is assigned its own folder and versioned independently - see
-[CHANGELOG.md](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md)
 
-Additionally, an [XSLT folder](https://bitbucket.org/cessda/cessda.metadata.profiles/src/master/XSLT/)
+Additionally, an [XSLT folder](https://github.com/cessda/cessda.metadata.profiles/tree/main/XSLT/)
 contains the XSLT resource which can be used to generate human-readable HTML documentation from the source XML profile document.
 The profiles reference the final published stylesheet directly.
 
