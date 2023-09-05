@@ -2,29 +2,30 @@
 <!--____________________________________________________________________________________
 © Copyright 2020, CESSDA ERIC
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
-Author: Darren Bell - UK Data Archive
-Created: 2020-12-02
-Version: v2.0.0
-Change summary from v1.0.4: See https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
-Last modified 2023-08-31 Darren Bell
+Author: Darren Bell - UK Data Service
+Created: 2023-06-10
+Version: v1.0.0
+Change summary:  - First release of CDC 2.6 monolingual profile - 
+see change log at https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
+Last modified: 2023-08-29 Darren Bell
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2023-05-29">
+    versionDate="2023-08-29">
     <r:Agency>CESSDA</r:Agency>
-    <r:ID>CDC_DDI25_PROFILE_MONOLINGUAL</r:ID>
-    <r:Version>2.0.0</r:Version>
-    <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
+    <r:ID>CDC_DDI26_MONOLINGUAL_PROFILE</r:ID>
+    <r:Version>1.0.0</r:Version>
+    <r:VersionResponsibility>Darren Bell - UKDS</r:VersionResponsibility>
     <pr:DDIProfileName>
-        <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE - MONOLINGUAL</r:String>
+        <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.6 MONOLINGUAL PROFILE</r:String>
     </pr:DDIProfileName>
     <pr:XPathVersion>1.0</pr:XPathVersion>
-    <pr:DDINamespace>2.5</pr:DDINamespace>
+    <pr:DDINamespace>2.6</pr:DDINamespace>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix/>
-        <pr:XMLNamespace>ddi:codebook:2_5</pr:XMLNamespace>
+        <pr:XMLNamespace>ddi:codebook:2_6</pr:XMLNamespace>
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>xsi</pr:XMLPrefix>
@@ -51,12 +52,12 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/@xsi:schemaLocation"
-        defaultValue="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
+        defaultValue="ddi:codebook:2_6 http://www.ddialliance.org/Specification/DDI-Codebook/2.6/XMLSchema/codebook.xsd"
         fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: System-required information - nearly always "ddi:codebook:2_5
+            <r:Content>Usage: System-required information - nearly always "ddi:codebook:2_6
                 codebook.xsd"</r:Content>
             <r:Content>CMM_Mapping: 11.2.1</r:Content>
         </r:Description>
@@ -307,7 +308,7 @@ ________________________________________________________________________________
                 'YYYY-MM' or 'YYYY' as date format. It is strongly recommended to provide the full
                 date to allow sorting by publication date in CDC.</r:Content>
             <r:Content>CDC_UI_Label: Publication year</r:Content>
-            <r:Content>CMM_Mapping: None</r:Content>
+            <r:Content>CMM_Mapping: 1.1.9</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -412,7 +413,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Use the URI of the CV version that is being used based on the pattern
+            <r:Content>Usage: Use the URI of the CV version that is being used based on the pattern 
                 "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:[version number]"
                 For example, for version 4.2.2 of CESSDA Topic Classification, use
                 "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2.2"</r:Content>
@@ -628,11 +629,11 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The default value is "true" in DDI-L. The description statement of a
-                universe is generally stated in inclusive terms such as "All persons residing in Europe".
-                Occasionally a universe is defined by what it excludes, i.e., "All persons residing
-                in Europe except for those residing on U.S. Military bases".
-                In this case the value would be changed to "false".
+            <r:Content>Usage: The default value is "true" in DDI-L. The description statement of a 
+                universe is generally stated in inclusive terms such as "All persons residing in Europe". 
+                Occasionally a universe is defined by what it excludes, i.e., "All persons residing 
+                in Europe except for those residing on U.S. Military bases". 
+                In this case the value would be changed to "false". 
                 In DDI-C, attribute clusion states the inclusion/exclusion with values "I" and "E" respectively.</r:Content>
             <r:Content>CDC_UI_Label: None</r:Content>
             <r:Content>CMM_Mapping: 1.3.4.2</r:Content>
@@ -866,6 +867,41 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
+    <!--ACCESS CATEGORY - OPEN OR RESTRICTED-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/typeOfAccess" isRequired="true">
+        <r:Description>
+            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
+                CDC will use the same Access Rights vocabulary as OpenAIRE. 
+                The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
+                http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
+                Only the codes “restrictedAccess” and “openAccess” will be used.</r:Content>
+            <r:Content>CDC_UI_Label: Open/Closed</r:Content>
+            <r:Content>CMM_Mapping: 1.4.1</r:Content>
+        </r:Description>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/typeOfAccess/@vocabURI" 
+        defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="true" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if '../typeofAccess' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Always 'info:eu-repo-Access-Terms vocabulary'.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
     <!--ACCESS STATEMENT-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn" isRequired="false">
@@ -888,42 +924,6 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <!--****************************************************************************************-->
-    <!--ACCESS CATEGORY - OPEN OR RESTRICTED-->
-    <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/conditions" isRequired="true">
-        <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
-                CDC will use the same Access Rights vocabulary as OpenAIRE.
-                The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
-                http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
-                Only the codes “restrictedAccess” and “openAccess” will be used.</r:Content>
-            <r:Content>CDC_UI_Label: Open/Closed</r:Content>
-            <r:Content>CMM_Mapping: 1.4.1</r:Content>
-        </r:Description>
-    </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/conditions/@elementVersion"
-        defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="true" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'conditions' element is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Always 'info:eu-repo-Access-Terms vocabulary'.</r:Content>
-            <r:Content>CMM_Mapping: None</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
-        </pr:Instructions>
-    </pr:Used>
-
     <!--****************************************************************************************-->
     <!--FILE DESCRIPTIONS-->
     <!--****************************************************************************************-->
@@ -990,7 +990,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: URL of website on which the publication can be found (or at least information concerning
+            <r:Content>Usage: URL of website on which the publication can be found (or at least information concerning 
                 the literature).</r:Content>
             <r:Content>CMM_Mapping: 9.10</r:Content>
         </r:Description>

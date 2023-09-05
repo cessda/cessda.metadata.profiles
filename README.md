@@ -9,7 +9,7 @@ This repository contains DDI Profiles that are used by the
 machine-actionable XML documents that specify additional constraints on the content of a DDI XML document,
 over and above those specified by the document's associated XSD schema.
 These DDI profiles are intended to be used in the context
-of validating DDI2.5 and DDI1.2.2 documents that are being submitted to
+of validating DDI2.x, DDI3.x and DDI1.2.2 documents that are being submitted to
 [CESSDA Data Catalogue](https://datacatalogue.cessda.eu/) from participating Service Providers.
 
 Firstly, the Profiles provide human-readable guidance for metadata professionals e.g. whether an element is optional, recommended

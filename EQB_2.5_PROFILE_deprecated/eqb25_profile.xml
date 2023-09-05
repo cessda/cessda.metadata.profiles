@@ -658,9 +658,26 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<OptionalNodeConstraint/>
+				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'collDate' element is populated with a freetext expression.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@event" isRequired="false">
