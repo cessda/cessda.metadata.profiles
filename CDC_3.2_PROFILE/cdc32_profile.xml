@@ -1235,7 +1235,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Descriptive term of the Mode of Data Collection CV item in the local langiage.</r:Content>
+            <r:Content>Usage: Descriptive term of the Mode of Data Collection CV item in the local language.</r:Content>
             <r:Content>CDC_UI_Label: Data collection mode</r:Content>
             <r:Content>CMM_Mapping: 1.3.6.5</r:Content>
         </r:Description>
