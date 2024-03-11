@@ -1285,7 +1285,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/a:AccessTypeName/@‌context" 
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/a:AccessTypeName/@context" 
         defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '../a:AccessTypeName' element is present</r:Content>
