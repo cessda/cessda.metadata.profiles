@@ -1240,12 +1240,119 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
-    <!--RELATED PUBLICATIONS (AND PID)-->
+    <!--RELATED PUBLICATIONS -->
     <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: First option for bibliographic citation of the related publication.</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
+            <r:Content>CMM_Mapping: 9.11</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/@xml:lang"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the related publication. This not always the same as the metadata language and therefore this is useful for monolingual profile, too. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CMM_Mapping: 9.5.1/9.8.1.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@URI"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: URL of website on which the publication can be found (or at least information concerning
+                the literature).</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
+            <r:Content>CMM_Mapping: 9.10</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@xml:lang"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of website on which the publication can be found (or at least information concerning
+                the literature). ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
+            <r:Content>CMM_Mapping: 9.10</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Second option for bibliographic citation of the related publication.</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
+            <r:Content>CMM_Mapping: 9.11</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl/@xml:lang"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the related publication title. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CMM_Mapping: 9.5.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: PID of the publication. Required by OpenAire to to relate the
@@ -1281,19 +1388,72 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Third option for bibliographic citation of the related publication.</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
+            <r:Content>CMM_Mapping: 9.11</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit/@xml:lang"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the related publication title. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CMM_Mapping: 9.5.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@URI"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended.</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: URL of website on which the publication can be found (or at least information concerning
                 the literature).</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
             <r:Content>CMM_Mapping: 9.10</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<RecommendedNodeConstraint/>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@xml:lang"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the publication website. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
