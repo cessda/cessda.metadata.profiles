@@ -443,6 +443,111 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+	<!--****************************************************************************************-->
+    <!--STUDY GROUP/SERIES INFORMATION-->
+    <!--****************************************************************************************-->
+	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/@URI" isRequired="false">
+		<r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: URI to the study group (series) description page in the SPs web page</r:Content>
+            <r:Content>CDC_UI_Label: Series</r:Content>
+			<r:Content>CMM_Mapping: 10.4.2 Study Group Description URI</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+   </pr:Used>
+   <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the whole serStmt OR the URI to the study group (series) description page
+                in the SPs web page. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
+			<r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serName" isRequired="false">
+		 <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The name of the study group / series.</r:Content>
+            <r:Content>CDC_UI_Label: Series</r:Content>
+            <r:Content>CMM_Mapping: 10.3 Study Group Name</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+	</pr:Used>
+	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serName/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'serName' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the name of the series. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CMM_Mapping: 10.3.1 Language of the Study Group Name</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serInfo" isRequired="false">
+		 <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The description of the study group / series.</r:Content>
+            <r:Content>CDC_UI_Label: Series</r:Content>
+            <r:Content>CMM_Mapping: 10.4 Study Group Description</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+	</pr:Used>
+	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serInfo/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'serInfo' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the description of the series. ISO 639-1 codes are strongly encouraged
+                to be used.</r:Content>
+            <r:Content>CMM_Mapping: 10.3.1 Language of the Study Group Description</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--SUBJECTS AND KEYWORDS-->
     <!--****************************************************************************************-->
@@ -888,6 +993,45 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+	<!--****************************************************************************************-->
+    <!--KIND OF DATA-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/dataKind" isRequired="false">
+       <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: A free text field describing shortly the type or kind of the dataset.
+                Using a vocabulary is recommended.</r:Content>
+            <r:Content>CDC_UI_Label: Kind of data</r:Content>
+            <r:Content>CMM_Mapping: 1.2.4</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/dataKind/@xml:lang" isRequired="false">
+       <r:Description>
+            <r:Content>Required: Mandatory if 'dataKind' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the data kind. ISO 639-1 codes are strongly
+                encouraged to be used.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--TIME DIMENSION-->
     <!--****************************************************************************************-->
@@ -1267,7 +1411,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the related publication. This not always the same as the metadata language and therefore this is useful for monolingual profile, too. ISO 639-1 codes are strongly encouraged
+            <r:Content>Usage: Language of the related publication. This not always the same as the metadata language
+                and therefore this is useful for monolingual profile, too. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
             <r:Content>CMM_Mapping: 9.5.1/9.8.1.1</r:Content>
         </r:Description>
