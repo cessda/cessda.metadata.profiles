@@ -320,7 +320,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
 	<!--****************************************************************************************-->
-    <!-- STUDY GROUP/SERIES INFORMATION -->
+    <!--STUDY GROUP/SERIES INFORMATION-->
     <!--****************************************************************************************-->
 	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/@URI" isRequired="false">
 		<r:Description>
@@ -706,7 +706,8 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A free text field describing shortly the type or kind of the dataset. Using a vocabulary is recommended.</r:Content>
+            <r:Content>Usage: A free text field describing shortly the type or kind of the dataset.
+                Using a vocabulary is recommended.</r:Content>
             <r:Content>CDC_UI_Label: Kind of data</r:Content>
             <r:Content>CMM_Mapping: 1.2.4</r:Content>
         </r:Description>
@@ -1006,7 +1007,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the related publication. This not always the same as the metadata language and therefore this is useful for monolingual profile, too. ISO 639-1 codes are strongly encouraged
+            <r:Content>Usage: Language of the related publication. This not always the same as the metadata language
+                and therefore this is useful for monolingual profile, too. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
             <r:Content>CMM_Mapping: 9.5.1/9.8.1.1</r:Content>
         </r:Description>
