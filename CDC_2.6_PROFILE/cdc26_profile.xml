@@ -718,7 +718,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate" isRequired="false">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: This is the free text expression of the collection period. This
@@ -1072,7 +1072,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept" isRequired="false">
         <r:Description>
-            <r:Content>Recommended</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Time Method Controlled Vocabulary "Code value" that is the same across
@@ -1163,7 +1163,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept" isRequired="false">
         <r:Description>
-            <r:Content>Recommended</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Sampling Procedure Controlled Vocabulary "Code value" that is the same
@@ -1255,7 +1255,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept" isRequired="false">
         <r:Description>
-            <r:Content>Recommended</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Mode of Collection Controlled Vocabulary "Code value" that is the same
