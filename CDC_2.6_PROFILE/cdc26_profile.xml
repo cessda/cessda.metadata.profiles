@@ -36,7 +36,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <pr:Used xpath="/codeBook/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
             <r:Content>CDC_UI_Label: Study description available in.. (in the search result
@@ -46,7 +46,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<RecommendedNodeConstraint/>
+				<OptionalNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
