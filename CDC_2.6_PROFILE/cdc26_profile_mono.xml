@@ -150,7 +150,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: This is the document the metadata refers to, i.e. the URL of the study
                 description page at the SP website.</r:Content>
-            <r:Content>CDC_UI_Label: in the search result list with label "Access data"</r:Content>
+            <r:Content>CDC_UI_Label: in the search result list with label "Access study"</r:Content>
             <r:Content>CMM_Mapping: 1.1.10.5</r:Content>
         </r:Description>
     </pr:Used>
@@ -180,6 +180,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: If AuthEnty is a person, the organisational affiliation of that
                 person</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
             <r:Content>CMM_Mapping: 1.1.7.1/1.1.7.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -400,6 +401,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Source of keywords - ELSST is recommended but other vocabularies can
                 be referenced.</r:Content>
+            <r:Content>CDC_UI_Label: Keywords (if ELSST)</r:Content>
             <r:Content>CMM_Mapping: 1.2.3.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -540,6 +542,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Ideally YYYY-MM-DDThh:mm:ssZ format, but can accept YYYY-MM-DD,
                 YYYY-MM or YYYY as date attribute. If there are multiple end dates, use the
                 last.</r:Content>
+            <r:Content>CDC_UI_Label: Data collection period</r:Content>
             <r:Content>CMM_Mapping: 1.3.7.1/1.3.7.2/1.3.7.3</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -667,7 +670,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Description of population or other elements studied or measured (freetext).</r:Content>
-            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CDC_UI_Label: Universe</r:Content>
             <r:Content>CMM_Mapping: 1.3.4</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -688,7 +691,7 @@ ________________________________________________________________________________
                 in Europe except for those residing on U.S. Military bases". 
                 In this case the value would be changed to "false". 
                 In DDI-C, attribute clusion states the inclusion/exclusion with values "I" and "E" respectively.</r:Content>
-            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CDC_UI_Label: Universe</r:Content>
             <r:Content>CMM_Mapping: 1.3.4.2</r:Content>
         </r:Description>
         <pr:Instructions>
