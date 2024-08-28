@@ -23,7 +23,7 @@ ________________________________________________________________________________
     <pr:XPathVersion>1.0</pr:XPathVersion>
     <pr:DDINamespace>2.5</pr:DDINamespace>
     <pr:XMLPrefixMap>
-        <pr:XMLPrefix/>
+        <pr:XMLPrefix>ddi</pr:XMLPrefix>
         <pr:XMLNamespace>ddi:codebook:2_5</pr:XMLNamespace>
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
@@ -33,7 +33,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ROOT ELEMENT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -50,7 +50,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/@xsi:schemaLocation"
+    <pr:Used xpath="/ddi:codeBook/@xsi:schemaLocation"
         defaultValue="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
         fixedValue="false" isRequired="false">
         <r:Description>
@@ -71,13 +71,13 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--TITLE AND IDENTIFIERS-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:docDscr/ddi:citation/ddi:titlStmt/ddi:titl" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Title of the CDC XML document - note that the Study Title goes in
-                /codeBook/stdyDscr/citation/titlStmt/titl</r:Content>
+                /ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:titl</r:Content>
             <r:Content>CMM_Mapping: 11.1.1</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -88,7 +88,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/docDscr/citation/titlStmt/titl/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:docDscr/ddi:citation/ddi:titlStmt/ddi:titl/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'titl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -105,7 +105,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:titl" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -116,7 +116,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.3</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/titl/@xml:lang" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:titl/@xml:lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -125,7 +125,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.3.1</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:parTitl" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -144,7 +144,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/parTitl/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:parTitl/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'parTitl' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -162,7 +162,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:IDNo" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -175,11 +175,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.10.4/1.1.2</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:IDNo/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language is recommended when the @agency attribute contains an
+            <r:Content>Usage: Language is recommended when the agency attribute contains an
                 organisation name, for example, in the context of 'IDNo' being used to display the
                 internal study number</r:Content>
             <r:Content>CMM_Mapping: 3.2.1/3.3.1</r:Content>
@@ -192,7 +192,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/titlStmt/IDNo/@agency" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:titlStmt/ddi:IDNo/@agency" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -204,7 +204,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.10.4.1/1.1.2.1</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/holdings/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:holdings/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -221,7 +221,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/holdings/@URI" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:holdings/@URI" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -234,7 +234,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--PRINCIPAL INVESTIGATOR / CREATOR-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -251,12 +251,12 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Organisation name, which may be the contents of the
-                AuthEnty element or the @affiliation attribute of AuthEnty specifies a person. ISO
+                AuthEnty element or the affiliation attribute if AuthEnty specifies a person. ISO
                 639-1 codes codes are strongly encouraged to be used.</r:Content>
             <r:Content>CMM_Mapping: 3.2.1/3.3.1</r:Content>
         </r:Description>
@@ -268,7 +268,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/rspStmt/AuthEnty/@affiliation" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty/@affiliation" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -288,7 +288,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--FUNDING INFORMATION-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -298,9 +298,9 @@ ________________________________________________________________________________
                 is included in the OpenAire list of Funders, see the instructions for grantNo syntax
                 here:
                 https://guidelines.openaire.eu/en/latest/data/field_contributor.html#nameidentifier-ma-o
-                . Indicate the appropriate agency using the "@agency" attribute. If different
+                . Indicate the appropriate agency using the "agency" attribute. If different
                 funding agencies sponsored different stages of the production process, use the
-                "@role" attribute to distinguish the grant numbers.</r:Content>
+                "role" attribute to distinguish the grant numbers.</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -311,7 +311,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo/@agency" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo/@agency" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -326,7 +326,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo/@role" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo/@role" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -346,7 +346,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--PUBLISHER-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distrbtr" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -358,7 +358,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.8</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@xml:lang" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distrbtr/@xml:lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -367,7 +367,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 3.2.1/3.3.1</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distrbtr/@abbr" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distrbtr/@abbr" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -386,7 +386,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--DATE OF PUBLICATION-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distDate" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -404,7 +404,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distDate/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'distDate' element is populated with a freetext
                 expression.</r:Content>
@@ -423,7 +423,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/distStmt/distDate/@date" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distDate/@date" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'distDate' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -446,7 +446,7 @@ ________________________________________________________________________________
 	<!--****************************************************************************************-->
     <!--STUDY GROUP/SERIES INFORMATION-->
     <!--****************************************************************************************-->
-	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/@URI" isRequired="false">
+	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/@URI" isRequired="false">
 		<r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -462,7 +462,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
    </pr:Used>
-   <pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/@xml:lang" isRequired="false">
+   <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -478,7 +478,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serName" isRequired="false">
+	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/ddi:serName" isRequired="false">
 		 <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -495,7 +495,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
 	</pr:Used>
-	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serName/@xml:lang" isRequired="false">
+	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/ddi:serName/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'serName' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -513,7 +513,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serInfo" isRequired="false">
+	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/ddi:serInfo" isRequired="false">
 		 <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -530,7 +530,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
 	</pr:Used>
-	<pr:Used xpath="/codeBook/stdyDscr/citation/serStmt/serInfo/@xml:lang" isRequired="false">
+	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/ddi:serInfo/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'serInfo' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -551,7 +551,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--SUBJECTS AND KEYWORDS-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:keyword" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -568,7 +568,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:keyword/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -586,7 +586,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@vocab" defaultValue="ELSST"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:keyword/@vocab" defaultValue="ELSST"
         fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended if 'keyword' element is present</r:Content>
@@ -604,11 +604,11 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/keyword/@vocabURI" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:keyword/@vocabURI" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Optional but note that if @vocab=”ELSST”, then
+            <r:Content>Optional but note that if vocab=”ELSST”, then
                 use “https://elsst.cessda.eu/id/” here.</r:Content>
             <r:Content>CMM_Mapping: 1.2.3.4</r:Content>
         </r:Description>
@@ -620,7 +620,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:topcClas" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -639,7 +639,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:topcClas/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'topcClas' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -657,7 +657,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocab"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:topcClas/@vocab"
         defaultValue="CESSDA Topic Classification" fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -674,7 +674,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocabURI" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:subject/ddi:topcClas/@vocabURI" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -695,7 +695,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ABSTRACT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:abstract" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -705,7 +705,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.2.1</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/abstract/@xml:lang" isRequired="true">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:abstract/@xml:lang" isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -717,7 +717,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--DATA COLLECTION DATE(S)-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:collDate" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -735,7 +735,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:collDate/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'collDate' element is populated with a freetext
                 expression.</r:Content>
@@ -754,12 +754,12 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@event" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:collDate/@event" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if parent is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Either 'start', 'end' or 'single' to indicate the type of @date
-                Attribute</r:Content>
+            <r:Content>Usage: Either 'start', 'end' or 'single' to indicate the type of date
+                attribute</r:Content>
             <r:Content>CDC_UI_Label: Data collection period</r:Content>
             <r:Content>CMM_Mapping: 1.3.7.1/1.3.7.2/1.3.7.3</r:Content>
         </r:Description>
@@ -773,7 +773,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@date" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:collDate/@date" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended strongly if 'collDate' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -794,7 +794,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--COUNTRY COVERAGE-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:nation" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -811,7 +811,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:nation/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'nation' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -829,7 +829,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/nation/@abbr" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:nation/@abbr" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -848,7 +848,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ANALYSIS UNIT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:anlyUnit" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -865,7 +865,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:anlyUnit/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'anlyUnit' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -883,7 +883,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:anlyUnit/ddi:concept" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -902,7 +902,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocab"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:anlyUnit/ddi:concept/@vocab"
         defaultValue="DDI Analysis Unit" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -918,7 +918,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocabURI"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:anlyUnit/ddi:concept/@vocabURI"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -938,7 +938,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--UNIVERSE-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/universe" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:universe" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -955,7 +955,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/universe/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:universe/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'universe' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -974,7 +974,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/universe/@clusion" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:universe/@clusion" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -998,7 +998,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--KIND OF DATA-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/dataKind" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:dataKind" isRequired="false">
        <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1016,7 +1016,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/stdyInfo/sumDscr/dataKind/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:dataKind/@xml:lang" isRequired="false">
        <r:Description>
             <r:Content>Required: Mandatory if 'dataKind' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1037,7 +1037,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--TIME DIMENSION-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:timeMeth" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1054,7 +1054,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:timeMeth/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'timeMeth' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1072,7 +1072,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:timeMeth/ddi:concept" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1091,7 +1091,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept/@vocab"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:timeMeth/ddi:concept/@vocab"
         defaultValue="DDI Time Method" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1107,7 +1107,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/timeMeth/concept/@vocabURI"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:timeMeth/ddi:concept/@vocabURI"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1127,7 +1127,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--SAMPLING METHOD / PROCEDURE-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:sampProc" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1145,7 +1145,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:sampProc/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'sampProc' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1163,7 +1163,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:sampProc/ddi:concept" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1182,7 +1182,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept/@vocab"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:sampProc/ddi:concept/@vocab"
         defaultValue="DDI Sampling Procedure" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1199,7 +1199,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/sampProc/concept/@vocabURI"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:sampProc/ddi:concept/@vocabURI"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1219,7 +1219,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--DATA COLLECTION METHOD-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:collMode" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1237,7 +1237,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:collMode/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'collMode' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1255,7 +1255,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:collMode/ddi:concept" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1274,7 +1274,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept/@vocab"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:collMode/ddi:concept/@vocab"
         defaultValue="DDI Mode of Collection" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1291,7 +1291,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/method/dataColl/collMode/concept/@vocabURI"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:collMode/ddi:concept/@vocabURI"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1311,7 +1311,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ACCESS STATEMENT-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:dataAccs/ddi:useStmt/ddi:restrctn" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1331,7 +1331,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/dataAccs/useStmt/restrctn/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:dataAccs/ddi:useStmt/ddi:restrctn/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'restrctn' is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1352,7 +1352,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--FILE DESCRIPTIONS-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:fileDscr/ddi:fileTxt/ddi:fileName" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1368,7 +1368,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/fileDscr/fileTxt/fileName/@xml:lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:fileDscr/ddi:fileTxt/ddi:fileName/@xml:lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1389,7 +1389,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--RELATED PUBLICATIONS -->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1407,7 +1407,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/@xml:lang"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1425,7 +1425,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@URI"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:ExtLink/@URI"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1443,7 +1443,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@xml:lang"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:ExtLink/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1462,7 +1462,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:titlStmt/ddi:titl"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1480,7 +1480,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl/@xml:lang"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:titlStmt/ddi:titl/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1497,7 +1497,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:titlStmt/ddi:IDNo"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1515,7 +1515,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo/@agency"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:titlStmt/ddi:IDNo/@agency"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..../IDNo' element is present.</r:Content>
@@ -1536,7 +1536,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:biblCit"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1554,7 +1554,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit/@xml:lang"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:biblCit/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1571,7 +1571,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@URI"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:holdings/@URI"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1589,7 +1589,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@xml:lang"
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relPubl/ddi:citation/ddi:holdings/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
