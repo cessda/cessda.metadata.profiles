@@ -966,6 +966,49 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
+    <!--ACCESS CATEGORY - OPEN OR RESTRICTED-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:dataAccs/ddi:useStmt/ddi:conditions" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
+                CDC will use the same Access Rights vocabulary as OpenAIRE.
+                The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
+                http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
+                Only the codes "info:eu-repo/semantics/restrictedAccess" and "info:eu-repo/semantics/openAccess"
+                will be used.</r:Content>
+            <r:Content>CDC_UI_Label: Open / Restricted</r:Content>
+            <r:Content>CMM_Mapping: 1.4.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:dataAccs/ddi:useStmt/ddi:conditions/@elementVersion"
+        defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="false" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: When the conditions element is used for vocabulary
+                  'info:eu-repo-Access-Terms vocabulary', then use this vocabulary name
+                  'info:eu-repo-Access-Terms vocabulary' in this field.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <!--****************************************************************************************-->
     <!--FILE DESCRIPTIONS-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:codeBook/ddi:fileDscr/ddi:fileTxt/ddi:fileName" isRequired="false">
