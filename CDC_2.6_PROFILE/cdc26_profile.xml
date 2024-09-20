@@ -286,7 +286,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <!--****************************************************************************************-->
+	<!--****************************************************************************************-->
     <!--FUNDING INFORMATION-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo" isRequired="false">
@@ -294,54 +294,70 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The identification code of the grant or other monetary award which
-                provided funding for the Study. If you know that the funder
-                is included in the OpenAire list of Funders, see the instructions for grantNo syntax
-                here:
-                https://guidelines.openaire.eu/en/latest/data/field_contributor.html#nameidentifier-ma-o
-                . Indicate the appropriate agency using the "agency" attribute. If different
-                funding agencies sponsored different stages of the production process, use the
-                "role" attribute to distinguish the grant numbers.</r:Content>
+            <r:Content>Usage: The identification code of the grant or other monetary award which provided funding
+                for the Study. If you know that the funder is included in the OpenAire list of Funders,
+                see the instructions for grantNo syntax here:
+                https://guidelines.openaire.eu/en/latest/data/field_contributor.html#nameidentifier-ma-o .
+                Indicate the appropriate agency using the "agency" attribute.
+                If different funding agencies sponsored different stages of the production process,
+                use the "role" attribute to distinguish the grant numbers.</r:Content>
+            <r:Content>CDC_UI_Label: Grant number</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
+		    <Constraints>
+			    <OptionalNodeConstraint/>
+		    </Constraints>
+		    ]]></r:Content>
+       </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'grantNo' element is present</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Language of the name of the agency which provided the funding. ISO 639-1 codes
+			    are strongly encouraged to be used. </r:Content>
+            <r:Content>CMM_Mapping: 3.2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo/@agency" isRequired="false">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
+            <r:Content>Required: Mandatory if 'grantNo' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Agency which provided the funding.</r:Content>
+            <r:Content>CDC_UI_Label: Funder</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo/@role" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: If different funding agencies sponsored different stages of the
-                production process, use the "role" attribute to distinguish the grant
-                numbers.</r:Content>
+            <r:Content>Usage: If different funding agencies sponsored different stages of the production process,
+                use the "role" attribute to distinguish the grant numbers.</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.4</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
+		    <Constraints>
+			    <OptionalNodeConstraint/>
+		    </Constraints>
+		    ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
