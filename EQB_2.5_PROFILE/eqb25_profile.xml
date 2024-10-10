@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--____________________________________________________________________________________
+© Copyright 2024, CESSDA ERIC
+Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
+Author: Katja Moilanen - TAU-FSD
+Created: 2024-XX-XX
+Version: v1.0.0
+Last modified 2024-XX-XX Katja Moilanen
+____________________________________________________________________________________
+-->
+<pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
+    versionDate="2024-XX-XX">
+    <r:Agency>CESSDA</r:Agency>
+    <r:ID>EQB_DDI25_PROFILE</r:ID>
+    <r:Version>1.0.0</r:Version>
+    <r:VersionResponsibility>Katja Moilanen - TAU-FSD</r:VersionResponsibility>
+    <pr:DDIProfileName>
+        <r:String>EUROPEAN QUESTION BANK (EQB) DDI2.5 PROFILE</r:String>
+    </pr:DDIProfileName>
+    <pr:XPathVersion>1.0</pr:XPathVersion>
+    <pr:DDINamespace>2.5</pr:DDINamespace>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>ddi</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:codebook:2_5</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>xsi</pr:XMLPrefix>
+        <pr:XMLNamespace>http://www.w3.org/2001/XMLSchema-instance</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <!--****************************************************************************************-->
+    <!--ROOT ELEMENT-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="/ddi:codeBook/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used</r:Content>
+            <r:Content>CDC_UI_Label: Study description available in.. (in the search result
+                list)</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/@xsi:schemaLocation"
+        defaultValue="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
+        fixedValue="false" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: System-required information - nearly always
+			    "ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
+			</r:Content>
+            <r:Content>CMM_Mapping: 11.2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+</pr:DDIProfile>
