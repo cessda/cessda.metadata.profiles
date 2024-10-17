@@ -422,20 +422,19 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distDate/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'distDate' element is populated with a freetext
-                expression.</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the country label. ISO 639-1 codes are strongly encouraged
-                to be used.</r:Content>
+            <r:Content>Usage: Language of the free text expression of the study description publication time.
+                ISO 639-1 codes are strongly encouraged to be used.</r:Content>
             <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
+			    <Constraints>
+		            <OptionalNodeConstraint/>
+		        </Constraints>
+			    ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
@@ -753,8 +752,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:collDate/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'collDate' element is populated with a freetext
-                expression.</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the free text expression of the collection period.
                 ISO 639-1 codes are strongly encouraged to be used.</r:Content>
@@ -763,10 +761,10 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content>
                 <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
+			    <Constraints>
+				    <OptionalNodeConstraint/>
+			    </Constraints>
+			    ]]>
             </r:Content>
         </pr:Instructions>
     </pr:Used>
