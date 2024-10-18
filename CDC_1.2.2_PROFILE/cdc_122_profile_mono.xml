@@ -1046,19 +1046,19 @@ ________________________________________________________________________________
     <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@URI"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
+            <r:Content>Required: Mandatory if '..../relPubl/ExtLink' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: URL of website on which the publication can be found (or at least information concerning
                 the literature).</r:Content>
-            <r:Content>CDC_UI_Label: Related publications</r:Content>
+	        <r:Content>CDC_UI_Label: Related publications</r:Content>
             <r:Content>CMM_Mapping: 9.10</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
+            <r:Content> <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl"
@@ -1066,7 +1066,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
             <r:Content>Usage: Second option for bibliographic citation of the related publication.</r:Content>
             <r:Content>CDC_UI_Label: Related publications</r:Content>
             <r:Content>CMM_Mapping: 9.11</r:Content>
@@ -1134,6 +1134,24 @@ ________________________________________________________________________________
 				<OptionalNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/distStmt/distDate/@date" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The publication year of the related publication.</r:Content>
+            <r:Content>CDC_UI_Label: Related publications</r:Content>
+            <r:Content>CMM_Mapping: 9.6</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content>
+                <![CDATA[
+	            <Constraints>
+                    <RecommendedNodeConstraint/>
+                </Constraints>
+		        ]]>
+            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@URI"
