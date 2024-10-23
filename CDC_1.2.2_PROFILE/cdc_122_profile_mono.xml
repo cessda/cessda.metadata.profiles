@@ -190,6 +190,58 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+	<pr:Used xpath="/ddi:codeBook/stdyDscr/citation/rspStmt/AuthEnty/ExtLink" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The persistent identifier (PID) of the principal investigator/creator</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 2.4</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/rspStmt/AuthEnty/ExtLink/@URI"
+        isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if '..../AuthEnty/ExtLink' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The URL of the PID. Please note, that the URI attribute is mandatory for the
+			    ExtLink element due to the DDI-C specification.</r:Content>
+	        <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 2.4.2</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content> <![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/rspStmt/AuthEnty/ExtLink/@title" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The type of the PID. If the PID is documented, the type of the PID
+			    should be documented, too.</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 2.4.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--FUNDING INFORMATION-->
     <!--****************************************************************************************-->
