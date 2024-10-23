@@ -191,6 +191,40 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty/@personalID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The persistent identifier (PID) of the principal investigator/creator</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 2.4</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty/@typeOfPersonalID"
+	    isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The type of the PID. If the PID is documented, the type of the PID
+			    should be documented, too</r:Content>
+            <r:Content>CDC_UI_Label: Creator</r:Content>
+            <r:Content>CMM_Mapping: 2.4.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <!--****************************************************************************************-->
     <!--FUNDING INFORMATION-->
     <!--****************************************************************************************-->
