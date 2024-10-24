@@ -51,9 +51,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/@xsi:schemaLocation"
-        defaultValue="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd"
-        fixedValue="false" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/@xsi:schemaLocation" defaultValue="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd" fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -97,13 +95,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 11.1.1.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
         <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/titlStmt/titl" isRequired="true">
@@ -151,13 +147,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.3.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/titlStmt/IDNo" isRequired="true">
@@ -179,7 +173,8 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage:  Language is recommended when the agency attribute contains an organisation name, for example, in the context of 'IDNo'
                 being used to display the internal study number</r:Content>
-            <r:Content>CMM_Mapping: 3.2.1/3.3.1</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 3.2.1/3.3.1</r:Content>
+		</r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -298,8 +293,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/rspStmt/AuthEnty/ExtLink/@URI"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/rspStmt/AuthEnty/ExtLink/@URI" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..../AuthEnty/ExtLink' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -309,7 +303,7 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 2.4.2</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> <![CDATA[
+            <r:Content><![CDATA[
             <Constraints>
                 <MandatoryNodeIfParentPresentConstraint/>
             </Constraints>
@@ -359,7 +353,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/codeBook/stdyDscr/citation/prodStmt/grantNo/@xml-lang" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/prodStmt/grantNo/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'grantNo' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -369,10 +363,10 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]></r:Content>
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/prodStmt/grantNo/@agency" isRequired="false">
@@ -385,10 +379,10 @@ ________________________________________________________________________________
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]></r:Content>
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/prodStmt/grantNo/@role" isRequired="false">
@@ -477,13 +471,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-			    <Constraints>
-				    <OptionalNodeConstraint/>
-			    </Constraints>
-			    ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+			<Constraints>
+	    	    <OptionalNodeConstraint/>
+    	    </Constraints>
+		    ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/citation/distStmt/distDate/@date" isRequired="false">
@@ -498,13 +490,11 @@ ________________________________________________________________________________
          <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
 	<!--****************************************************************************************-->
@@ -568,13 +558,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 10.3.1 Language of the Study Group Name</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
 	<pr:Used xpath="/ddi:codeBook/stdyDscr/citation/serStmt/serInfo" isRequired="false">
@@ -603,13 +591,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 10.3.1 Language of the Study Group Description</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -640,17 +626,14 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.2.3.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/subject/keyword/@vocab" defaultValue="ELSST"
-        fixedValue="false" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/subject/keyword/@vocab" defaultValue="ELSST" fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended if 'keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -709,17 +692,14 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.2.2.1.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocab"
-        defaultValue="CESSDA Topic Classification" fixedValue="false" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/subject/topcClas/@vocab" defaultValue="CESSDA Topic Classification" fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -804,13 +784,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.7.4.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-			    <Constraints>
-				    <OptionalNodeConstraint/>
-			    </Constraints>
-			    ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+			<Constraints>
+                <OptionalNodeConstraint/>
+		    </Constraints>
+		    ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@event" isRequired="false">
@@ -823,13 +801,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.7.1/1.3.7.2/1.3.7.3</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/collDate/@date" isRequired="false">
@@ -879,13 +855,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.3.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+		    ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/nation/@abbr" isRequired="false">
@@ -932,13 +906,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.5.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept" isRequired="false">
@@ -959,8 +931,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocab"
-        defaultValue="DDI Analysis Unit" fixedValue="true" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocab" defaultValue="DDI Analysis Unit" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -975,8 +946,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocabURI"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/anlyUnit/concept/@vocabURI" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1022,13 +992,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.4.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/stdyInfo/sumDscr/universe/@clusion" isRequired="false">
@@ -1082,13 +1050,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
@@ -1119,13 +1085,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.1.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/timeMeth/concept" isRequired="false">
@@ -1147,8 +1111,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/timeMeth/concept/@vocab"
-        defaultValue="DDI Time Method" fixedValue="true" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/timeMeth/concept/@vocab" defaultValue="DDI Time Method" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1209,13 +1172,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.6.2.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/sampProc/concept" isRequired="false">
@@ -1226,8 +1187,7 @@ ________________________________________________________________________________
             <r:Content>Usage: Sampling Procedure Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'sampProc' element is 'Todennäköisyysotanta' for
                 Finnish, the 'concept' element is 'Probability'. See example at https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:SamplingProcedure </r:Content>
-            <r:Content>CMM_Mapping: 1.3.6.2.1</r:Content>
-        </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.2.1</r:Content> </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1236,8 +1196,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/sampProc/concept/@vocab"
-        defaultValue="DDI Sampling Procedure" fixedValue="true" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/sampProc/concept/@vocab" defaultValue="DDI Sampling Procedure" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1253,8 +1212,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/sampProc/concept/@vocabURI"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/sampProc/concept/@vocabURI" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1299,13 +1257,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.3.6.4.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/collMode/concept" isRequired="false">
@@ -1316,7 +1272,8 @@ ________________________________________________________________________________
             <r:Content>Usage: Mode of Collection Controlled Vocabulary "Code value" that is the same
                 across languages. e.g if the 'collMode' element is 'Haastattelu' for Finnish, the
                 'concept' element is 'Interview' See https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:ModeOfCollection </r:Content>
-            <r:Content>CMM_Mapping: 1.3.6.4.1</r:Content> </r:Description>
+            <r:Content>CMM_Mapping: 1.3.6.4.1</r:Content>
+        </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
@@ -1325,8 +1282,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/collMode/concept/@vocab"
-        defaultValue="DDI Mode of Collection" fixedValue="true" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/collMode/concept/@vocab" defaultValue="DDI Mode of Collection" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1342,8 +1298,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/collMode/concept/@vocabURI"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/method/dataColl/collMode/concept/@vocabURI" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1391,13 +1346,11 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.4.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-        <Constraints>
-          <MandatoryNodeIfParentPresentConstraint/>
-        </Constraints>
-      ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
 	<!--****************************************************************************************-->
@@ -1463,10 +1416,9 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
-    <!--RELATED PUBLICATIONS -->
+    <!--RELATED PUBLICATIONS-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1483,8 +1435,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/@xml-lang"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1501,8 +1452,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@URI"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@URI" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..../relPubl/ExtLink' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1512,21 +1462,19 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 9.10</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content> <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]></r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@xml-lang"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/ExtLink/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of website on which the publication can be found (or at least information concerning
-                the literature). ISO 639-1 codes are strongly encouraged
-                to be used.</r:Content>
+				the literature). ISO 639-1 codes are strongly encouraged to be used.</r:Content>
             <r:Content>CDC_UI_Label: Related publications</r:Content>
             <r:Content>CMM_Mapping: 9.10</r:Content>
         </r:Description>
@@ -1538,8 +1486,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1556,8 +1503,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl/@xml-lang"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/titl/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1573,8 +1519,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1591,8 +1536,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo/@agency"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/titlStmt/IDNo/@agency" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if '..../IDNo' element is present.</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1603,17 +1547,14 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 9.9.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1630,8 +1571,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit/@xml-lang"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/biblCit/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1656,17 +1596,14 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 9.6</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-	            <Constraints>
-                    <RecommendedNodeConstraint/>
-	    	    </Constraints>
-		        ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+	        <Constraints>
+                <RecommendedNodeConstraint/>
+	  	    </Constraints>
+	        ]]></r:Content>
         </pr:Instructions>
     </pr:Used>	
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@URI"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@URI" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -1683,8 +1620,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@xml-lang"
-        isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/stdyDscr/othrStdyMat/relPubl/citation/holdings/@xml-lang" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
