@@ -358,7 +358,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:prodStmt/ddi:grantNo/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'grantNo' element is present</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the name of the agency which provided the funding. ISO 639-1 codes
 			    are strongly encouraged to be used. </r:Content>
@@ -367,7 +367,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
             <Constraints>
-                <MandatoryNodeIfParentPresentConstraint/>
+                <RecommendedNodeConstraint/>
             </Constraints>
             ]]></r:Content>
         </pr:Instructions>
@@ -553,7 +553,7 @@ ________________________________________________________________________________
 	</pr:Used>
 	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/ddi:serName/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'serName' element is present.</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the name of the series. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
@@ -562,7 +562,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
             <Constraints>
-                <MandatoryNodeIfParentPresentConstraint/>
+                <RecommendedNodeConstraint/>
             </Constraints>
             ]]></r:Content>
         </pr:Instructions>
@@ -586,7 +586,7 @@ ________________________________________________________________________________
 	</pr:Used>
 	<pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:serStmt/ddi:serInfo/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'serInfo' element is present.</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the description of the series. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
@@ -595,7 +595,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
             <Constraints>
-                <MandatoryNodeIfParentPresentConstraint/>
+                <RecommendedNodeConstraint/>
             </Constraints>
             ]]></r:Content>
         </pr:Instructions>
@@ -992,7 +992,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:universe/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'universe' element is present.</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Universe item. ISO 639-1 codes are strongly
                 encouraged to be used.</r:Content>
@@ -1002,7 +1002,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
             <Constraints>
-                <MandatoryNodeIfParentPresentConstraint/>
+                <RecommendedNodeConstraint/>
             </Constraints>
             ]]></r:Content>
         </pr:Instructions>
@@ -1051,7 +1051,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:stdyInfo/ddi:sumDscr/ddi:dataKind/@xml:lang" isRequired="false">
        <r:Description>
-            <r:Content>Required: Mandatory if 'dataKind' element is present</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the data kind. ISO 639-1 codes are strongly
                 encouraged to be used.</r:Content>
@@ -1060,7 +1060,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
             <Constraints>
-                <MandatoryNodeIfParentPresentConstraint/>
+                <RecommendedNodeConstraint/>
             </Constraints>
             ]]></r:Content>
         </pr:Instructions>
