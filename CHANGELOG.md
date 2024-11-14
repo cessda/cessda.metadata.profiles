@@ -338,7 +338,7 @@ Minor changes to usage notes.
 
 ## DDI CDC 2.5 Monolingual Profile
 
-### 2024-11-12 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
+### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
