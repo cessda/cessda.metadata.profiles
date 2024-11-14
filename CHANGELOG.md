@@ -232,7 +232,7 @@ Minor changes to usage notes.
 - Fixed issue [163](https://github.com/cessda/cessda.metadata.profiles/issues/163)
 - Fixed issue [164](https://github.com/cessda/cessda.metadata.profiles/issues/164)
 
-### 2023-08-31 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile.xml)
+### 2023-08-31 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_2.5_PROFILE/cdc25_profile.xml)
 
 - Fixed issue [41](https://github.com/cessda/cessda.metadata.profiles/issues/41/)
 - Fixed issue [48](https://github.com/cessda/cessda.metadata.profiles/issues/48/)
