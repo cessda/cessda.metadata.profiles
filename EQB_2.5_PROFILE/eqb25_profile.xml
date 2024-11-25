@@ -3,15 +3,15 @@
 © Copyright 2024, CESSDA ERIC
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Katja Moilanen - TAU-FSD
-Created: 2024-XX-XX
+Created: 2024-11-25
 Version: v1.0.0
-Last modified 2024-XX-XX Katja Moilanen
+Last modified: 2024-11-25 Katja Moilanen
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2024-XX-XX">
+    versionDate="2024-11-25">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>EQB_DDI25_PROFILE</r:ID>
     <r:Version>1.0.0</r:Version>
@@ -1366,6 +1366,59 @@ ________________________________________________________________________________
 				<OptionalNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<!--****************************************************************************************-->
+    <!--INSTRUMENT/QUESTIONNAIRE INFORMATION-->
+    <!--****************************************************************************************-->
+	<pr:Used xpath="/ddi:codeBook/ddi:otherMat/@level" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'ddi:codeBook/ddi:otherMat' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: Required for DDI schema. Use always 'instrument' in this context.</r:Content>
+            <r:Content>EQB_UI_Label: TBD</r:Content>
+			<r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="/ddi:codeBook/ddi:otherMat/ddi:labl" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The name / label of the instrument.</r:Content>
+            <r:Content>EQB_UI_Label: TBD</r:Content>
+			<r:Content>CMM_Mapping: 5.3.2</r:Content>
+        </r:Description>
+		<pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="/ddi:codeBook/ddi:otherMat/ddi:labl/@xml:lang" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if 'ddi:codeBook/ddi:otherMat/ddi:labl' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
+				strongly encouraged to be used</r:Content>
+            <r:Content>EQB_UI_Label: TBD</r:Content>
+			<r:Content>CMM_Mapping: 5.3.2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+            <Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+            </Constraints>
+            ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
 </pr:DDIProfile>

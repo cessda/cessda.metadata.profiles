@@ -484,6 +484,20 @@ Minor changes to usage notes.
 
 ***
 
+## DDI EQB 2.5 Profile
+
+### 2024-11-25 [v1.0.0 CURRENT] (https://github.com/cessda/cessda.metadata.profiles/tree/main/EQB_2.5_PROFILE)
+
+- First release
+- Fixed issue [211](https://github.com/cessda/cessda.metadata.profiles/issues/211)
+- Fixed issue [209](https://github.com/cessda/cessda.metadata.profiles/issues/209)
+- Fixed issue [186](https://github.com/cessda/cessda.metadata.profiles/issues/186)
+- Fixed issue [191](https://github.com/cessda/cessda.metadata.profiles/issues/191)
+- Fixed issue [192](https://github.com/cessda/cessda.metadata.profiles/issues/192)
+- Fixed issue [193](https://github.com/cessda/cessda.metadata.profiles/issues/193)
+
+***
+
 
 ## DDI EQB 2.5 Profile - DEPRECATED 31-Aug-2023
 
