@@ -15,7 +15,7 @@ ________________________________________________________________________________
     versionDate="2023-08-29">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI33_PROFILE</r:ID>
-    <r:Version>1.0.0</r:Version>
+    <r:Version>1.1.0</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI3.3 PROFILE</r:String>
@@ -23,8 +23,40 @@ ________________________________________________________________________________
     <pr:XPathVersion>1.0</pr:XPathVersion>
     <pr:DDINamespace>3.3</pr:DDINamespace>
     <pr:XMLPrefixMap>
-        <pr:XMLPrefix/>
-        <pr:XMLNamespace>ddi:codebook:3_3</pr:XMLNamespace>
+        <pr:XMLPrefix>ddi</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:instance:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>s</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:studyunit:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>pi</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:physicalinstance:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>c</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:conceptualcomponent:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>l</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:logicalproduct:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>r</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:reusable:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>d</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:datacollection:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>a</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:archive:3_3</pr:XMLNamespace>
+    </pr:XMLPrefixMap>
+    <pr:XMLPrefixMap>
+        <pr:XMLPrefix>g</pr:XMLPrefix>
+        <pr:XMLNamespace>ddi:group:3_3</pr:XMLNamespace>
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>xsi</pr:XMLPrefix>
