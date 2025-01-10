@@ -574,8 +574,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Optional but note that if @vocab=”ELSST”, then
-                use “https://elsst.cessda.eu/id” here.</r:Content>
+            <r:Content>Optional but note that if @vocab="ELSST", then
+                use "https://elsst.cessda.eu/id" here.</r:Content>
          <r:Content>CMM_Mapping: 1.2.2.4</r:Content>
         </r:Description>
         <pr:Instructions>
