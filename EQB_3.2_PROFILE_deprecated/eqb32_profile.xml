@@ -24,7 +24,7 @@ ________________________________________________________________________________
     <pr:DDINamespace>3.2</pr:DDINamespace>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>ddi</pr:XMLPrefix>
-        <pr:XMLNamespace>ddi:codebook:3_2</pr:XMLNamespace>
+        <pr:XMLNamespace>ddi:instance:3_2</pr:XMLNamespace>
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>s</pr:XMLPrefix>

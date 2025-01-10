@@ -56,7 +56,7 @@ ________________________________________________________________________________
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>g</pr:XMLPrefix>
-        <pr:XMLNamespace>ddi:archive:3_3</pr:XMLNamespace>
+        <pr:XMLNamespace>ddi:group:3_3</pr:XMLNamespace>
     </pr:XMLPrefixMap>
     <pr:XMLPrefixMap>
         <pr:XMLPrefix>xsi</pr:XMLPrefix>
