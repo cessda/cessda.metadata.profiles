@@ -4,9 +4,9 @@
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive
 Created: 2021-05-22
-Version: v0.1.1
+Version: v0.2.0
 Change summary: Replaced erronerous CDATA syntax for MutuallyExclusiveGroupConstraint with placeholder comment in 11 instances, fixed erronerous use of @xml@lang
-Last modified 2021-09-09 Darren Bell
+Last modified 2025-01-13 Matthew Morris
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
