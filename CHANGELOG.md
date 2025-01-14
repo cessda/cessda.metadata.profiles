@@ -16,10 +16,9 @@ Each profile is versioned independently so the following contains discrete chang
 10. DDI EQB 3.2 Profile - deprecated 31-Aug-2023
 11. XSL Stylesheet - converts DDI Profile into HTML documentation
   
-
 ## DDI CDC 1.2.2 Profile
 
-### 2024-11-14 [v3.0.0 CURRENT] (https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile.xml)
+### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -147,7 +146,7 @@ Minor changes to usage notes.
 
 ## DDI CDC 1.2.2 Monolingual Profile
 
-### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml
+### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -167,7 +166,6 @@ Minor changes to usage notes.
 - Fixed issue [163](https://github.com/cessda/cessda.metadata.profiles/issues/163)
 - Fixed issue [164](https://github.com/cessda/cessda.metadata.profiles/issues/164)
 
-
 ### 2023-08-31 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
 
 - Fixed issue [41](https://github.com/cessda/cessda.metadata.profiles/issues/41/)
@@ -181,7 +179,6 @@ Minor changes to usage notes.
 - Fixed issue [110](https://github.com/cessda/cessda.metadata.profiles/issues/110/)
 - Fixed issue [149](https://github.com/cessda/cessda.metadata.profiles/issues/149/)
 - Added CMM Mapping annotation to all XPaths
-
 
 ### 2023-05-31 [v1.0.5](https://github.com/cessda/cessda.metadata.profiles/blob/v1.0.5/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
 
@@ -291,7 +288,6 @@ Minor changes to usage notes.
 
 - CDC2.5 and CDC1.2.2 Profile approved as first public release 1.0 by CESSDA MO
 
-
 ### 2020-09-09 [v0.9](https://github.com/cessda/cessda.metadata.profiles/commit/c1f41a9dd02202a5a5fcb196945385fa6dbfdd4c)
 
 - Incremented version number to 0.9 as a pre-release version for final checking and to align with version number of CDC 1.2.2 Profile
@@ -299,7 +295,6 @@ Minor changes to usage notes.
 - Fixed issue [CESSDA.CMV 60](https://github.com/cessda/cessda.cmv/issues/60)
 - Corrected syntax of MandatoryIfParentPresentNodeConstraint constraint.
 - Changed @vocabURI example patterns from "urn.." to "http:.."
-
 
 ### 2020-09-05 [v0.4](https://github.com/cessda/cessda.metadata.profiles/commit/fa77f5d797caf6005e00933a286a2752e68f8469)
 
@@ -326,12 +321,15 @@ Minor changes to usage notes.
 - Fixed issue [CESSDA.CMV 12](https://github.com/cessda/cessda.cmv/issues/12)
 
 ### 2020-05-03 [v0.3](https://github.com/cessda/cessda.metadata.profiles/commit/40758a09c36671facd1ef58160028d1cb7d5cabc)
+
 - keyword and topcclas elements swapped to align with sequence in codebook.xsd
 
 ### 2020-03-06 [v0.2](https://bitbucket.org/cessda/cessda.metadata.profiles/commits/58b2a6187bc2c9e7a20f8547c293d655e9d3ff74)
+
 - Significant changes from based on feedback from FSD
 
 ### 2020-02-14 [v0.1](https://bitbucket.org/cessda/cessda.metadata.profiles/commits/d0d589a27bbfdde6095597eaca872fe9b43f2a3f)
+
 - First commit of draft profile
 
 ***
@@ -358,8 +356,8 @@ Minor changes to usage notes.
 - Fixed issue [163](https://github.com/cessda/cessda.metadata.profiles/issues/163)
 - Fixed issue [164](https://github.com/cessda/cessda.metadata.profiles/issues/164)
 
-
 ### 2023-08-31 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
+
 - Fixed issue [41](https://github.com/cessda/cessda.metadata.profiles/issues/41/)
 - Fixed issue [48](https://github.com/cessda/cessda.metadata.profiles/issues/48/)
 - Fixed issue [49](https://github.com/cessda/cessda.metadata.profiles/issues/49/)
@@ -371,7 +369,7 @@ Minor changes to usage notes.
 - Fixed issue [110](https://github.com/cessda/cessda.metadata.profiles/issues/110/)
 - Fixed issue [149](https://github.com/cessda/cessda.metadata.profiles/issues/149/)
 - Added CMM Mapping annotation to all XPaths
- 
+
 ### 2023-05-31 [v1.0.5](https://github.com/cessda/cessda.metadata.profiles/blob/v1.0.5/CDC_2.5_PROFILE/cdc25_profile.xml)
 
 `/codebook/@xml:lang` attribute changed from Mandatory to Recommended in the monolingual profile.
@@ -420,6 +418,7 @@ Minor changes to usage notes.
 - Fixed issue [164](https://github.com/cessda/cessda.metadata.profiles/issues/164)
 
 ### 2023-08-31 [v1.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_2.6_PROFILE/cdc26_profile.xml)
+
 - First release
 
 ***
@@ -445,18 +444,19 @@ Minor changes to usage notes.
 - Fixed issue [163](https://github.com/cessda/cessda.metadata.profiles/issues/163)
 - Fixed issue [164](https://github.com/cessda/cessda.metadata.profiles/issues/164)
 
-
-
 ### 2023-08-31 [v1.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_2.6_PROFILE/cdc26_profile_mono.xml)
 
-- First release 
+- First release
 
 ***
 
-
 ## DDI CDC 3.2 Profile
 
-### 2023-08-31 [v1.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_3.2_PROFILE/cdc32_profile.xml)
+### 2025-01-14 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_3.2_PROFILE/cdc32_profile.xml)
+
+- Add all prefixes used in XPaths to the XMLPrefixMap
+
+### 2023-08-31 [v1.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_3.2_PROFILE/cdc32_profile.xml)
 
 - Fixed issue [41](https://github.com/cessda/cessda.metadata.profiles/issues/41/)
 - Fixed issue [48](https://github.com/cessda/cessda.metadata.profiles/issues/48/)
@@ -478,15 +478,19 @@ Minor changes to usage notes.
 
 ## DDI CDC 3.3 Profile
 
-### 2023-08-31 [v1.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_3.3_PROFILE/cdc33_profile.xml)
+### 2025-01-14 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_3.3_PROFILE/cdc33_profile.xml)
 
-- First release 
+- Add all prefixes used in XPaths to the XMLPrefixMap
+
+### 2023-08-31 [v1.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_3.3_PROFILE/cdc33_profile.xml)
+
+- First release
 
 ***
 
 ## DDI EQB 2.5 Profile
 
-### 2024-11-25 [v1.0.0 CURRENT] (https://github.com/cessda/cessda.metadata.profiles/tree/main/EQB_2.5_PROFILE)
+### 2024-11-25 [v1.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/EQB_2.5_PROFILE)
 
 - First release
 - Fixed issue [211](https://github.com/cessda/cessda.metadata.profiles/issues/211)
@@ -497,7 +501,6 @@ Minor changes to usage notes.
 - Fixed issue [193](https://github.com/cessda/cessda.metadata.profiles/issues/193)
 
 ***
-
 
 ## DDI EQB 2.5 Profile - DEPRECATED 31-Aug-2023
 
