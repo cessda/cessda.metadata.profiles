@@ -749,7 +749,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/r:r:AnalysisUnitsCovered/@xml:lang"
+        xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'AnalysisUnitsCovered' element is
