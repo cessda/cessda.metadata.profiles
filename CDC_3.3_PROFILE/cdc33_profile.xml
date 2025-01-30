@@ -15,7 +15,7 @@ ________________________________________________________________________________
     versionDate="2023-08-29">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI33_PROFILE</r:ID>
-    <r:Version>2.0.0</r:Version>
+    <r:Version>2.0.1</r:Version>
     <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI3.3 PROFILE</r:String>
@@ -749,7 +749,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/r:r:AnalysisUnitsCovered/@xml:lang"
+        xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered/@xml:lang"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'AnalysisUnitsCovered' element is
