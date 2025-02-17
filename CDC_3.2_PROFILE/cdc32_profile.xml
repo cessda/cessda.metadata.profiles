@@ -730,7 +730,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered"
+        xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered/r:String"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -749,10 +749,10 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered/@xml:lang"
+        xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnitsCovered/r:String/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'AnalysisUnitsCovered' element is
+            <r:Content>Required: Mandatory if 'r:AnalysisUnitsCovered/r:String' element is
                 present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Analysis Unit descriptive term. ISO 639-1
@@ -1101,7 +1101,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <pr:Used
         xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:DataCollectionDate/r:StartDate"
-        isRequired="true">
+        isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended </r:Content>
             <r:Content>ElementType: Element</r:Content>
