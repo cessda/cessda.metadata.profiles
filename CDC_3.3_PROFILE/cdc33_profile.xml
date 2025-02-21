@@ -139,7 +139,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--LANGUAGE OF DATA FILES-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/r:ResourcePackage/pi:PhysicalInstance/r:Citation/r:Language"
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/pi:PhysicalInstance/r:Citation/r:Language"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -425,7 +425,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:AgencyOrganizationReference/r:FunderRole" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:FunderRole" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -442,7 +442,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:AgencyOrganizationReference/r:GrantNo" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:GrantNumber" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -713,7 +713,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@controlledVocabularyListURN" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@controlledVocabularyURN" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -772,7 +772,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--RELATED PUBLICATIONS (AND PID)-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/StudyUnit/r:OtherMaterialScheme/r:OtherMaterial/r:TypeOfMaterial" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:OtherMaterialScheme/r:OtherMaterial/r:TypeOfMaterial" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -1205,7 +1205,7 @@ ________________________________________________________________________________
     <!--DATA COLLECTION METHOD-->
     <!--****************************************************************************************-->
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/d:TypeOfModeOfCollection"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1225,7 +1225,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection@controlledVocabularyName"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/d:TypeOfModeOfCollection/@controlledVocabularyName"
         defaultValue="DDI Mode of Collection" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1243,7 +1243,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection@controlledVocabularyURN"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/d:TypeOfModeOfCollection/@controlledVocabularyURN"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>

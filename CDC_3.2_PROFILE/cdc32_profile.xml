@@ -139,7 +139,7 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--LANGUAGE OF DATA FILES-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/r:ResourcePackage/pi:PhysicalInstance/r:Citation/r:Language"
+    <pr:Used xpath="/ddi:DDIInstance/g:ResourcePackage/pi:PhysicalInstance/r:Citation/r:Language"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -425,7 +425,7 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:AgencyOrganizationReference/r:FunderRole" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:FunderRole" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -442,7 +442,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:AgencyOrganizationReference/r:GrantNo" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:GrantNumber" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -697,7 +697,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@CodeListName"
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@codeListName"
         defaultValue="DDI Analysis Unit" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -713,7 +713,7 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@CodeListURN" isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:AnalysisUnit/@codeListURN" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
@@ -922,7 +922,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod/@CodeListName"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod/@codeListName"
         defaultValue="DDI Time Method" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -939,7 +939,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod/@CodeListURN"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:Methodology/d:TimeMethod/d:TypeOfTimeMethod/@codeListURN"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
@@ -1205,7 +1205,7 @@ ________________________________________________________________________________
     <!--DATA COLLECTION METHOD-->
     <!--****************************************************************************************-->
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/d:TypeOfModeOfCollection"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1225,7 +1225,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection@codeListName"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/d:TypeOfModeOfCollection/@codeListName"
         defaultValue="DDI Mode of Collection" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
@@ -1243,7 +1243,7 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeofCollection/d:TypeOfModeOfCollection@codeListURN"
+        xpath="/ddi:DDIInstance/s:StudyUnit/d:DataCollection/d:CollectionEvent/d:ModeOfCollection/d:TypeOfModeOfCollection/@codeListURN"
         isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
