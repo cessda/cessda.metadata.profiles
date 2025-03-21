@@ -1303,19 +1303,27 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <!--ACCESS CATEGORY - OPEN OR RESTRICTED-->
     <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/a:AccessTypeName/r:String" isRequired="true">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/a:AccessTypeName/r:String" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
                 CDC will use the same Access Rights vocabulary as OpenAIRE.
                 The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
                 http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
-                Only the codes “restrictedAccess” and “openAccess” will be used.</r:Content>
+                Only the codes "info:eu-repo/semantics/restrictedAccess" and "info:eu-repo/semantics/openAccess"
+                will be used.</r:Content>
             <r:Content>CDC_UI_Label: Open/Closed</r:Content>
             <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/a:Archive/a:ArchiveSpecific/a:Item/a:Access/a:AccessTypeName/@context"
         defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="true" isRequired="false">
