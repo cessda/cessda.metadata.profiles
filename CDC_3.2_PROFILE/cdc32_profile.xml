@@ -67,16 +67,16 @@ ________________________________________________________________________________
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:DDIInstance/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: ISO 639-1 codes are strongly encouraged to be used.</r:Content>
-            <r:Content>CDC_UI_Label: Study description available in</r:Content>
-         <r:Content>CMM_Mapping: None</r:Content>
+            <r:Content>CDC_UI_Label: Study description available in.. (in the search result list)</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<RecommendedNodeConstraint/>
+				<OptionalNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
@@ -174,10 +174,10 @@ ________________________________________________________________________________
                 (2) A URL or URN (a reference to a web resource that specifies its location)
                 linking to the study description on the SP website. CDC provides a link from
                 the study information there to the study description on the SP website,
-                to allow users to access the data. [This element not visible in the UI, it is only needed for the link].
+                to allow users to access the data.
                 The @typeOfUserID attribute must be "URLServiceProvider".</r:Content>
-            <r:Content>CDC_UI_Label: Study number / PID</r:Content>
-            <r:Content>CMM_Mapping: 1.1.10.4/1.1.2</r:Content>
+           <r:Content>CDC_UI_Label: Study number / PID | Access study</r:Content>
+           <r:Content>CMM_Mapping: 1.1.10.4/1.1.2 | 1.1.10.4.2/1.1.10.5</r:Content>
         </r:Description>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:UserID/@typeOfUserID" defaultValue="StudyNumber"
@@ -398,6 +398,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Container element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Reference to the Agency which provided the funding.</r:Content>
+			<r:Content>CDC_UI_Label: Funder</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.1</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -454,6 +455,7 @@ ________________________________________________________________________________
                 Indicate the appropriate agency using the r:AgencyOrganizationReference element.
                 If different funding agencies sponsored different stages of the production process,
                 use the /r:FunderRole element to distinguish the grant numbers.</r:Content>
+			<r:Content>CDC_UI_Label: Grant number</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -676,6 +678,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Source of keywords - ELSST is recommended but other vocabularies can
                 be referenced.</r:Content>
+		 <r:Content>CDC_UI_Label: Keywords (if ELSST)</r:Content>
          <r:Content>CMM_Mapping: 1.2.3.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -772,8 +775,8 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Contains the Analysis Unit code value in English.</r:Content>
-         <r:Content>CMM_Mapping: 1.3.5.2</r:Content>
+            <r:Content>Usage: Contains the Analysis Unit code value.</r:Content>
+            <r:Content>CMM_Mapping: 1.3.5.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -824,7 +827,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Descriptive term of Analysis Unit CV item in the local language.</r:Content>
             <r:Content>CDC_UI_Label: Analysis unit</r:Content>
-         <r:Content>CMM_Mapping: None</r:Content>
+            <r:Content>CMM_Mapping: 1.3.5.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -843,7 +846,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Analysis Unit descriptive term. ISO 639-1
                 codes are strongly encouraged to be used.</r:Content>
-         <r:Content>CMM_Mapping: None</r:Content>
+            <r:Content>CMM_Mapping: 1.3.5.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -915,7 +918,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: URL of website on which the publication can be found (or at least information concerning the literature).</r:Content>
-            <r:Content>CMM_Mapping: 9.9.1</r:Content>
+            <r:Content>CMM_Mapping: 9.10</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -934,7 +937,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Description of population or other elements studied or measured (freetext).</r:Content>
-            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CDC_UI_Label: Universe</r:Content>
             <r:Content>CMM_Mapping: 1.3.4</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -974,7 +977,7 @@ ________________________________________________________________________________
                 in Europe except for those residing on U.S. Military bases".
                 In this case the value would be changed to "false".
                 In DDI-C, attribute clusion states the inclusion/exclusion with values "I" and "E" respectively.</r:Content>
-            <r:Content>CDC_UI_Label: None</r:Content>
+            <r:Content>CDC_UI_Label: Universe</r:Content>
             <r:Content>CMM_Mapping: 1.3.4.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1339,7 +1342,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Use the string "DDI Mode of Collection" regardless of
                 language.</r:Content>
-            <r:Content>CMM_Mapping: 1.3.6.4.4</r:Content>
+            <r:Content>CMM_Mapping: 1.3.6.4.3</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1376,7 +1379,7 @@ ________________________________________________________________________________
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Descriptive term of the Mode of Data Collection CV item in the local language.</r:Content>
             <r:Content>CDC_UI_Label: Data collection mode</r:Content>
-            <r:Content>CMM_Mapping: 1.3.6.5</r:Content>
+            <r:Content>CMM_Mapping: 1.3.6.4.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1395,7 +1398,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Mode of Data Collection descriptive term. ISO 639-1
                 codes are strongly encouraged to be used.</r:Content>
-            <r:Content>CMM_Mapping: 1.3.6.5.1</r:Content>
+            <r:Content>CMM_Mapping: 1.3.6.4.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content>
@@ -1421,7 +1424,7 @@ ________________________________________________________________________________
                 http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
                 Only the codes "info:eu-repo/semantics/restrictedAccess" and "info:eu-repo/semantics/openAccess"
                 will be used.</r:Content>
-            <r:Content>CDC_UI_Label: Open/Closed</r:Content>
+            <r:Content>CDC_UI_Label: Data access</r:Content>
             <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
         <pr:Instructions>
