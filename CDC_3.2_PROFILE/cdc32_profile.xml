@@ -1546,4 +1546,307 @@ ________________________________________________________________________________
             </r:Content>
         </pr:Instructions>
     </pr:Used>
+    <!--****************************************************************************************-->
+    <!--INDIVIDUAL(S)-->
+    <!--****************************************************************************************-->
+	<pr:Used xpath="//a:Individual" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The repeatable parent element for the Individual information.</r:Content>
+            <r:Content>CMM_Mapping: 2</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/r:URN" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Individual which is used when referencing this individual e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/r:Agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Individual which is used when referencing this individual e.g. CreatorReference.
+			    Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/r:ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Individual which is used when referencing this individual e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+   <pr:Used xpath="//a:Individual/r:Version" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Individual which is used when referencing this individual e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/a:IndividualIdentification/a:IndividualName/a:FullName/r:String" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The full name of the Individual</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="//a:Individual/a:IndividualIdentification/a:ResearcherID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The repeatable parent element for the Individual PID.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/a:IndividualIdentification/a:ResearcherID/a:TypeOfID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The type of the PID. If the PID is documented, the type of the PID
+			    should be documented, too.</r:Content>
+            <r:Content>CMM_Mapping: 2.4.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/a:IndividualIdentification/a:ResearcherID/a:ResearcherIdentification" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The persistent identifier (PID) of the Individual</r:Content>
+            <r:Content>CMM_Mapping: 2.4</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Individual/a:IndividualIdentification/a:ResearcherID/r:URI" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The URL of the PID.</r:Content>
+            <r:Content>CMM_Mapping: 2.4.2</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<!--****************************************************************************************-->
+    <!--ORGANIZATION(S)-->
+    <!--****************************************************************************************-->
+	<pr:Used xpath="//a:Organization" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The repeatable parent element for the Organization information.</r:Content>
+            <r:Content>CMM_Mapping: 3</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	 <pr:Used xpath="//a:Organization/r:URN" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Organization which is used when referencing this Organization e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+   <pr:Used xpath="//a:Organization/r:Agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Organization which is used when referencing this Organization e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+   <pr:Used xpath="//a:Organization/r:ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Organization which is used when referencing this Organization e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+   <pr:Used xpath="//a:Organization/r:Version" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Organization which is used when referencing this Organization e.g. CreatorReference.
+                Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="//a:Organization/a:OrganizationIdentification/a:OrganizationName/r:String" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The name of the Organization</r:Content>
+            <r:Content>CMM_Mapping: 3.2</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Organization/r:UserID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The URL of persistent identifier (PID) of the organization</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Organization/r:UserID/@typeOfUserID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if '//a:Organization/r:UserID' element is present.</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The type of the PID. Please note, that the this attribute is mandatory for the
+			    UserID element due to the DDI-L specification.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<MandatoryNodeIfParentPresentConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
 </pr:DDIProfile>
