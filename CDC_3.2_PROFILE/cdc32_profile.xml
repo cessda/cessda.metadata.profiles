@@ -1849,4 +1849,295 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+	<!--****************************************************************************************-->
+    <!--AFFILIATION - RELATION(S) BETWEEN INDIVIDUAL(S) AND ORGANIZATION(S)-->
+    <!--****************************************************************************************-->
+    <pr:Used xpath="//a:Relation" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The repeatable parent element for the Relation information.</r:Content>
+            <r:Content>CMM_Mapping: 2.3</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/r:URN" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Relation. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/r:Agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Relation. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/r:ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Relation. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/r:Version" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Identifier of the Relation. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="//a:Relation/a:SourceObject" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if ' //a:Relation' is present</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The parent element for the SourceObject information.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+	<pr:Used xpath="//a:Relation/a:SourceObject/a:IndividualReference/r:URN" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Individual. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:SourceObject/a:IndividualReference/r:Agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Individual. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:SourceObject/a:IndividualReference/r:ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Individual. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:SourceObject/a:IndividualReference/r:Version" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Individual. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:SourceObject/a:IndividualReference/r:TypeOfObject" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if ' //a:SourceObject/a:IndividualReference' is present</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The type of the referenced object, which in this case is always Individual</r:Content>
+            <r:Content>CMM_Mapping: 2.3.1.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<MandatoryNodeIfParentPresentConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if ' //a:Relation' is present</r:Content>
+            <r:Content>ElementType: Container element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The parent element for the TargetObject information.</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+                <MandatoryNodeIfParentPresentConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject/a:OrganizationReference/r:URN" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Organization. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.3</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject/a:OrganizationReference/r:Agency" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Organization. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.3</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject/a:OrganizationReference/r:ID" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Organization. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.3</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject/a:OrganizationReference/r:Version" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: Reference information of the Organization. Either DDI URN or triple Agency, ID, Version (or both) need to be provided.</r:Content>
+            <r:Content>CMM_Mapping: 2.3.3</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject/a:OrganizationReference/r:TypeOfObject" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if ' //a:SourceObject/a:IndividualReference' is present</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The type of the referenced object, which in this case is always Organization</r:Content>
+            <r:Content>CMM_Mapping: 2.3.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<MandatoryNodeIfParentPresentConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="//a:Relation/a:TargetObject/a:Role/r:Description/r:Content" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Mandatory if ' //a:Relation/a:TargetObject/a:Role/r:Description' is present</r:Content>
+            <r:Content>ElementType: Content element</r:Content>
+            <r:Content>ElementRepeatable: No</r:Content>
+            <r:Content>Usage: The role of the TargetObject (Organization), which in this case should always be set as 'Affiliation'</r:Content>
+            <r:Content>CMM_Mapping: 2.3.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<MandatoryNodeIfParentPresentConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
 </pr:DDIProfile>
