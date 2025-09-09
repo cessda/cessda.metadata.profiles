@@ -269,9 +269,9 @@ ________________________________________________________________________________
     <!--PUBLISHER ORGANIZATION REFERENCE-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference"
-        isRequired="false">
+        isRequired="true">
         <r:Description>
-            <r:Content>Required: Recommended</r:Content>
+            <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Container element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: A reference to the name of the institution publishing the metadata,
@@ -279,15 +279,8 @@ ________________________________________________________________________________
             <r:Content>CDC_UI_Label: Publisher</r:Content>
             <r:Content>CMM_Mapping: 1.1.8</r:Content>
         </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
     </pr:Used>
-   <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:TypeOfObject"
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Publisher/r:PublisherReference/r:TypeOfObject"
         defaultValue="Organization" fixedValue="true" isRequired="false">
         <r:Description>
             <r:Content>Required: Mandatory if 'r:PublisherReference' is present</r:Content>
@@ -346,9 +339,8 @@ ________________________________________________________________________________
             <r:Content>CMM_Mapping: 1.1.10.4</r:Content>
         </r:Description>
     </pr:Used>
-    <pr:Used
-        xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:ManagingAgency"
-        isRequired="false">
+    <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:InternationalIdentifier/r:ManagingAgency"
+        isRequired="true">
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Content element</r:Content>
@@ -359,13 +351,6 @@ ________________________________________________________________________________
                 or DOI or Handle or URN.</r:Content>
             <r:Content>CMM_Mapping: 1.1.10.4.1</r:Content>
         </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<RecommendedNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
     </pr:Used>
     <!--****************************************************************************************-->
     <!--ABSTRACT-->
@@ -393,20 +378,22 @@ ________________________________________________________________________________
     <!--FUNDING INFORMATION-->
     <!--****************************************************************************************-->
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:AgencyOrganizationReference" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Optional</r:Content>
+       <r:Description>
+            <r:Content>Required: Mandatory if ../r:FundingInformation is present</r:Content>
             <r:Content>ElementType: Container element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Reference to the Agency which provided the funding.</r:Content>
-			<r:Content>CDC_UI_Label: Funder</r:Content>
+		    <r:Content>CDC_UI_Label: Funder</r:Content>
             <r:Content>CMM_Mapping: 1.1.6.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
+            <r:Content>
+                <![CDATA[
+                <Constraints>
+                    <MandatoryNodeIfParentPresentConstraint/>
+                </Constraints>
+                ]]>
+            </r:Content>
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:FundingInformation/r:AgencyOrganizationReference/r:TypeOfObject" isRequired="false">
