@@ -467,9 +467,13 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'distDate' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept 'YYYY-MM-DD',
-                'YYYY-MM' or 'YYYY' as date format. It is strongly recommended to provide the full
-                date to allow sorting by publication date in CDC.</r:Content>
+            <r:Content>Usage: Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept
+                'YYYY-MM-DD', 'YYYY-MM' or 'YYYY' as date format.
+                It is strongly recommended to provide the full date to allow
+                sorting by publication date in CDC.
+				If this date is in the future (data embargo end date), CDC will try to read
+				the publication date for CDC from ddi:codeBook/ddi:docDscr/ddi:citation/ddi:distStmt/ddi:distDate/@date
+				(metadata publication date).</r:Content>
             <r:Content>CDC_UI_Label: Publication year</r:Content>
             <r:Content>CMM_Mapping: 1.1.9</r:Content>
         </r:Description>
@@ -479,6 +483,27 @@ ________________________________________________________________________________
                 <MandatoryNodeIfParentPresentConstraint/>
             </Constraints>
             ]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/ddi:docDscr/ddi:citation/ddi:distStmt/ddi:distDate/@date" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Optional</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: This field is used in CDC only if the date in the field
+                ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:distStmt/ddi:distDate/@date is in the future.
+                Ideally 'YYYY-MM-DDThh:mm:ssZ' format, but can accept
+                'YYYY-MM-DD', 'YYYY-MM' or 'YYYY' as date format.
+                It is strongly recommended to provide the full date to allow
+                sorting by publication date in CDC.</r:Content>
+            <r:Content>CDC_UI_Label: Publication year</r:Content>
+            <r:Content>CMM_Mapping: 11.1.3.1</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+            <Constraints>
+	            <OptionalNodeConstraint/>
+	        </Constraints>
+        ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
 	<!--****************************************************************************************-->
