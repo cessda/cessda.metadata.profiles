@@ -283,10 +283,12 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: No</r:Content>
-            <r:Content>Usage: The persistent identifier (PID) of the principal investigator/creator</r:Content>
+            <r:Content>ElementRepeatable: Yes</r:Content>
+            <r:Content>Usage: The persistent identifier (PID) of the principal investigator/creator or
+			    the PID of the affiliation of the principal investigator/creator e.g.
+				0000-0002-7668-5427 (ORCID) or 033003e23 (ROR)</r:Content>
             <r:Content>CDC_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 2.4</r:Content>
+            <r:Content>CMM_Mapping: 2.4/None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -303,7 +305,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The URL of the PID. Please note, that the URI attribute is mandatory for the
 			    ExtLink element due to the DDI-C specification.</r:Content>
 	        <r:Content>CDC_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 2.4.2</r:Content>
+            <r:Content>CMM_Mapping: 2.4.2/None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -313,9 +315,26 @@ ________________________________________________________________________________
             ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty/ddi:ExtLink/@role" isRequired="false">
+        <r:Description>
+            <r:Content>Required: Recommended</r:Content>
+            <r:Content>ElementType: Attribute</r:Content>
+            <r:Content>Usage: The role of the PID. Must be used when the PID refers to the affiliation and in this case
+			    the attribute value must be "affiliation-PID". If the PID refers to the PI or creator, it is recommended
+				to use value "PID" for this field</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
+        </r:Description>
+        <pr:Instructions>
+            <r:Content><![CDATA[
+			<Constraints>
+				<RecommendedNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
+        </pr:Instructions>
+    </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:citation/ddi:rspStmt/ddi:AuthEnty/ddi:ExtLink/@title" isRequired="false">
         <r:Description>
-            <r:Content>Required: Optional</r:Content>
+            <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The type of the PID. If the PID is documented, the type of the PID
 			    should be documented, too.</r:Content>
@@ -325,7 +344,7 @@ ________________________________________________________________________________
         <pr:Instructions>
             <r:Content><![CDATA[
 			<Constraints>
-				<OptionalNodeConstraint/>
+				<RecommendedNodeConstraint/>
 			</Constraints>
 			]]></r:Content>
         </pr:Instructions>
