@@ -247,7 +247,7 @@ ________________________________________________________________________________
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Citation/r:Creator/r:CreatorReference/r:TypeOfObject"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory of 'r:CreatorReference' is present.</r:Content>
+            <r:Content>Required: Mandatory if 'r:CreatorReference' is present.</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Type of object being referenced - in this case, it should always be either
@@ -286,8 +286,8 @@ ________________________________________________________________________________
             <r:Content>Required: Mandatory if 'r:PublisherReference' is present</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: Type of object being referenced - in this case, it should always be either
-                "Individual" or "Organization".</r:Content>
+            <r:Content>Usage: Type of object being referenced - in this case, it should always be
+                 "Organization".</r:Content>
             <r:Content>CDC_UI_Label: Publisher</r:Content>
             <r:Content>CMM_Mapping: 1.1.8</r:Content>
         </r:Description>
@@ -630,10 +630,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Use the URI of the CV version that is being used based on the pattern
-                "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:[version number]"
-                For example, for version 4.2 of CESSDA Topic Classification, use
-                "https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2.2".</r:Content>
+            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/v2/vocabularies/TopicClassification/4.2.3?languageVersion=en-4.2.3 .</r:Content>
             <r:Content>CMM_Mapping: 1.2.2.4</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -665,7 +663,7 @@ ________________________________________________________________________________
     <pr:Used xpath="/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Keyword/@xml:lang"
         isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'keyword' element is present</r:Content>
+            <r:Content>Required: Mandatory if 'r:keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the keyword. ISO 639-1 codes are strongly encouraged to be
                 used.</r:Content>
@@ -685,7 +683,7 @@ ________________________________________________________________________________
         xpath="/ddi:DDIInstance/s:StudyUnit/r:Coverage/r:TopicalCoverage/r:Keyword/@codeListName"
         defaultValue="ELSST" fixedValue="false" isRequired="false">
         <r:Description>
-            <r:Content>Required: Recommended if 'keyword' element is present</r:Content>
+            <r:Content>Required: Recommended if 'r:keyword' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Source of keywords - ELSST is recommended but other vocabularies can
                 be referenced.</r:Content>
@@ -818,7 +816,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/1.0.0?languageVersion=en-1.0.0.</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/2.1.3?languageVersion=en-2.1.3 .</r:Content>
          <r:Content>CMM_Mapping: 1.3.5.5</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1115,7 +1113,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                "https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2.0?languageVersion=en-1.2.0".</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2.3?languageVersion=en-1.2.3 .</r:Content>
          <r:Content>CMM_Mapping: 1.3.1.5</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1214,7 +1212,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                "https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1.1?languageVersion=en-1.1.1".</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/2.0.1?languageVersion=en-2.0.1 .</r:Content>
             <r:Content>CMM_Mapping: 1.3.6.2.5</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -1419,7 +1417,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                "https://vocabularies.cessda.eu/v2/vocabularies/ModeOfCollection/3.0?languageVersion=en-3.0.0".</r:Content>
+                https://vocabularies.cessda.eu/v2/vocabularies/ModeOfCollection/5.0.0?languageVersion=en-5.0.0 .</r:Content>
             <r:Content>CMM_Mapping: 1.3.6.4.5</r:Content>
         </r:Description>
         <pr:Instructions>
