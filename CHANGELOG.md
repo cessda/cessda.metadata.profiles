@@ -12,13 +12,23 @@ Each profile is versioned independently so the following contains discrete chang
 06. DDI CDC 2.6 Monolingual Profile
 07. DDI CDC 3.2 Profile
 08. DDI CDC 3.3 Profile
-09. DDI EQB 2.5 Profile - deprecated 31-Aug-2023
-10. DDI EQB 3.2 Profile - deprecated 31-Aug-2023
-11. XSL Stylesheet - converts DDI Profile into HTML documentation
+09. DDI EQB 2.5 Profile
+10. DDI EQB 2.5 Profile - deprecated 31-Aug-2023
+11. DDI EQB 3.2 Profile - deprecated 31-Aug-2023
+12. XSL Stylesheet - converts DDI Profile into HTML documentation
   
 ## DDI CDC 1.2.2 Profile
 
-### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile.xml)
+### 2024-12-09 [v3.1.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile.xml)
+- Fixed issue [260] (https://github.com/cessda/cessda.metadata.profiles/issues/260)
+- Fixed issue [262] (https://github.com/cessda/cessda.metadata.profiles/issues/262)
+- Fixed issue [235] (https://github.com/cessda/cessda.metadata.profiles/issues/235)
+- Fixed issue [213] (https://github.com/cessda/cessda.metadata.profiles/issues/213)
+- Fixed issue [243] (https://github.com/cessda/cessda.metadata.profiles/issues/243)
+- Fixed issue [248] (https://github.com/cessda/cessda.metadata.profiles/issues/248)
+
+
+### 2024-11-14 [v3.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/3.0.0/CDC_1.2.2_PROFILE/cdc_122_profile.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -146,7 +156,15 @@ Minor changes to usage notes.
 
 ## DDI CDC 1.2.2 Monolingual Profile
 
-### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
+### 2024-12-09 [v3.1.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
+- Fixed issue [260] (https://github.com/cessda/cessda.metadata.profiles/issues/260)
+- Fixed issue [262] (https://github.com/cessda/cessda.metadata.profiles/issues/262)
+- Fixed issue [235] (https://github.com/cessda/cessda.metadata.profiles/issues/235)
+- Fixed issue [213] (https://github.com/cessda/cessda.metadata.profiles/issues/213)
+- Fixed issue [243] (https://github.com/cessda/cessda.metadata.profiles/issues/243)
+- Fixed issue [248] (https://github.com/cessda/cessda.metadata.profiles/issues/248)
+
+### 2024-11-14 [v3.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/3.0.0/CDC_1.2.2_PROFILE/cdc_122_profile_mono.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -205,7 +223,15 @@ Minor changes to usage notes.
 
 ## DDI CDC 2.5 Profile
 
-### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile.xml)
+### 2024-12-09 [v3.1.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile.xml)
+Fixed issue [260] (https://github.com/cessda/cessda.metadata.profiles/issues/260)
+Fixed issue [262] (https://github.com/cessda/cessda.metadata.profiles/issues/262)
+Fixed issue [235] (https://github.com/cessda/cessda.metadata.profiles/issues/235)
+Fixed issue [213] (https://github.com/cessda/cessda.metadata.profiles/issues/213)
+Fixed issue [243] (https://github.com/cessda/cessda.metadata.profiles/issues/243)
+Fixed issue [248] (https://github.com/cessda/cessda.metadata.profiles/issues/248)
+
+### 2024-11-14 [v3.0.0](https://github.com/cessda/cessda.metadata.profiles/tree/3.0.0/CDC_2.5_PROFILE/cdc25_profile.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -336,7 +362,15 @@ Minor changes to usage notes.
 
 ## DDI CDC 2.5 Monolingual Profile
 
-### 2024-11-14 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
+### 2024-12-09 [v3.1.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
+Fixed issue [260] (https://github.com/cessda/cessda.metadata.profiles/issues/260)
+Fixed issue [262] (https://github.com/cessda/cessda.metadata.profiles/issues/262)
+Fixed issue [235] (https://github.com/cessda/cessda.metadata.profiles/issues/235)
+Fixed issue [213] (https://github.com/cessda/cessda.metadata.profiles/issues/213)
+Fixed issue [243] (https://github.com/cessda/cessda.metadata.profiles/issues/243)
+Fixed issue [248] (https://github.com/cessda/cessda.metadata.profiles/issues/248)
+
+### 2024-11-14 [v3.0.0](https://github.com/cessda/cessda.metadata.profiles/tree/3.0.0/CDC_2.5_PROFILE/cdc25_profile_mono.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -394,7 +428,14 @@ Minor changes to usage notes.
 
 ## DDI CDC 2.6 Profile
 
-### 2024-11-14 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.6_PROFILE/cdc26_profile.xml)
+### 2025-12-09 [v2.1.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.6_PROFILE/cdc26_profile.xml)
+- Fixed issue [260] (https://github.com/cessda/cessda.metadata.profiles/issues/260)
+- Fixed issue [262] (https://github.com/cessda/cessda.metadata.profiles/issues/262)
+- Fixed issue [235] (https://github.com/cessda/cessda.metadata.profiles/issues/235)
+- Fixed issue [213] (https://github.com/cessda/cessda.metadata.profiles/issues/213)
+- Fixed issue [248] (https://github.com/cessda/cessda.metadata.profiles/issues/248)
+
+### 2024-11-14 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/tree/2.0.0/CDC_2.6_PROFILE/cdc26_profile.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -425,7 +466,14 @@ Minor changes to usage notes.
 
 ## DDI CDC 2.6 Monolingual Profile
 
-### 2024-11-14 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.6_PROFILE/cdc26_profile_mono.xml)
+### 2025-12-09 [v2.1.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/tree/main/CDC_2.6_PROFILE/cdc26_profile_mono.xml)
+- Fixed issue [260] (https://github.com/cessda/cessda.metadata.profiles/issues/260)
+- Fixed issue [262] (https://github.com/cessda/cessda.metadata.profiles/issues/262)
+- Fixed issue [235] (https://github.com/cessda/cessda.metadata.profiles/issues/235)
+- Fixed issue [213] (https://github.com/cessda/cessda.metadata.profiles/issues/213)
+- Fixed issue [248] (https://github.com/cessda/cessda.metadata.profiles/issues/248)
+
+### 2024-11-14 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/tree/2.0.0/CDC_2.6_PROFILE/cdc26_profile_mono.xml)
 
 - Fixed issue [179](https://github.com/cessda/cessda.metadata.profiles/issues/179)
 - Fixed issue [207](https://github.com/cessda/cessda.metadata.profiles/issues/207)
@@ -452,7 +500,37 @@ Minor changes to usage notes.
 
 ## DDI CDC 3.2 Profile
 
-### 2025-01-14 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_3.2_PROFILE/cdc32_profile.xml)
+### 2025-12-09 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_3.2_PROFILE/cdc32_profile.xml)
+- Fixed issue [259] (https://github.com/cessda/cessda.metadata.profiles/issues/259)
+- Fixed issue [264] (https://github.com/cessda/cessda.metadata.profiles/issues/264)
+- Fixed issue [226] (https://github.com/cessda/cessda.metadata.profiles/issues/226)
+- Fixed issue [258] (https://github.com/cessda/cessda.metadata.profiles/issues/258)
+- Fixed issue [244] (https://github.com/cessda/cessda.metadata.profiles/issues/244)
+- Fixed issue [250] (https://github.com/cessda/cessda.metadata.profiles/issues/250)
+- Fixed issue [247] (https://github.com/cessda/cessda.metadata.profiles/issues/247)
+- Fixed issue [246] (https://github.com/cessda/cessda.metadata.profiles/issues/246)
+- Fixed issue [245] (https://github.com/cessda/cessda.metadata.profiles/issues/245)
+- Fixed issue [240] (https://github.com/cessda/cessda.metadata.profiles/issues/240)
+- Fixed issue [223] (https://github.com/cessda/cessda.metadata.profiles/issues/223)
+- Fixed issue [201] (https://github.com/cessda/cessda.metadata.profiles/issues/201)
+- Fixed issue [221] (https://github.com/cessda/cessda.metadata.profiles/issues/221)
+- Fixed issue [224] (https://github.com/cessda/cessda.metadata.profiles/issues/224)
+- Fixed issue [217] (https://github.com/cessda/cessda.metadata.profiles/issues/217)
+- Fixed issue [222] (https://github.com/cessda/cessda.metadata.profiles/issues/222)
+- Fixed issue [219] (https://github.com/cessda/cessda.metadata.profiles/issues/219)
+- Fixed issue [220] (https://github.com/cessda/cessda.metadata.profiles/issues/220)
+- Fixed issue [232] (https://github.com/cessda/cessda.metadata.profiles/issues/232)
+- Fixed issue [230] (https://github.com/cessda/cessda.metadata.profiles/issues/230)
+- Fixed issue [229] (https://github.com/cessda/cessda.metadata.profiles/issues/229)
+- Fixed issue [228] (https://github.com/cessda/cessda.metadata.profiles/issues/228)
+- Fixed issue [168] (https://github.com/cessda/cessda.metadata.profiles/issues/168)
+- Fixed issue [225] (https://github.com/cessda/cessda.metadata.profiles/issues/225)
+- Fixed issue [218] (https://github.com/cessda/cessda.metadata.profiles/issues/218)
+
+### 2025-01-30 [v2.0.1](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.1/CDC_3.2_PROFILE/cdc32_profile.xml)
+- Fixed issue [215](https://github.com/cessda/cessda.metadata.profiles/issues/215/)
+
+### 2025-01-14 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_3.2_PROFILE/cdc32_profile.xml)
 
 - Add all prefixes used in XPaths to the XMLPrefixMap
 
@@ -478,7 +556,37 @@ Minor changes to usage notes.
 
 ## DDI CDC 3.3 Profile
 
-### 2025-01-14 [v2.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_3.3_PROFILE/cdc33_profile.xml)
+### 2025-12-09 [v3.0.0 CURRENT](https://github.com/cessda/cessda.metadata.profiles/blob/main/CDC_3.3_PROFILE/cdc33_profile.xml)
+- Fixed issue [259] (https://github.com/cessda/cessda.metadata.profiles/issues/259)
+- Fixed issue [264] (https://github.com/cessda/cessda.metadata.profiles/issues/264)
+- Fixed issue [226] (https://github.com/cessda/cessda.metadata.profiles/issues/226)
+- Fixed issue [258] (https://github.com/cessda/cessda.metadata.profiles/issues/258)
+- Fixed issue [244] (https://github.com/cessda/cessda.metadata.profiles/issues/244)
+- Fixed issue [250] (https://github.com/cessda/cessda.metadata.profiles/issues/250)
+- Fixed issue [247] (https://github.com/cessda/cessda.metadata.profiles/issues/247)
+- Fixed issue [246] (https://github.com/cessda/cessda.metadata.profiles/issues/246)
+- Fixed issue [245] (https://github.com/cessda/cessda.metadata.profiles/issues/245)
+- Fixed issue [240] (https://github.com/cessda/cessda.metadata.profiles/issues/240)
+- Fixed issue [223] (https://github.com/cessda/cessda.metadata.profiles/issues/223)
+- Fixed issue [201] (https://github.com/cessda/cessda.metadata.profiles/issues/201)
+- Fixed issue [221] (https://github.com/cessda/cessda.metadata.profiles/issues/221)
+- Fixed issue [224] (https://github.com/cessda/cessda.metadata.profiles/issues/224)
+- Fixed issue [217] (https://github.com/cessda/cessda.metadata.profiles/issues/217)
+- Fixed issue [222] (https://github.com/cessda/cessda.metadata.profiles/issues/222)
+- Fixed issue [219] (https://github.com/cessda/cessda.metadata.profiles/issues/219)
+- Fixed issue [220] (https://github.com/cessda/cessda.metadata.profiles/issues/220)
+- Fixed issue [232] (https://github.com/cessda/cessda.metadata.profiles/issues/232)
+- Fixed issue [231] (https://github.com/cessda/cessda.metadata.profiles/issues/231)
+- Fixed issue [230] (https://github.com/cessda/cessda.metadata.profiles/issues/230)
+- Fixed issue [228] (https://github.com/cessda/cessda.metadata.profiles/issues/228)
+- Fixed issue [168] (https://github.com/cessda/cessda.metadata.profiles/issues/168)
+- Fixed issue [225] (https://github.com/cessda/cessda.metadata.profiles/issues/225)
+- Fixed issue [218] (https://github.com/cessda/cessda.metadata.profiles/issues/218)
+
+### 2025-01-30 [v2.0.1](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.1/CDC_3.3_PROFILE/cdc33_profile.xml)
+- Fixed issue [215](https://github.com/cessda/cessda.metadata.profiles/issues/215/)
+
+### 2025-01-14 [v2.0.0](https://github.com/cessda/cessda.metadata.profiles/blob/2.0.0/CDC_3.3_PROFILE/cdc33_profile.xml)
 
 - Add all prefixes used in XPaths to the XMLPrefixMap
 

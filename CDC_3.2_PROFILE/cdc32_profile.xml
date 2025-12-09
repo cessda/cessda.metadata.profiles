@@ -2,21 +2,21 @@
 <!--____________________________________________________________________________________
 © Copyright 2020, CESSDA ERIC
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
-Author: Darren Bell - UK Data Archive
+Author: Darren Bell - UK Data Service, Katja Moilanen - FSD, Matthew Morris - CESSDA
 Created: 2021-03-10
-Version: v2.0.0
-Change summary from v0.1.0: See change log at https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
-Last modified 2025-01-14 Matthew Morris
+Version: v3.0.0
+Change summary from v2.0.1: See change log at https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
+Last modified 2025-12-09 Katja Moilanen
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2023-08-29">
+    versionDate="2025-12-09">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI32_PROFILE</r:ID>
-    <r:Version>2.0.1</r:Version>
-    <r:VersionResponsibility>Darren Bell - UKDA</r:VersionResponsibility>
+    <r:Version>3.0.0</r:Version>
+    <r:VersionResponsibility>Katja Moilanen - FSD</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI3.2 PROFILE</r:String>
     </pr:DDIProfileName>
@@ -1697,11 +1697,8 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
-                CDC will use the same Access Rights vocabulary as OpenAIRE.
-                The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
-                http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
-                Only the codes "info:eu-repo/semantics/restrictedAccess" and "info:eu-repo/semantics/openAccess"
-                will be used.</r:Content>
+                CDC will use the COAR Access Rights vocabulary https://vocabularies.coar-repositories.org/access_rights/.
+                Only the codes "restricted access" and "open access" will be used.</r:Content>
             <r:Content>CDC_UI_Label: Data access</r:Content>
             <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
@@ -1714,21 +1711,21 @@ ________________________________________________________________________________
         </pr:Instructions>
     </pr:Used>
     <pr:Used xpath="//a:Archive/a:ArchiveSpecific/a:Item/a:Access/a:AccessTypeName/@context"
-        defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="true" isRequired="false">
+        defaultValue="COAR Access Right Vocabulary" fixedValue="false" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if '../a:AccessTypeName' element is present</r:Content>
+            <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Always 'info:eu-repo-Access-Terms vocabulary'.</r:Content>
+            <r:Content>Usage: When the AccessTypeName element is used for vocabulary
+                  'COAR Access Right Vocabulary', then use this vocabulary name
+                  'COAR Access Right Vocabulary' in this field.</r:Content>
             <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
         <pr:Instructions>
-            <r:Content>
-                <![CDATA[
-                <Constraints>
-                    <MandatoryNodeIfParentPresentConstraint/>
-                </Constraints>
-                ]]>
-            </r:Content>
+            <r:Content><![CDATA[
+			<Constraints>
+				<OptionalNodeConstraint/>
+			</Constraints>
+			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
       <!--****************************************************************************************-->

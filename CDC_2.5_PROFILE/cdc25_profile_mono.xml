@@ -4,18 +4,18 @@
 Licence: This document is issued under a CC BY licence (https://creativecommons.org/licenses/by/4.0/)
 Author: Darren Bell - UK Data Archive, Katja Moilanen - FSD
 Created: 2020-12-02
-Version: v3.0.0
-Change summary from v2.0.0: See https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
-Last modified: 2024-11-14 Katja Moilanen
+Version: v3.1.0
+Change summary from v3.0.0: See https://github.com/cessda/cessda.metadata.profiles/blob/main/CHANGELOG.md
+Last modified: 2025-12-09 Katja Moilanen
 ____________________________________________________________________________________
 -->
 <pr:DDIProfile xmlns:r="ddi:reusable:3_2" xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xmlns:pr="ddi:ddiprofile:3_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="ddi:ddiprofile:3_2 https://ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/ddiprofile.xsd"
-    versionDate="2024-11-14">
+    versionDate="2025-12-09">
     <r:Agency>CESSDA</r:Agency>
     <r:ID>CDC_DDI25_PROFILE_MONOLINGUAL</r:ID>
-    <r:Version>3.0.0</r:Version>
+    <r:Version>3.1.0</r:Version>
     <r:VersionResponsibility>Katja Moilanen - FSD</r:VersionResponsibility>
     <pr:DDIProfileName>
         <r:String>CESSDA DATA CATALOGUE (CDC) DDI2.5 PROFILE - MONOLINGUAL</r:String>
@@ -1051,11 +1051,8 @@ ________________________________________________________________________________
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
             <r:Content>Usage: Controlled description of the data access (open access vs. restricted access).
-                CDC will use the same Access Rights vocabulary as OpenAIRE.
-                The name of the vocabulary is “info:eu-repo-Access-Terms vocabulary” - see
-                http://purl.org/eu-repo/semantics/#info-eu-repo-AccessRights
-                Only the codes "info:eu-repo/semantics/restrictedAccess" and "info:eu-repo/semantics/openAccess"
-                will be used.</r:Content>
+                CDC will use the COAR Access Rights vocabulary https://vocabularies.coar-repositories.org/access_rights/.
+                Only the codes "restricted access" and "open access" will be used.</r:Content>
             <r:Content>CDC_UI_Label: Data access</r:Content>
             <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
@@ -1067,14 +1064,14 @@ ________________________________________________________________________________
 			]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:dataAccs/ddi:useStmt/ddi:conditions/@elementVersion" defaultValue="info:eu-repo-Access-Terms vocabulary" fixedValue="false" isRequired="false">
+    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:dataAccs/ddi:useStmt/ddi:conditions/@elementVersion" defaultValue="COAR Access Right Vocabulary" fixedValue="false" isRequired="false">
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: When the conditions element is used for vocabulary
-                  'info:eu-repo-Access-Terms vocabulary', then use this vocabulary name
-                  'info:eu-repo-Access-Terms vocabulary' in this field.</r:Content>
-            <r:Content>CMM_Mapping: None</r:Content>
+                  'COAR Access Right Vocabulary', then use this vocabulary name
+                  'COAR Access Right Vocabulary' in this field.</r:Content>
+            <r:Content>CMM_Mapping: 1.4.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
