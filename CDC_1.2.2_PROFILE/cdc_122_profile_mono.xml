@@ -845,9 +845,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
-                https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2.0?languageVersion=en-1.2.0
-            </r:Content>
+            <r:Content>Usage: Use the string "DDI Time Method" regardless of language.</r:Content>
             <r:Content>CMM_Mapping: 1.3.1.3</r:Content>
         </r:Description>
         <pr:Instructions>
