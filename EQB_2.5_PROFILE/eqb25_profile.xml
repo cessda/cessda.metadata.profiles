@@ -221,7 +221,7 @@ ________________________________________________________________________________
             <r:Content>Usage: If AuthEnty is a person, the organisational affiliation of that
                 person</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: 1.1.7.1/1.1.7.2</r:Content>
+            <r:Content>CMM_Mapping: 1.1.7.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -291,7 +291,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The type of the PID. If the PID is documented, the type of the PID
 			    should be documented, too.</r:Content>
             <r:Content>EQB_UI_Label: Creator</r:Content>
-            <r:Content>CMM_Mapping: 2.4.1</r:Content>
+            <r:Content>CMM_Mapping: 2.4.1/None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -439,9 +439,9 @@ ________________________________________________________________________________
 		<r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: URI to the study group (series) description page in the SPs web page</r:Content>
+            <r:Content>Usage: URI to the series description page in the SPs web page</r:Content>
             <r:Content>EQB_UI_Label: Series</r:Content>
-			<r:Content>CMM_Mapping: 10.4.2</r:Content>
+			<r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -455,7 +455,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Language of the whole serStmt OR the URI to the study group (series) description page
+            <r:Content>Usage: Language of the whole serStmt OR the URI to the series description page
                 in the SPs web page. ISO 639-1 codes are strongly encouraged to be used.</r:Content>
 			<r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
@@ -472,9 +472,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The name of the study group / series.</r:Content>
+            <r:Content>Usage: The name of the series.</r:Content>
             <r:Content>EQB_UI_Label: Series</r:Content>
-            <r:Content>CMM_Mapping: 10.3</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -490,7 +490,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the name of the series. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
-            <r:Content>CMM_Mapping: 10.3.1</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -505,9 +505,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The description of the study group / series.</r:Content>
+            <r:Content>Usage: The description of the series.</r:Content>
             <r:Content>EQB_UI_Label: Series</r:Content>
-            <r:Content>CMM_Mapping: 10.4</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -523,7 +523,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the description of the series. ISO 639-1 codes are strongly encouraged
                 to be used.</r:Content>
-            <r:Content>CMM_Mapping: 10.3.1</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -573,8 +573,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Source of keywords - ELSST is recommended but other vocabularies can
-                be referenced.</r:Content>
+            <r:Content>Usage: The name of the used vocabulary. If possible, use "ELSST"
+                (regardless of language) but other vocabularies are also permitted.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
             <r:Content>CMM_Mapping: 1.2.3.2</r:Content>
         </r:Description>
@@ -590,7 +590,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Optional but note that if vocab=”ELSST”, then
+            <r:Content>Usage: Optional but note that if vocab=”ELSST”, then
                 use “https://elsst.cessda.eu/id/” here.</r:Content>
             <r:Content>CMM_Mapping: 1.2.3.4</r:Content>
         </r:Description>
@@ -643,8 +643,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: name of the vocabulary. If possible, use "CESSDA Topic Classification"
-                (regardless of language) but other vocabularies are permitted.</r:Content>
+            <r:Content>Usage: The name of the used vocabulary. If possible, use "CESSDA Topic Classification"
+                (regardless of language) but other vocabularies are also permitted.</r:Content>
             <r:Content>CMM_Mapping: 1.2.2.2</r:Content>
         </r:Description>
         <pr:Instructions>
@@ -887,7 +887,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+            <r:Content>Usage: The URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:AnalysisUnit:2.1.3 or
                 https://vocabularies.cessda.eu/v2/vocabularies/AnalysisUnit/1.0.0?languageVersion=en-1.0.0</r:Content>
             <r:Content>CMM_Mapping: 1.3.5.5</r:Content>
         </r:Description>
@@ -1031,7 +1032,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+            <r:Content>Usage: The URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TimeMethod:1.2.3 or
                 https://vocabularies.cessda.eu/v2/vocabularies/TimeMethod/1.2.0?languageVersion=en-1.2.0</r:Content>
             <r:Content>CMM_Mapping: 1.3.1.5</r:Content>
         </r:Description>
@@ -1119,7 +1121,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+            <r:Content>Usage: The URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:SamplingProcedure:2.0.2 or
                 https://vocabularies.cessda.eu/v2/vocabularies/SamplingProcedure/1.1.0?languageVersion=en-1.1.0</r:Content>
             <r:Content>CMM_Mapping: 1.3.6.2.5</r:Content>
         </r:Description>
@@ -1207,7 +1210,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+            <r:Content>Usage: The URL of the CV version that is being used e.g
+                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:ModeOfCollection:5.0.1 or
                 https://vocabularies.cessda.eu/v2/vocabularies/ModeOfCollection/3.0.0?languageVersion=en-3.0.0</r:Content>
             <r:Content>CMM_Mapping: 1.3.6.4.5</r:Content>
         </r:Description>
@@ -1242,7 +1246,7 @@ ________________________________________________________________________________
     </pr:Used>
     <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:method/ddi:dataColl/ddi:resInstru/@xml:lang" isRequired="false">
         <r:Description>
-            <r:Content>Required: Mandatory if 'collMode' element is present</r:Content>
+            <r:Content>Required: Mandatory if 'resInstru' element is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: Language of the Type of Instrument CV item. ISO 639-1 codes are
                 strongly encouraged to be used.</r:Content>
@@ -1295,7 +1299,8 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The Canonical URL of the CV version that is being used e.g.
+            <r:Content>Usage: The URL of the CV version that is being used e.g.
+                https://vocabularies.cessda.eu/urn/urn:ddi:int.ddi.cv:TypeOfInstrument:1.1.2 or
                 https://vocabularies.cessda.eu/v2/vocabularies/TypeOfInstrument/1.1.0?languageVersion=en-1.1.0</r:Content>
             <r:Content>CMM_Mapping: 5.3.1.5</r:Content>
         </r:Description>
@@ -1393,9 +1398,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The citation requirement text</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: ?????????</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1409,8 +1414,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'citReq' is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: ?????????</r:Content>
+            <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
+                strongly encouraged to be used</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1425,9 +1431,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The text for requiring the data user to inform the archive of their data usage.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: ?????????</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1441,8 +1447,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'deposReq' is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: ?????????</r:Content>
+            <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
+                strongly encouraged to be used</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1460,9 +1467,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The material related to the study description</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1477,9 +1484,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The title of the material related to the study description</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1493,8 +1500,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory if 'titl' is present</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
+                strongly encouraged to be used</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1512,9 +1520,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: Language-specific name of file </r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 4.2.2</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1528,9 +1536,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: Identifier of file </r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1547,7 +1555,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
                 strongly encouraged to be used</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 4.2.2.1</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1566,7 +1574,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The ID of the variable group</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1580,9 +1588,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: Type of the variable group.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1596,9 +1604,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: Identifiers of the variables belonging to this variable group.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1613,9 +1621,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The label of the variable group</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 6.1.2.4</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1632,7 +1640,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
 				strongly encouraged to be used</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-			<r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+			<r:Content>CMM_Mapping: 6.1.2.4.2</r:Content>
         </r:Description>
 		<pr:Instructions>
             <r:Content><![CDATA[
@@ -1649,9 +1657,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The Identifier of the variable</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1665,7 +1673,7 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Mandatory</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: A name of a variable within a dataset.</r:Content>
+            <r:Content>Usage: The name of the variable.</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 4.3.1.2</r:Content>
         </r:Description>
@@ -1674,9 +1682,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The indicator if the variable is weight ('wgt') or not ('not-wgt').</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 4.3.1.9</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1690,9 +1698,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The file name identifiers of the files containing this variable</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1707,7 +1715,7 @@ ________________________________________________________________________________
             <r:Content>Required: Recommended</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A label of a variable.</r:Content>
+            <r:Content>Usage: The label of the variable.</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 4.3.1.3</r:Content>
         </r:Description>
@@ -1744,7 +1752,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A prequestion text appearing before the actual question text</r:Content>
+            <r:Content>Usage: The prequestion text appearing before the actual question text</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 6.1.1.6</r:Content>
         </r:Description>
@@ -1778,7 +1786,7 @@ ________________________________________________________________________________
             <r:Content>Required: Required</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A literal question item text.</r:Content>
+            <r:Content>Usage: The literal question item text.</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 6.1.1.5</r:Content>
         </r:Description>
@@ -1790,7 +1798,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
 				strongly encouraged to be used</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
-			<r:Content>CMM_Mapping: 6.1.1.5</r:Content>
+			<r:Content>CMM_Mapping: 6.1.1.5.1</r:Content>
         </r:Description>
 		<pr:Instructions>
             <r:Content><![CDATA[
@@ -1805,7 +1813,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A postquestion text appearing after the actual question text</r:Content>
+            <r:Content>Usage: The postquestion text appearing after the actual question text</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 6.1.1.6</r:Content>
         </r:Description>
@@ -1839,7 +1847,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: An instruction for the interviewer.</r:Content>
+            <r:Content>Usage: The instructions for the interviewer.</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 6.1.1.7</r:Content>
         </r:Description>
@@ -1877,7 +1885,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The type (integer/real) of individual valid value</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1891,9 +1899,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Individual valid value</r:Content>
+            <r:Content>Usage: The individual valid value</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1909,7 +1917,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The type (integer/real) of values in the range of valid values</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1925,7 +1933,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The lowest value in the range of valid values</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 6.2.1.1.6.1/6.2.2.4</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1941,7 +1949,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The highest value in the range of valid values</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 6.2.1.1.6.2/6.2.2.5</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1957,7 +1965,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The type (integer/real) of individual invalid value</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1971,9 +1979,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: Individual invalid value</r:Content>
+            <r:Content>Usage: The individual invalid value</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -1989,7 +1997,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The type (integer/real) of values in the range of invalid values</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2005,7 +2013,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The lowest value in the range of invalid values</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2021,7 +2029,7 @@ ________________________________________________________________________________
             <r:Content>ElementType: Attribute</r:Content>
             <r:Content>Usage: The highest value in the range of invalid values</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2039,9 +2047,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The value of the statistical measure</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping:  4.3.3.1.4/4.3.3.2.4/4.3.3.3.4/4.3.3.4.4/None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2055,9 +2063,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The type of statistical measure: minimum, maximum, mean, standard deviation, median, mode, valid cases or invalid cases.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 4.3.3.1/4.3.3.2/4.3.3.3/4.3.3.4/None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2075,9 +2083,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: This element serves two use cases: 1) Providing additional information about the variable, 2) Describing the variable when it is not derived from a question.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2094,7 +2102,7 @@ ________________________________________________________________________________
             <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
 				strongly encouraged to be used</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-			<r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+			<r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
 		<pr:Instructions>
             <r:Content><![CDATA[
@@ -2111,9 +2119,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage:  The indicator if the category represents a missing value ('Y') or not ('N').</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: 6.2.1.1.8.3</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2128,7 +2136,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: No</r:Content>
-            <r:Content>Usage: A value related to a particular category.</r:Content>
+            <r:Content>Usage: The value related to the category.</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 6.2.1.1.7</r:Content>
         </r:Description>
@@ -2145,7 +2153,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A label of a particular category</r:Content>
+            <r:Content>Usage: The label of the category</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 6.2.1.1.8</r:Content>
         </r:Description>
@@ -2179,9 +2187,9 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The value of the statistical measure for the category.</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2195,9 +2203,9 @@ ________________________________________________________________________________
         <r:Description>
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: XXXXXXXXX</r:Content>
+            <r:Content>Usage: The type of the statistical measure for the category e.g. 'freq' for frequency</r:Content>
             <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: XXXXXXXXX</r:Content>
+            <r:Content>CMM_Mapping: None</r:Content>
         </r:Description>
         <pr:Instructions>
             <r:Content><![CDATA[
@@ -2215,7 +2223,7 @@ ________________________________________________________________________________
             <r:Content>Required: Optional</r:Content>
             <r:Content>ElementType: Content element</r:Content>
             <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: A concept related to a variable.</r:Content>
+            <r:Content>Usage: The concept related to the variable.</r:Content>
             <r:Content>EQB_UI_Label: TBD</r:Content>
 			<r:Content>CMM_Mapping: 4.3.2.1 / 6.1.1.10 / 7.3</r:Content>
         </r:Description>
