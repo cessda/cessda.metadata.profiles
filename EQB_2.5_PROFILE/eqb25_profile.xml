@@ -1459,59 +1459,6 @@ ________________________________________________________________________________
             ]]></r:Content>
         </pr:Instructions>
     </pr:Used>
-	<!--****************************************************************************************-->
-    <!--RELATED MATERIAL-->
-    <!--****************************************************************************************-->
-    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relMat" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Optional</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: Yes</r:Content>
-            <r:Content>Usage: The material related to the study description</r:Content>
-            <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: None</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relMat/ddi:citation/ddi:titlStmt/ddi:titl" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Optional</r:Content>
-            <r:Content>ElementType: Content element</r:Content>
-            <r:Content>ElementRepeatable: No</r:Content>
-            <r:Content>Usage: The title of the material related to the study description</r:Content>
-            <r:Content>EQB_UI_Label: XXXXXXXXX</r:Content>
-            <r:Content>CMM_Mapping: None</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-			<Constraints>
-				<OptionalNodeConstraint/>
-			</Constraints>
-			]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
-    <pr:Used xpath="/ddi:codeBook/ddi:stdyDscr/ddi:othrStdyMat/ddi:relMat/ddi:citation/ddi:titlStmt/ddi:titl/@xml:lang" isRequired="false">
-        <r:Description>
-            <r:Content>Required: Mandatory if 'titl' is present</r:Content>
-            <r:Content>ElementType: Attribute</r:Content>
-            <r:Content>Usage: The language of the content of the element. ISO 639-1 codes are
-                strongly encouraged to be used</r:Content>
-            <r:Content>CMM_Mapping: None</r:Content>
-        </r:Description>
-        <pr:Instructions>
-            <r:Content><![CDATA[
-            <Constraints>
-                <MandatoryNodeIfParentPresentConstraint/>
-            </Constraints>
-            ]]></r:Content>
-        </pr:Instructions>
-    </pr:Used>
     <!--****************************************************************************************-->
     <!--FILE INFORMATION-->
     <!--****************************************************************************************-->
